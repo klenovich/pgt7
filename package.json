@@ -9,7 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.2.6",
+    "@ant-design/pro-components": "^2.6.34",
     "@plasmicapp/loader-nextjs": "^1.0.333",
+    "@plasmicapp/react-web": "^0.2.283",
+    "@plasmicpkgs/antd5": "^0.0.162",
+    "@plasmicpkgs/plasmic-basic-components": "^0.0.193",
+    "@plasmicpkgs/plasmic-cms": "^0.0.234",
+    "@plasmicpkgs/plasmic-nav": "^0.0.147",
+    "@plasmicpkgs/plasmic-rich-components": "^1.0.154",
     "next": "13.5.6",
     "react": "^18",
     "react-dom": "^18"
