@@ -61,9 +61,10 @@ export const PlasmicNavBar__ArgProps = new Array<ArgPropType>();
 export type PlasmicNavBar__OverridesType = {
   root?: p.Flex<typeof NavigationBar>;
   link?: p.Flex<"a"> & Partial<LinkProps>;
-  home?: p.Flex<"a"> & Partial<LinkProps>;
-  bands?: p.Flex<"a"> & Partial<LinkProps>;
   events?: p.Flex<"a"> & Partial<LinkProps>;
+  artists?: p.Flex<"a"> & Partial<LinkProps>;
+  blog?: p.Flex<"a"> & Partial<LinkProps>;
+  team?: p.Flex<"a"> & Partial<LinkProps>;
 };
 
 export interface DefaultNavBarProps {
@@ -204,42 +205,6 @@ function PlasmicNavBar__RenderFunc(props: {
             />
           ) : null}
           <p.PlasmicLink
-            data-plasmic-name={"home"}
-            data-plasmic-override={overrides.home}
-            className={classNames(
-              projectcss.all,
-              projectcss.a,
-              projectcss.__wab_text,
-              sty.home
-            )}
-            component={Link}
-            href={
-              hasVariant(globalVariants, "screen", "mobileOnly") ? `/` : "/"
-            }
-            platform={"nextjs"}
-          >
-            {"Home"}
-          </p.PlasmicLink>
-          <p.PlasmicLink
-            data-plasmic-name={"bands"}
-            data-plasmic-override={overrides.bands}
-            className={classNames(
-              projectcss.all,
-              projectcss.a,
-              projectcss.__wab_text,
-              sty.bands
-            )}
-            component={Link}
-            href={
-              hasVariant(globalVariants, "screen", "mobileOnly")
-                ? `/all-artists`
-                : "/"
-            }
-            platform={"nextjs"}
-          >
-            {"Bands"}
-          </p.PlasmicLink>
-          <p.PlasmicLink
             data-plasmic-name={"events"}
             data-plasmic-override={overrides.events}
             className={classNames(
@@ -249,10 +214,67 @@ function PlasmicNavBar__RenderFunc(props: {
               sty.events
             )}
             component={Link}
-            href={"/"}
+            href={"/events"}
             platform={"nextjs"}
           >
-            {"Contact"}
+            {"EVENTS"}
+          </p.PlasmicLink>
+          <p.PlasmicLink
+            data-plasmic-name={"artists"}
+            data-plasmic-override={overrides.artists}
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              projectcss.__wab_text,
+              sty.artists
+            )}
+            component={Link}
+            href={
+              hasVariant(globalVariants, "screen", "mobileOnly")
+                ? `/artists`
+                : `/artists`
+            }
+            platform={"nextjs"}
+          >
+            {"ARTISTS"}
+          </p.PlasmicLink>
+          <p.PlasmicLink
+            data-plasmic-name={"blog"}
+            data-plasmic-override={overrides.blog}
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              projectcss.__wab_text,
+              sty.blog
+            )}
+            component={Link}
+            href={
+              hasVariant(globalVariants, "screen", "mobileOnly")
+                ? `/artists`
+                : "/blog"
+            }
+            platform={"nextjs"}
+          >
+            {"BLOG"}
+          </p.PlasmicLink>
+          <p.PlasmicLink
+            data-plasmic-name={"team"}
+            data-plasmic-override={overrides.team}
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              projectcss.__wab_text,
+              sty.team
+            )}
+            component={Link}
+            href={
+              hasVariant(globalVariants, "screen", "mobileOnly")
+                ? `/artists`
+                : "/team"
+            }
+            platform={"nextjs"}
+          >
+            {"TEAM"}
           </p.PlasmicLink>
         </React.Fragment>
       }
@@ -275,11 +297,12 @@ function PlasmicNavBar__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "link", "home", "bands", "events"],
+  root: ["root", "link", "events", "artists", "blog", "team"],
   link: ["link"],
-  home: ["home"],
-  bands: ["bands"],
-  events: ["events"]
+  events: ["events"],
+  artists: ["artists"],
+  blog: ["blog"],
+  team: ["team"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -287,9 +310,10 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: typeof NavigationBar;
   link: "a";
-  home: "a";
-  bands: "a";
   events: "a";
+  artists: "a";
+  blog: "a";
+  team: "a";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -353,9 +377,10 @@ export const PlasmicNavBar = Object.assign(
   {
     // Helper components rendering sub-elements
     link: makeNodeComponent("link"),
-    home: makeNodeComponent("home"),
-    bands: makeNodeComponent("bands"),
     events: makeNodeComponent("events"),
+    artists: makeNodeComponent("artists"),
+    blog: makeNodeComponent("blog"),
+    team: makeNodeComponent("team"),
 
     // Metadata about props expected for PlasmicNavBar
     internalVariantProps: PlasmicNavBar__VariantProps,

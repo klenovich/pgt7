@@ -19,7 +19,8 @@ import { useRouter } from "next/router";
 
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
-
+import * as plasmicAuth from "@plasmicapp/react-web/lib/auth";
+import { usePlasmicDataSourceContext } from "@plasmicapp/data-sources-context";
 import {
   executePlasmicDataOp,
   usePlasmicDataOp,
@@ -183,7 +184,7 @@ function PlasmicHomepage__RenderFunc(props: {
               alt={""}
               className={classNames(sty.img__mzptP)}
               displayHeight={"auto"}
-              displayMaxHeight={"none"}
+              displayMaxHeight={"500px"}
               displayMaxWidth={"100%"}
               displayMinHeight={"0"}
               displayMinWidth={"0"}
@@ -210,6 +211,34 @@ function PlasmicHomepage__RenderFunc(props: {
               data-plasmic-name={"svg"}
               data-plasmic-override={overrides.svg}
               className={classNames(projectcss.all, sty.svg)}
+              onClick={async event => {
+                const $steps = {};
+
+                $steps["goToWhat"] = true
+                  ? (() => {
+                      const actionArgs = { destination: "#what" };
+                      return (({ destination }) => {
+                        if (
+                          typeof destination === "string" &&
+                          destination.startsWith("#")
+                        ) {
+                          document
+                            .getElementById(destination.substr(1))
+                            .scrollIntoView({ behavior: "smooth" });
+                        } else {
+                          __nextRouter?.push(destination);
+                        }
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["goToWhat"] != null &&
+                  typeof $steps["goToWhat"] === "object" &&
+                  typeof $steps["goToWhat"].then === "function"
+                ) {
+                  $steps["goToWhat"] = await $steps["goToWhat"];
+                }
+              }}
               role={"img"}
             />
           </section>
@@ -217,6 +246,7 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-name={"whatIsPostGenre"}
             data-plasmic-override={overrides.whatIsPostGenre}
             className={classNames(projectcss.all, sty.whatIsPostGenre)}
+            id={"whatis"}
           >
             <h1
               className={classNames(
@@ -275,7 +305,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 sty.link___6FSq
               )}
               component={Link}
-              href={"https://www.plasmic.app/"}
+              href={"/team"}
               platform={"nextjs"}
             >
               {"Learn More"}
@@ -351,7 +381,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 sty.link__tLx9R
               )}
               component={Link}
-              href={"https://www.plasmic.app/"}
+              href={"/live-from-oakland"}
               platform={"nextjs"}
             >
               {"Learn More"}
@@ -414,7 +444,7 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-name={"button"}
             data-plasmic-override={overrides.button}
             className={classNames("__wab_instance", sty.button)}
-            link={`/all-artists`}
+            link={`/artists`}
           />
         </div>
       </div>
@@ -513,9 +543,51 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   return func;
 }
 
+function withPlasmicPageGuard<P extends object>(
+  WrappedComponent: React.ComponentType<P>
+) {
+  const PageGuard: React.FC<P> = props => (
+    <p.PlasmicPageGuard
+      minRole={null}
+      appId={"oATn9WrAqtDeaLtJDt8hxD"}
+      authorizeEndpoint={"https://studio.plasmic.app/authorize"}
+      canTriggerLogin={true}
+    >
+      <WrappedComponent {...props} />
+    </p.PlasmicPageGuard>
+  );
+
+  return PageGuard;
+}
+
+function withUsePlasmicAuth<P extends object>(
+  WrappedComponent: React.ComponentType<P>
+) {
+  const WithUsePlasmicAuthComponent: React.FC<P> = props => {
+    const dataSourceCtx = usePlasmicDataSourceContext() ?? {};
+    const { isUserLoading, user, token } = plasmicAuth.usePlasmicAuth({
+      appId: "oATn9WrAqtDeaLtJDt8hxD"
+    });
+
+    return (
+      <p.PlasmicDataSourceContextProvider
+        value={{
+          ...dataSourceCtx,
+          isUserLoading,
+          userAuthToken: token,
+          user
+        }}
+      >
+        <WrappedComponent {...props} />
+      </p.PlasmicDataSourceContextProvider>
+    );
+  };
+  return WithUsePlasmicAuthComponent;
+}
+
 export const PlasmicHomepage = Object.assign(
   // Top-level PlasmicHomepage renders the root element
-  makeNodeComponent("root"),
+  withUsePlasmicAuth(withPlasmicPageGuard(makeNodeComponent("root"))),
   {
     // Helper components rendering sub-elements
     navBar: makeNodeComponent("navBar"),

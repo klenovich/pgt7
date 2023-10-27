@@ -59,6 +59,9 @@
   max-width: 50%;
   width: 50%;
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.2);
+  left: auto;
+  top: auto;
+  align-self: flex-start;
   display: none !important;
 }
 .img__iAAj8 > picture > img {
@@ -69,7 +72,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .img__iAAj8 {
-    display: block !important;
+    display: none !important;
   }
 }
 .img__b7KuT {
@@ -78,6 +81,7 @@
   max-width: 50%;
   width: 50%;
   min-width: 50%;
+  align-self: flex-start;
 }
 .img__b7KuT > picture > img {
   object-fit: cover;
@@ -87,38 +91,38 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .img__b7KuT {
-    display: block !important;
+    display: none !important;
   }
-}
-.home {
-  position: relative;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .home {
-    background: url("/plasmic/pg_site/images/image2.png") top 50% left 50% / cover repeat;
-    left: auto;
-    top: auto;
-    z-index: 1;
-    position: relative;
-    align-self: flex-start;
-    width: 100%;
-    height: 100%;
-    min-width: 0;
-    min-height: 0;
-  }
-}
-.bands {
-  position: relative;
-  width: auto;
-  height: auto;
-  max-width: 100%;
 }
 .events {
   position: relative;
   width: auto;
   height: auto;
   max-width: 100%;
+  color: #000000;
+  font-weight: 600;
+}
+.artists {
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  font-weight: 600;
+  color: #000000;
+}
+.blog {
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  font-weight: 600;
+  color: #000000;
+}
+.team {
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  color: #000000;
+  font-weight: 600;
 }

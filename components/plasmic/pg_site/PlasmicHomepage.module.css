@@ -75,6 +75,7 @@
   margin-left: 0px;
   left: auto;
   top: auto;
+  max-height: 500px;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
 }
@@ -95,12 +96,6 @@
   text-align: center;
   padding-bottom: 20px;
   min-width: 0;
-  display: none;
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .text__y3Gu {
-    display: block;
-  }
 }
 .svg {
   position: relative;
@@ -109,12 +104,6 @@
   height: 50px;
   margin-bottom: 35px;
   width: 1em;
-  display: none;
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .svg {
-    display: block;
-  }
 }
 .whatIsPostGenre {
   display: grid;

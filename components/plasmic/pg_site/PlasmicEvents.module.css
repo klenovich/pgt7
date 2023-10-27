@@ -25,7 +25,7 @@
   max-width: 100%;
   position: relative;
 }
-.img__qeIc6 {
+.img__aq5Px {
   position: relative;
   object-fit: cover;
   max-width: 100%;
@@ -35,13 +35,13 @@
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
 }
-.img__qeIc6 > picture > img {
+.img__aq5Px > picture > img {
   object-fit: cover;
 }
-.img__qeIc6 > :global(.__wab_img-spacer) > img {
+.img__aq5Px > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
-.h1 {
+.h1__iRi6J {
   position: relative;
   width: 100%;
   height: auto;
@@ -66,7 +66,7 @@
   position: relative;
   color: #000000;
 }
-.freeBox___1Mevp {
+.freeBox__w29Yj {
   display: flex;
   position: relative;
   flex-direction: row;
@@ -83,7 +83,7 @@
   border-width: 2px;
   border-style: solid;
 }
-.img__oSrFe {
+.img__dWbwx {
   position: relative;
   object-fit: cover;
   max-width: 35%;
@@ -92,13 +92,13 @@
   max-height: 90px;
   flex-shrink: 0;
 }
-.img__oSrFe > picture > img {
+.img__dWbwx > picture > img {
   object-fit: cover;
 }
-.img__oSrFe > :global(.__wab_img-spacer) > img {
+.img__dWbwx > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
-.freeBox__hnOrz {
+.freeBox__me9Fl {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -110,7 +110,7 @@
   min-width: 0;
   padding: 8px;
 }
-.text__mJv8H {
+.text__rgM9 {
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -125,7 +125,7 @@
   overflow: hidden;
   min-width: 0;
 }
-.text__wvLwe {
+.text__bO9Xt {
   position: relative;
   width: 235px;
   height: auto;
@@ -135,14 +135,34 @@
   font-size: 15px;
   font-weight: 500;
 }
-.text__mqBtq {
+.text__av8P9 {
   position: relative;
   width: 100%;
   height: auto;
   max-width: 100%;
-  white-space: pre-wrap;
+  white-space: pre;
   max-height: 50px;
   font-size: 15px;
   font-weight: 500;
+  text-overflow: clip;
+  overflow: hidden;
+  min-width: 0;
+}
+.h1__d3SYb {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  font-size: 30px;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 20px;
+  border-top-width: 2px;
+  border-top-style: solid;
+  padding-top: 10px;
   min-width: 0;
 }
