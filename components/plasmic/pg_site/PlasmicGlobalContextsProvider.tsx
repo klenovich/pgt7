@@ -14,7 +14,6 @@ export interface GlobalContextsProviderProps {
   cmsCredentialsProviderProps?: Partial<
     Omit<React.ComponentProps<typeof CmsCredentialsProvider>, "children">
   >;
-
   antdConfigProviderProps?: Partial<
     Omit<React.ComponentProps<typeof AntdConfigProvider>, "children">
   >;
@@ -107,7 +106,7 @@ export default function GlobalContextsProvider(
         loadingText={
           antdConfigProviderProps && "loadingText" in antdConfigProviderProps
             ? antdConfigProviderProps.loadingText!
-            : undefined
+            : "POST GENRE"
         }
         removeLoading={
           antdConfigProviderProps && "removeLoading" in antdConfigProviderProps

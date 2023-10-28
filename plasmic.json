@@ -777,6 +777,19 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/admin"
+        },
+        {
+          "id": "MMCuprZ7Cbs1",
+          "name": "Footer",
+          "type": "managed",
+          "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+          "renderModuleFilePath": "plasmic/pg_site/PlasmicFooter.tsx",
+          "importSpec": {
+            "modulePath": "Footer.tsx"
+          },
+          "cssFilePath": "plasmic/pg_site/PlasmicFooter.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -875,6 +888,12 @@
         "name": "Screen",
         "projectId": "oATn9WrAqtDeaLtJDt8hxD",
         "contextFilePath": "plasmic/pg_site/PlasmicGlobalVariant__Screen.tsx"
+      },
+      {
+        "id": "qQx-TJ6Dn3Wv",
+        "name": "UnnamedGroup",
+        "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+        "contextFilePath": "plasmic/pg_site/PlasmicGlobalVariant__UnnamedGroup.tsx"
       }
     ]
   },
