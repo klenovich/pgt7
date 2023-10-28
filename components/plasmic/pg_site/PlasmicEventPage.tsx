@@ -65,7 +65,7 @@ type ArgPropType = keyof PlasmicEventPage__ArgsType;
 export const PlasmicEventPage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicEventPage__OverridesType = {
-  root?: p.Flex<"div">;
+  postGenre?: p.Flex<"div">;
   navBar?: p.Flex<typeof NavBar>;
   bandInfo?: p.Flex<"section">;
   name?: p.Flex<"section">;
@@ -174,7 +174,20 @@ function PlasmicEventPage__RenderFunc(props: {
 
   return (
     <React.Fragment>
-      <Head></Head>
+      <Head>
+        <meta name="twitter:card" content="summary" />
+        <title key="title">{PlasmicEventPage.pageMetadata.title}</title>
+        <meta
+          key="og:title"
+          property="og:title"
+          content={PlasmicEventPage.pageMetadata.title}
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={PlasmicEventPage.pageMetadata.title}
+        />
+      </Head>
 
       <style>{`
         body {
@@ -184,8 +197,8 @@ function PlasmicEventPage__RenderFunc(props: {
 
       <div className={projectcss.plasmic_page_wrapper}>
         <div
-          data-plasmic-name={"root"}
-          data-plasmic-override={overrides.root}
+          data-plasmic-name={"postGenre"}
+          data-plasmic-override={overrides.postGenre}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
           className={classNames(
@@ -196,7 +209,7 @@ function PlasmicEventPage__RenderFunc(props: {
             projectcss.plasmic_tokens,
             plasmic_antd_5_hostless_css.plasmic_tokens,
             plasmic_plasmic_rich_components_css.plasmic_tokens,
-            sty.root
+            sty.postGenre
           )}
         >
           <NavBar
@@ -576,8 +589,8 @@ function PlasmicEventPage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: [
-    "root",
+  postGenre: [
+    "postGenre",
     "navBar",
     "bandInfo",
     "name",
@@ -617,7 +630,7 @@ type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
-  root: "div";
+  postGenre: "div";
   navBar: typeof NavBar;
   bandInfo: "section";
   name: "section";
@@ -678,7 +691,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "postGenre") {
     func.displayName = "PlasmicEventPage";
   } else {
     func.displayName = `PlasmicEventPage.${nodeName}`;
@@ -688,7 +701,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
 
 export const PlasmicEventPage = Object.assign(
   // Top-level PlasmicEventPage renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("postGenre"),
   {
     // Helper components rendering sub-elements
     navBar: makeNodeComponent("navBar"),
@@ -709,7 +722,7 @@ export const PlasmicEventPage = Object.assign(
 
     // Page metadata
     pageMetadata: {
-      title: "",
+      title: "POST GENRE",
       description: "",
       ogImageSrc: "",
       canonical: ""

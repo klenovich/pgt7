@@ -131,7 +131,20 @@ function PlasmicArtists__RenderFunc(props: {
 
   return (
     <React.Fragment>
-      <Head></Head>
+      <Head>
+        <meta name="twitter:card" content="summary" />
+        <title key="title">{PlasmicArtists.pageMetadata.title}</title>
+        <meta
+          key="og:title"
+          property="og:title"
+          content={PlasmicArtists.pageMetadata.title}
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={PlasmicArtists.pageMetadata.title}
+        />
+      </Head>
 
       <style>{`
         body {
@@ -438,7 +451,7 @@ export const PlasmicArtists = Object.assign(
 
     // Page metadata
     pageMetadata: {
-      title: "",
+      title: "POST GENRE - ARTISTS",
       description: "",
       ogImageSrc: "",
       canonical: ""

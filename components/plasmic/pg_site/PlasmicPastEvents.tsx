@@ -65,7 +65,7 @@ type ArgPropType = keyof PlasmicPastEvents__ArgsType;
 export const PlasmicPastEvents__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicPastEvents__OverridesType = {
-  root?: p.Flex<"div">;
+  postGenrePastEvents?: p.Flex<"div">;
   navBar?: p.Flex<typeof NavBar>;
   allArtists?: p.Flex<typeof Card>;
   link?: p.Flex<"a"> & Partial<LinkProps>;
@@ -128,7 +128,20 @@ function PlasmicPastEvents__RenderFunc(props: {
 
   return (
     <React.Fragment>
-      <Head></Head>
+      <Head>
+        <meta name="twitter:card" content="summary" />
+        <title key="title">{PlasmicPastEvents.pageMetadata.title}</title>
+        <meta
+          key="og:title"
+          property="og:title"
+          content={PlasmicPastEvents.pageMetadata.title}
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={PlasmicPastEvents.pageMetadata.title}
+        />
+      </Head>
 
       <style>{`
         body {
@@ -138,8 +151,8 @@ function PlasmicPastEvents__RenderFunc(props: {
 
       <div className={projectcss.plasmic_page_wrapper}>
         <div
-          data-plasmic-name={"root"}
-          data-plasmic-override={overrides.root}
+          data-plasmic-name={"postGenrePastEvents"}
+          data-plasmic-override={overrides.postGenrePastEvents}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
           className={classNames(
@@ -150,7 +163,7 @@ function PlasmicPastEvents__RenderFunc(props: {
             projectcss.plasmic_tokens,
             plasmic_antd_5_hostless_css.plasmic_tokens,
             plasmic_plasmic_rich_components_css.plasmic_tokens,
-            sty.root
+            sty.postGenrePastEvents
           )}
         >
           <NavBar
@@ -443,7 +456,7 @@ function PlasmicPastEvents__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "navBar", "allArtists", "link"],
+  postGenrePastEvents: ["postGenrePastEvents", "navBar", "allArtists", "link"],
   navBar: ["navBar"],
   allArtists: ["allArtists", "link"],
   link: ["link"]
@@ -452,7 +465,7 @@ type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
-  root: "div";
+  postGenrePastEvents: "div";
   navBar: typeof NavBar;
   allArtists: typeof Card;
   link: "a";
@@ -505,7 +518,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "postGenrePastEvents") {
     func.displayName = "PlasmicPastEvents";
   } else {
     func.displayName = `PlasmicPastEvents.${nodeName}`;
@@ -515,7 +528,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
 
 export const PlasmicPastEvents = Object.assign(
   // Top-level PlasmicPastEvents renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("postGenrePastEvents"),
   {
     // Helper components rendering sub-elements
     navBar: makeNodeComponent("navBar"),
@@ -528,7 +541,7 @@ export const PlasmicPastEvents = Object.assign(
 
     // Page metadata
     pageMetadata: {
-      title: "",
+      title: "POST GENRE - PAST EVENTS",
       description: "",
       ogImageSrc: "",
       canonical: ""

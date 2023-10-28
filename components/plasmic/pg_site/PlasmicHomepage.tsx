@@ -43,8 +43,9 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import NavBar from "../../NavBar"; // plasmic-import: zoXit50v16ZA/component
+import Card from "../../Card"; // plasmic-import: at931Xm9Xbfa/component
+import Footer from "../../Footer"; // plasmic-import: MMCuprZ7Cbs1/component
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources"; // plasmic-import: J9NgeB3kJyHt/codeComponent
-import Button from "../../Button"; // plasmic-import: n3nqd4CSh5rs/component
 
 import { useScreenVariants as useScreenVariantst9JqZjUtfPcp } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: t9JQZjUtfPcp/globalVariant
 
@@ -56,8 +57,6 @@ import projectcss from "./plasmic_pg_site.module.css"; // plasmic-import: oATn9W
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: tlpzCrm3llBR/css
 
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: nFzhwZ1Z9pNS/icon
-import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: yirDa_5F6M9M/icon
-import Icon2Icon from "./icons/PlasmicIcon__Icon2"; // plasmic-import: xTB-MTwf7uLF/icon
 
 createPlasmicElementProxy;
 
@@ -71,15 +70,15 @@ type ArgPropType = keyof PlasmicHomepage__ArgsType;
 export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
-  root?: p.Flex<"div">;
+  postGenre?: p.Flex<"div">;
   navBar?: p.Flex<typeof NavBar>;
   mainPage?: p.Flex<"section">;
   svg?: p.Flex<"svg">;
   whatIsPostGenre?: p.Flex<"section">;
   liveFromOakland?: p.Flex<"section">;
-  section?: p.Flex<"section">;
-  dataFetcher?: p.Flex<typeof Fetcher>;
-  button?: p.Flex<typeof Button>;
+  upcomingEvents?: p.Flex<"section">;
+  allArtists?: p.Flex<typeof Card>;
+  footer?: p.Flex<typeof Footer>;
 };
 
 export interface DefaultHomepageProps {}
@@ -129,6 +128,16 @@ function PlasmicHomepage__RenderFunc(props: {
         invalidatedKeys: null,
         roleId: null
       };
+    }),
+    events: usePlasmicDataOp(() => {
+      return {
+        sourceId: "8ePA6ZChMTTHShz67XBagq",
+        opId: "4423ec1e-ef1e-455f-88e3-ebae366c58c4",
+        userArgs: {},
+        cacheKey: `plasmic.$.4423ec1e-ef1e-455f-88e3-ebae366c58c4.$.`,
+        invalidatedKeys: null,
+        roleId: null
+      };
     })
   };
   if (Object.keys(new$Queries).some(k => new$Queries[k] !== $queries[k])) {
@@ -143,7 +152,20 @@ function PlasmicHomepage__RenderFunc(props: {
 
   return (
     <React.Fragment>
-      <Head></Head>
+      <Head>
+        <meta name="twitter:card" content="summary" />
+        <title key="title">{PlasmicHomepage.pageMetadata.title}</title>
+        <meta
+          key="og:title"
+          property="og:title"
+          content={PlasmicHomepage.pageMetadata.title}
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={PlasmicHomepage.pageMetadata.title}
+        />
+      </Head>
 
       <style>{`
         body {
@@ -153,8 +175,8 @@ function PlasmicHomepage__RenderFunc(props: {
 
       <div className={projectcss.plasmic_page_wrapper}>
         <div
-          data-plasmic-name={"root"}
-          data-plasmic-override={overrides.root}
+          data-plasmic-name={"postGenre"}
+          data-plasmic-override={overrides.postGenre}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
           className={classNames(
@@ -165,7 +187,7 @@ function PlasmicHomepage__RenderFunc(props: {
             projectcss.plasmic_tokens,
             plasmic_antd_5_hostless_css.plasmic_tokens,
             plasmic_plasmic_rich_components_css.plasmic_tokens,
-            sty.root
+            sty.postGenre
           )}
         >
           <NavBar
@@ -387,14 +409,33 @@ function PlasmicHomepage__RenderFunc(props: {
             </p.PlasmicLink>
           </section>
           <section
-            data-plasmic-name={"section"}
-            data-plasmic-override={overrides.section}
-            className={classNames(projectcss.all, sty.section)}
+            data-plasmic-name={"upcomingEvents"}
+            data-plasmic-override={overrides.upcomingEvents}
+            className={classNames(projectcss.all, sty.upcomingEvents)}
           >
+            <h1
+              className={classNames(
+                projectcss.all,
+                projectcss.h1,
+                projectcss.__wab_text,
+                sty.h1__x1V99
+              )}
+            >
+              <React.Fragment>
+                <span
+                  className={"plasmic_default__all plasmic_default__span"}
+                  style={{ fontWeight: 700 }}
+                >
+                  {"Upcoming Events"}
+                </span>
+              </React.Fragment>
+            </h1>
             {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
               (() => {
                 try {
-                  return $queries.query.data[0].Logo[0].url;
+                  return $queries.events.data
+                    .filter(event => new Date(event.Date) > new Date())
+                    .sort((a, b) => new Date(a.Date) - new Date(b.Date));
                 } catch (e) {
                   if (
                     e instanceof TypeError ||
@@ -409,41 +450,208 @@ function PlasmicHomepage__RenderFunc(props: {
               const currentItem = __plasmic_item_0;
               const currentIndex = __plasmic_idx_0;
               return (
-                <Fetcher
-                  data-plasmic-name={"dataFetcher"}
-                  data-plasmic-override={overrides.dataFetcher}
-                  className={classNames("__wab_instance", sty.dataFetcher)}
-                  dataOp={{
-                    sourceId: "8ePA6ZChMTTHShz67XBagq",
-                    opId: "25065026-b37d-44eb-921f-4802a41c670d",
-                    userArgs: {},
-                    cacheKey: `plasmic.$.4Fm_S-lj2BBv.$.25065026-b37d-44eb-921f-4802a41c670d.$.`,
-                    invalidatedKeys: null,
-                    roleId: null
-                  }}
+                <Card
+                  data-plasmic-name={"allArtists"}
+                  data-plasmic-override={overrides.allArtists}
+                  className={classNames("__wab_instance", sty.allArtists)}
                   key={currentIndex}
-                  queries={$queries}
+                  noTitle={true}
+                  title={"Card title"}
                 >
-                  {($queries: any) => (
+                  <p.PlasmicLink
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      sty.link__yfvQn
+                    )}
+                    component={Link}
+                    href={(() => {
+                      try {
+                        return "/events/" + currentItem.slug;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                    onClick={async event => {
+                      const $steps = {};
+
+                      $steps["goToPage"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              destination: (() => {
+                                try {
+                                  return "/" + currentItem.slug;
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return undefined;
+                                  }
+                                  throw e;
+                                }
+                              })()
+                            };
+                            return (({ destination }) => {
+                              if (
+                                typeof destination === "string" &&
+                                destination.startsWith("#")
+                              ) {
+                                document
+                                  .getElementById(destination.substr(1))
+                                  .scrollIntoView({ behavior: "smooth" });
+                              } else {
+                                __nextRouter?.push(destination);
+                              }
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["goToPage"] != null &&
+                        typeof $steps["goToPage"] === "object" &&
+                        typeof $steps["goToPage"].then === "function"
+                      ) {
+                        $steps["goToPage"] = await $steps["goToPage"];
+                      }
+                    }}
+                    platform={"nextjs"}
+                  >
                     <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__ljsdU
-                      )}
+                      className={classNames(projectcss.all, sty.freeBox__g8Dgx)}
                     >
-                      {"Enter some text"}
+                      <p.PlasmicImg
+                        alt={""}
+                        className={classNames(sty.img__gdke)}
+                        displayHeight={"auto"}
+                        displayMaxHeight={"90px"}
+                        displayMaxWidth={"35%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"200px"}
+                        loading={"lazy"}
+                        src={(() => {
+                          try {
+                            return currentItem.Photo[0].url;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return undefined;
+                            }
+                            throw e;
+                          }
+                        })()}
+                      />
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__vpqZt
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__uWcUm
+                          )}
+                        >
+                          <React.Fragment>
+                            {(() => {
+                              try {
+                                return currentItem.EventName;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return "something here";
+                                }
+                                throw e;
+                              }
+                            })()}
+                          </React.Fragment>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__zmLpO
+                          )}
+                        >
+                          <React.Fragment>
+                            {(() => {
+                              try {
+                                return currentItem["Location Name"];
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return "something here";
+                                }
+                                throw e;
+                              }
+                            })()}
+                          </React.Fragment>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__gMwK
+                          )}
+                        >
+                          <React.Fragment>
+                            {(() => {
+                              try {
+                                return (() => {
+                                  const date = new Date(currentItem.Date);
+                                  const options = {
+                                    hour: "numeric",
+                                    minute: "numeric",
+                                    weekday: "long",
+                                    month: "short",
+                                    day: "numeric",
+                                    year: "2-digit"
+                                  };
+                                  const formattedDate = date.toLocaleDateString(
+                                    "en-US",
+                                    options
+                                  );
+                                  return formattedDate.replace(",", "");
+                                })();
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return "something here";
+                                }
+                                throw e;
+                              }
+                            })()}
+                          </React.Fragment>
+                        </div>
+                      </div>
                     </div>
-                  )}
-                </Fetcher>
+                  </p.PlasmicLink>
+                </Card>
               );
             })}
           </section>
-          <Button
-            data-plasmic-name={"button"}
-            data-plasmic-override={overrides.button}
-            className={classNames("__wab_instance", sty.button)}
-            link={`/artists`}
+          <Footer
+            data-plasmic-name={"footer"}
+            data-plasmic-override={overrides.footer}
+            className={classNames("__wab_instance", sty.footer)}
           />
         </div>
       </div>
@@ -452,39 +660,39 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: [
-    "root",
+  postGenre: [
+    "postGenre",
     "navBar",
     "mainPage",
     "svg",
     "whatIsPostGenre",
     "liveFromOakland",
-    "section",
-    "dataFetcher",
-    "button"
+    "upcomingEvents",
+    "allArtists",
+    "footer"
   ],
   navBar: ["navBar"],
   mainPage: ["mainPage", "svg"],
   svg: ["svg"],
   whatIsPostGenre: ["whatIsPostGenre"],
   liveFromOakland: ["liveFromOakland"],
-  section: ["section", "dataFetcher"],
-  dataFetcher: ["dataFetcher"],
-  button: ["button"]
+  upcomingEvents: ["upcomingEvents", "allArtists"],
+  allArtists: ["allArtists"],
+  footer: ["footer"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
-  root: "div";
+  postGenre: "div";
   navBar: typeof NavBar;
   mainPage: "section";
   svg: "svg";
   whatIsPostGenre: "section";
   liveFromOakland: "section";
-  section: "section";
-  dataFetcher: typeof Fetcher;
-  button: typeof Button;
+  upcomingEvents: "section";
+  allArtists: typeof Card;
+  footer: typeof Footer;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -534,7 +742,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "postGenre") {
     func.displayName = "PlasmicHomepage";
   } else {
     func.displayName = `PlasmicHomepage.${nodeName}`;
@@ -544,7 +752,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
 
 export const PlasmicHomepage = Object.assign(
   // Top-level PlasmicHomepage renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("postGenre"),
   {
     // Helper components rendering sub-elements
     navBar: makeNodeComponent("navBar"),
@@ -552,9 +760,9 @@ export const PlasmicHomepage = Object.assign(
     svg: makeNodeComponent("svg"),
     whatIsPostGenre: makeNodeComponent("whatIsPostGenre"),
     liveFromOakland: makeNodeComponent("liveFromOakland"),
-    section: makeNodeComponent("section"),
-    dataFetcher: makeNodeComponent("dataFetcher"),
-    button: makeNodeComponent("button"),
+    upcomingEvents: makeNodeComponent("upcomingEvents"),
+    allArtists: makeNodeComponent("allArtists"),
+    footer: makeNodeComponent("footer"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
@@ -562,7 +770,7 @@ export const PlasmicHomepage = Object.assign(
 
     // Page metadata
     pageMetadata: {
-      title: "",
+      title: "POST GENRE",
       description: "",
       ogImageSrc: "",
       canonical: ""
