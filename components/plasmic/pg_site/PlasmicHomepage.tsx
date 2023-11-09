@@ -44,7 +44,7 @@ import {
 } from "@plasmicapp/react-web";
 import NavBar from "../../NavBar"; // plasmic-import: zoXit50v16ZA/component
 import Card from "../../Card"; // plasmic-import: at931Xm9Xbfa/component
-import Footer from "../../Footer"; // plasmic-import: MMCuprZ7Cbs1/component
+import Footer2 from "../../Footer2"; // plasmic-import: DUd-yxFV_3vR/component
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources"; // plasmic-import: J9NgeB3kJyHt/codeComponent
 
 import { useScreenVariants as useScreenVariantst9JqZjUtfPcp } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: t9JQZjUtfPcp/globalVariant
@@ -55,8 +55,6 @@ import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostl
 import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic_pg_site.module.css"; // plasmic-import: oATn9WrAqtDeaLtJDt8hxD/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: tlpzCrm3llBR/css
-
-import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: nFzhwZ1Z9pNS/icon
 
 createPlasmicElementProxy;
 
@@ -73,12 +71,20 @@ export type PlasmicHomepage__OverridesType = {
   postGenre?: p.Flex<"div">;
   navBar?: p.Flex<typeof NavBar>;
   mainPage?: p.Flex<"section">;
-  svg?: p.Flex<"svg">;
-  whatIsPostGenre?: p.Flex<"section">;
-  liveFromOakland?: p.Flex<"section">;
   upcomingEvents?: p.Flex<"section">;
+  h1?: p.Flex<"h1">;
   allArtists?: p.Flex<typeof Card>;
-  footer?: p.Flex<typeof Footer>;
+  link?: p.Flex<"a"> & Partial<LinkProps>;
+  whatis?: p.Flex<"section">;
+  figmaPaste2?: p.Flex<"div">;
+  rectangle38940?: p.Flex<"div">;
+  rectangle38941?: p.Flex<"div">;
+  rectangle38942?: p.Flex<"div">;
+  section?: p.Flex<"section">;
+  figmaPaste3?: p.Flex<"div">;
+  rectangle38944?: p.Flex<"div">;
+  rectangle38945?: p.Flex<"div">;
+  footer2?: p.Flex<typeof Footer2>;
 };
 
 export interface DefaultHomepageProps {}
@@ -135,6 +141,16 @@ function PlasmicHomepage__RenderFunc(props: {
         opId: "4423ec1e-ef1e-455f-88e3-ebae366c58c4",
         userArgs: {},
         cacheKey: `plasmic.$.4423ec1e-ef1e-455f-88e3-ebae366c58c4.$.`,
+        invalidatedKeys: null,
+        roleId: null
+      };
+    }),
+    site: usePlasmicDataOp(() => {
+      return {
+        sourceId: "8ePA6ZChMTTHShz67XBagq",
+        opId: "d0e69f30-cffc-49d6-8f61-a6c259079ca8",
+        userArgs: {},
+        cacheKey: `plasmic.$.d0e69f30-cffc-49d6-8f61-a6c259079ca8.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -204,8 +220,8 @@ function PlasmicHomepage__RenderFunc(props: {
             <p.PlasmicImg
               alt={""}
               className={classNames(sty.img__mzptP)}
-              displayHeight={"auto"}
-              displayMaxHeight={"500px"}
+              displayHeight={"90vh"}
+              displayMaxHeight={"90vh"}
               displayMaxWidth={"100%"}
               displayMinHeight={"0"}
               displayMinWidth={"0"}
@@ -218,440 +234,384 @@ function PlasmicHomepage__RenderFunc(props: {
                 aspectRatio: undefined
               }}
             />
-
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__y3Gu
-              )}
-            >
-              {"ELEVATING OAKLAND\u2019S\nMUSIC SCENE"}
-            </div>
-            <IconIcon
-              data-plasmic-name={"svg"}
-              data-plasmic-override={overrides.svg}
-              className={classNames(projectcss.all, sty.svg)}
-              onClick={async event => {
-                const $steps = {};
-
-                $steps["goToWhat"] = true
-                  ? (() => {
-                      const actionArgs = { destination: "#what" };
-                      return (({ destination }) => {
-                        if (
-                          typeof destination === "string" &&
-                          destination.startsWith("#")
-                        ) {
-                          document
-                            .getElementById(destination.substr(1))
-                            .scrollIntoView({ behavior: "smooth" });
-                        } else {
-                          __nextRouter?.push(destination);
-                        }
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
-                if (
-                  $steps["goToWhat"] != null &&
-                  typeof $steps["goToWhat"] === "object" &&
-                  typeof $steps["goToWhat"].then === "function"
-                ) {
-                  $steps["goToWhat"] = await $steps["goToWhat"];
-                }
-              }}
-              role={"img"}
-            />
-          </section>
-          <section
-            data-plasmic-name={"whatIsPostGenre"}
-            data-plasmic-override={overrides.whatIsPostGenre}
-            className={classNames(projectcss.all, sty.whatIsPostGenre)}
-            id={"whatis"}
-          >
-            <h1
-              className={classNames(
-                projectcss.all,
-                projectcss.h1,
-                projectcss.__wab_text,
-                sty.h1__pIqe6
-              )}
-            >
-              {"what is Post Genre?"}
-            </h1>
-            <p.PlasmicImg
-              alt={""}
-              className={classNames(sty.img__qeXfy)}
-              displayHeight={"auto"}
-              displayMaxHeight={"none"}
-              displayMaxWidth={"100%"}
-              displayMinHeight={"0"}
-              displayMinWidth={"0"}
-              displayWidth={"auto"}
-              loading={"lazy"}
-              src={{
-                src: "/plasmic/pg_site/images/image.png",
-                fullWidth: 718,
-                fullHeight: 514,
-                aspectRatio: undefined
-              }}
-            />
-
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text___5BaGj
-              )}
-            >
-              <React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ fontWeight: 700 }}
-                >
-                  {"Post Genre"}
-                </span>
-                <React.Fragment>
-                  {
-                    " is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-                  }
-                </React.Fragment>
-              </React.Fragment>
-            </div>
-            <p.PlasmicLink
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                projectcss.__wab_text,
-                sty.link___6FSq
-              )}
-              component={Link}
-              href={"/team"}
-              platform={"nextjs"}
-            >
-              {"Learn More"}
-            </p.PlasmicLink>
-          </section>
-          <section
-            data-plasmic-name={"liveFromOakland"}
-            data-plasmic-override={overrides.liveFromOakland}
-            className={classNames(projectcss.all, sty.liveFromOakland)}
-          >
-            <h1
-              className={classNames(
-                projectcss.all,
-                projectcss.h1,
-                projectcss.__wab_text,
-                sty.h1__tpWXo
-              )}
-            >
-              <React.Fragment>
-                <React.Fragment>{"Live From Oakland "}</React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ fontWeight: 700 }}
-                >
-                  {"concert series"}
-                </span>
-              </React.Fragment>
-            </h1>
-            <p.PlasmicImg
-              alt={""}
-              className={classNames(sty.img__geOdk)}
-              displayHeight={"auto"}
-              displayMaxHeight={"none"}
-              displayMaxWidth={"100%"}
-              displayMinHeight={"0"}
-              displayMinWidth={"0"}
-              displayWidth={"auto"}
-              loading={"lazy"}
-              src={{
-                src: "/plasmic/pg_site/images/image.png",
-                fullWidth: 718,
-                fullHeight: 514,
-                aspectRatio: undefined
-              }}
-            />
-
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__frWix
-              )}
-            >
-              <React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ fontWeight: 700 }}
-                >
-                  {"Post Genre"}
-                </span>
-                <React.Fragment>
-                  {
-                    " is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-                  }
-                </React.Fragment>
-              </React.Fragment>
-            </div>
-            <p.PlasmicLink
-              className={classNames(
-                projectcss.all,
-                projectcss.a,
-                projectcss.__wab_text,
-                sty.link__tLx9R
-              )}
-              component={Link}
-              href={"/live-from-oakland"}
-              platform={"nextjs"}
-            >
-              {"Learn More"}
-            </p.PlasmicLink>
           </section>
           <section
             data-plasmic-name={"upcomingEvents"}
             data-plasmic-override={overrides.upcomingEvents}
             className={classNames(projectcss.all, sty.upcomingEvents)}
           >
-            <h1
-              className={classNames(
-                projectcss.all,
-                projectcss.h1,
-                projectcss.__wab_text,
-                sty.h1__x1V99
-              )}
-            >
-              <React.Fragment>
-                <span
-                  className={"plasmic_default__all plasmic_default__span"}
-                  style={{ fontWeight: 700 }}
-                >
-                  {"Upcoming Events"}
-                </span>
-              </React.Fragment>
-            </h1>
-            {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
-              (() => {
-                try {
-                  return $queries.events.data
-                    .filter(event => new Date(event.Date) > new Date())
-                    .sort((a, b) => new Date(a.Date) - new Date(b.Date));
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return [];
+            <div className={classNames(projectcss.all, sty.freeBox__wTiqA)}>
+              <h1
+                data-plasmic-name={"h1"}
+                data-plasmic-override={overrides.h1}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h1,
+                  projectcss.__wab_text,
+                  sty.h1
+                )}
+              >
+                <React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700 }}
+                  >
+                    {"Upcoming Events"}
+                  </span>
+                </React.Fragment>
+              </h1>
+              {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+                (() => {
+                  try {
+                    return $queries.events.data
+                      .filter(event => new Date(event.Date) > new Date())
+                      .sort((a, b) => new Date(a.Date) - new Date(b.Date));
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return [];
+                    }
+                    throw e;
                   }
-                  throw e;
-                }
-              })()
-            ).map((__plasmic_item_0, __plasmic_idx_0) => {
-              const currentItem = __plasmic_item_0;
-              const currentIndex = __plasmic_idx_0;
-              return (
-                <Card
-                  data-plasmic-name={"allArtists"}
-                  data-plasmic-override={overrides.allArtists}
-                  className={classNames("__wab_instance", sty.allArtists)}
-                  key={currentIndex}
-                  noTitle={true}
-                  title={"Card title"}
-                >
-                  <p.PlasmicLink
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.a,
-                      sty.link__yfvQn
-                    )}
-                    component={Link}
-                    href={(() => {
-                      try {
-                        return "/events/" + currentItem.slug;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return undefined;
+                })()
+              ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                const currentItem = __plasmic_item_0;
+                const currentIndex = __plasmic_idx_0;
+                return (
+                  <Card
+                    data-plasmic-name={"allArtists"}
+                    data-plasmic-override={overrides.allArtists}
+                    className={classNames("__wab_instance", sty.allArtists)}
+                    key={currentIndex}
+                    noTitle={true}
+                    title={"Card title"}
+                  >
+                    <p.PlasmicLink
+                      data-plasmic-name={"link"}
+                      data-plasmic-override={overrides.link}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.link
+                      )}
+                      component={Link}
+                      href={(() => {
+                        try {
+                          return "/events/" + currentItem.slug;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
                         }
-                        throw e;
-                      }
-                    })()}
-                    onClick={async event => {
-                      const $steps = {};
+                      })()}
+                      onClick={async event => {
+                        const $steps = {};
 
-                      $steps["goToPage"] = true
-                        ? (() => {
-                            const actionArgs = {
-                              destination: (() => {
+                        $steps["goToPage"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                destination: (() => {
+                                  try {
+                                    return "/" + currentItem.slug;
+                                  } catch (e) {
+                                    if (
+                                      e instanceof TypeError ||
+                                      e?.plasmicType ===
+                                        "PlasmicUndefinedDataError"
+                                    ) {
+                                      return undefined;
+                                    }
+                                    throw e;
+                                  }
+                                })()
+                              };
+                              return (({ destination }) => {
+                                if (
+                                  typeof destination === "string" &&
+                                  destination.startsWith("#")
+                                ) {
+                                  document
+                                    .getElementById(destination.substr(1))
+                                    .scrollIntoView({ behavior: "smooth" });
+                                } else {
+                                  __nextRouter?.push(destination);
+                                }
+                              })?.apply(null, [actionArgs]);
+                            })()
+                          : undefined;
+                        if (
+                          $steps["goToPage"] != null &&
+                          typeof $steps["goToPage"] === "object" &&
+                          typeof $steps["goToPage"].then === "function"
+                        ) {
+                          $steps["goToPage"] = await $steps["goToPage"];
+                        }
+                      }}
+                      platform={"nextjs"}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__g8Dgx
+                        )}
+                      >
+                        <p.PlasmicImg
+                          alt={""}
+                          className={classNames(sty.img__gdke)}
+                          displayHeight={"auto"}
+                          displayMaxHeight={"90px"}
+                          displayMaxWidth={"35%"}
+                          displayMinHeight={"0"}
+                          displayMinWidth={"0"}
+                          displayWidth={"200px"}
+                          loading={"lazy"}
+                          src={(() => {
+                            try {
+                              return currentItem.Photo[0].url;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return undefined;
+                              }
+                              throw e;
+                            }
+                          })()}
+                        />
+
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            sty.freeBox__vpqZt
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__uWcUm
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
                                 try {
-                                  return "/" + currentItem.slug;
+                                  return currentItem.EventName;
                                 } catch (e) {
                                   if (
                                     e instanceof TypeError ||
                                     e?.plasmicType ===
                                       "PlasmicUndefinedDataError"
                                   ) {
-                                    return undefined;
+                                    return "something here";
                                   }
                                   throw e;
                                 }
-                              })()
-                            };
-                            return (({ destination }) => {
-                              if (
-                                typeof destination === "string" &&
-                                destination.startsWith("#")
-                              ) {
-                                document
-                                  .getElementById(destination.substr(1))
-                                  .scrollIntoView({ behavior: "smooth" });
-                              } else {
-                                __nextRouter?.push(destination);
-                              }
-                            })?.apply(null, [actionArgs]);
-                          })()
-                        : undefined;
-                      if (
-                        $steps["goToPage"] != null &&
-                        typeof $steps["goToPage"] === "object" &&
-                        typeof $steps["goToPage"].then === "function"
-                      ) {
-                        $steps["goToPage"] = await $steps["goToPage"];
-                      }
-                    }}
-                    platform={"nextjs"}
-                  >
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__g8Dgx)}
-                    >
-                      <p.PlasmicImg
-                        alt={""}
-                        className={classNames(sty.img__gdke)}
-                        displayHeight={"auto"}
-                        displayMaxHeight={"90px"}
-                        displayMaxWidth={"35%"}
-                        displayMinHeight={"0"}
-                        displayMinWidth={"0"}
-                        displayWidth={"200px"}
-                        loading={"lazy"}
-                        src={(() => {
-                          try {
-                            return currentItem.Photo[0].url;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return undefined;
-                            }
-                            throw e;
-                          }
-                        })()}
-                      />
-
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__vpqZt
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__uWcUm
-                          )}
-                        >
-                          <React.Fragment>
-                            {(() => {
-                              try {
-                                return currentItem.EventName;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return "something here";
+                              })()}
+                            </React.Fragment>
+                          </div>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__zmLpO
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return currentItem["Location Name"];
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "something here";
+                                  }
+                                  throw e;
                                 }
-                                throw e;
-                              }
-                            })()}
-                          </React.Fragment>
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__zmLpO
-                          )}
-                        >
-                          <React.Fragment>
-                            {(() => {
-                              try {
-                                return currentItem["Location Name"];
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return "something here";
+                              })()}
+                            </React.Fragment>
+                          </div>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__gMwK
+                            )}
+                          >
+                            <React.Fragment>
+                              {(() => {
+                                try {
+                                  return (() => {
+                                    const date = new Date(currentItem.Date);
+                                    const options = {
+                                      hour: "numeric",
+                                      minute: "numeric",
+                                      weekday: "long",
+                                      month: "short",
+                                      day: "numeric",
+                                      year: "2-digit"
+                                    };
+                                    const formattedDate =
+                                      date.toLocaleDateString("en-US", options);
+                                    return formattedDate.replace(",", "");
+                                  })();
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "something here";
+                                  }
+                                  throw e;
                                 }
-                                throw e;
-                              }
-                            })()}
-                          </React.Fragment>
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__gMwK
-                          )}
-                        >
-                          <React.Fragment>
-                            {(() => {
-                              try {
-                                return (() => {
-                                  const date = new Date(currentItem.Date);
-                                  const options = {
-                                    hour: "numeric",
-                                    minute: "numeric",
-                                    weekday: "long",
-                                    month: "short",
-                                    day: "numeric",
-                                    year: "2-digit"
-                                  };
-                                  const formattedDate = date.toLocaleDateString(
-                                    "en-US",
-                                    options
-                                  );
-                                  return formattedDate.replace(",", "");
-                                })();
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return "something here";
-                                }
-                                throw e;
-                              }
-                            })()}
-                          </React.Fragment>
+                              })()}
+                            </React.Fragment>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </p.PlasmicLink>
-                </Card>
-              );
-            })}
+                    </p.PlasmicLink>
+                  </Card>
+                );
+              })}
+            </div>
           </section>
-          <Footer
-            data-plasmic-name={"footer"}
-            data-plasmic-override={overrides.footer}
-            className={classNames("__wab_instance", sty.footer)}
+          <section
+            data-plasmic-name={"whatis"}
+            data-plasmic-override={overrides.whatis}
+            className={classNames(projectcss.all, sty.whatis)}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__vwnfG
+              )}
+            >
+              {"WHAT IS \nPOST GENRE?"}
+            </div>
+            <div
+              data-plasmic-name={"figmaPaste2"}
+              data-plasmic-override={overrides.figmaPaste2}
+              className={classNames(projectcss.all, sty.figmaPaste2)}
+            >
+              <div
+                data-plasmic-name={"rectangle38940"}
+                data-plasmic-override={overrides.rectangle38940}
+                className={classNames(projectcss.all, sty.rectangle38940)}
+              />
+
+              <div
+                data-plasmic-name={"rectangle38941"}
+                data-plasmic-override={overrides.rectangle38941}
+                className={classNames(projectcss.all, sty.rectangle38941)}
+              />
+
+              <div
+                data-plasmic-name={"rectangle38942"}
+                data-plasmic-override={overrides.rectangle38942}
+                className={classNames(projectcss.all, sty.rectangle38942)}
+              />
+            </div>
+          </section>
+          <section
+            data-plasmic-name={"section"}
+            data-plasmic-override={overrides.section}
+            className={classNames(projectcss.all, sty.section)}
+          >
+            <div
+              data-plasmic-name={"figmaPaste3"}
+              data-plasmic-override={overrides.figmaPaste3}
+              className={classNames(projectcss.all, sty.figmaPaste3)}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text___2B0Js
+                )}
+              >
+                <React.Fragment>
+                  <span
+                    className={"plasmic_default__all plasmic_default__span"}
+                    style={{ fontWeight: 700 }}
+                  >
+                    {"Post Genre"}
+                  </span>
+                  <React.Fragment>
+                    {
+                      "  is a mission driven organization focused on connecting the Oakland music scene with its larger community. We believe the connective quality of live music can be used as a tool to redefine a more vibrant and resilient artistic culture in Pittsburgh.\u00a0\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                    }
+                  </React.Fragment>
+                </React.Fragment>
+              </div>
+              <div
+                data-plasmic-name={"rectangle38944"}
+                data-plasmic-override={overrides.rectangle38944}
+                className={classNames(projectcss.all, sty.rectangle38944)}
+              />
+
+              <div
+                data-plasmic-name={"rectangle38945"}
+                data-plasmic-override={overrides.rectangle38945}
+                className={classNames(projectcss.all, sty.rectangle38945)}
+              />
+
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__rleut
+                )}
+              >
+                {
+                  "Our \u201csteel city\u201d was an industrial backbone to the growing United States, and now as the country evolves toward healthcare and technology, Pittsburgh is moving with it. As we grow and gain access to more resources, Post-Genre aims to protect and develop our cities\u2019 cultural roots. That means reminding people of the value of art: in bringing beauty to the community, and in showing each other that we are not alone.\n\n\n\n\n\n\n\n\n\n\n\n"
+                }
+              </div>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__uNq2
+                )}
+              >
+                {
+                  "So what type of music do we support? We believe in the artists who don\u2019t fit into a single category, because life can\u2019t be defined in just one category, and creation stems from the human experience. No person is just one thing \u2013 good, bad, serious, or sad. All of us are all of those things, and as music is a reflection of life, we support the artists who are sharing their own truths, no matter what they sound like, in the hopes that it might bring us a little bit closer."
+                }
+              </div>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__zlYLz
+                )}
+              >
+                {"Roots"}
+              </div>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__djWoF
+                )}
+              >
+                {"All Genres"}
+              </div>
+            </div>
+          </section>
+          <Footer2
+            data-plasmic-name={"footer2"}
+            data-plasmic-override={overrides.footer2}
+            className={classNames("__wab_instance", sty.footer2)}
           />
         </div>
       </div>
@@ -664,21 +624,48 @@ const PlasmicDescendants = {
     "postGenre",
     "navBar",
     "mainPage",
-    "svg",
-    "whatIsPostGenre",
-    "liveFromOakland",
     "upcomingEvents",
+    "h1",
     "allArtists",
-    "footer"
+    "link",
+    "whatis",
+    "figmaPaste2",
+    "rectangle38940",
+    "rectangle38941",
+    "rectangle38942",
+    "section",
+    "figmaPaste3",
+    "rectangle38944",
+    "rectangle38945",
+    "footer2"
   ],
   navBar: ["navBar"],
-  mainPage: ["mainPage", "svg"],
-  svg: ["svg"],
-  whatIsPostGenre: ["whatIsPostGenre"],
-  liveFromOakland: ["liveFromOakland"],
-  upcomingEvents: ["upcomingEvents", "allArtists"],
-  allArtists: ["allArtists"],
-  footer: ["footer"]
+  mainPage: ["mainPage"],
+  upcomingEvents: ["upcomingEvents", "h1", "allArtists", "link"],
+  h1: ["h1"],
+  allArtists: ["allArtists", "link"],
+  link: ["link"],
+  whatis: [
+    "whatis",
+    "figmaPaste2",
+    "rectangle38940",
+    "rectangle38941",
+    "rectangle38942"
+  ],
+  figmaPaste2: [
+    "figmaPaste2",
+    "rectangle38940",
+    "rectangle38941",
+    "rectangle38942"
+  ],
+  rectangle38940: ["rectangle38940"],
+  rectangle38941: ["rectangle38941"],
+  rectangle38942: ["rectangle38942"],
+  section: ["section", "figmaPaste3", "rectangle38944", "rectangle38945"],
+  figmaPaste3: ["figmaPaste3", "rectangle38944", "rectangle38945"],
+  rectangle38944: ["rectangle38944"],
+  rectangle38945: ["rectangle38945"],
+  footer2: ["footer2"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -687,12 +674,20 @@ type NodeDefaultElementType = {
   postGenre: "div";
   navBar: typeof NavBar;
   mainPage: "section";
-  svg: "svg";
-  whatIsPostGenre: "section";
-  liveFromOakland: "section";
   upcomingEvents: "section";
+  h1: "h1";
   allArtists: typeof Card;
-  footer: typeof Footer;
+  link: "a";
+  whatis: "section";
+  figmaPaste2: "div";
+  rectangle38940: "div";
+  rectangle38941: "div";
+  rectangle38942: "div";
+  section: "section";
+  figmaPaste3: "div";
+  rectangle38944: "div";
+  rectangle38945: "div";
+  footer2: typeof Footer2;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -729,7 +724,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
       () =>
         deriveRenderOpts(props, {
           name: nodeName,
-          descendantNames: [...PlasmicDescendants[nodeName]],
+          descendantNames: PlasmicDescendants[nodeName],
           internalArgPropNames: PlasmicHomepage__ArgProps,
           internalVariantPropNames: PlasmicHomepage__VariantProps
         }),
@@ -757,12 +752,20 @@ export const PlasmicHomepage = Object.assign(
     // Helper components rendering sub-elements
     navBar: makeNodeComponent("navBar"),
     mainPage: makeNodeComponent("mainPage"),
-    svg: makeNodeComponent("svg"),
-    whatIsPostGenre: makeNodeComponent("whatIsPostGenre"),
-    liveFromOakland: makeNodeComponent("liveFromOakland"),
     upcomingEvents: makeNodeComponent("upcomingEvents"),
+    h1: makeNodeComponent("h1"),
     allArtists: makeNodeComponent("allArtists"),
-    footer: makeNodeComponent("footer"),
+    link: makeNodeComponent("link"),
+    whatis: makeNodeComponent("whatis"),
+    figmaPaste2: makeNodeComponent("figmaPaste2"),
+    rectangle38940: makeNodeComponent("rectangle38940"),
+    rectangle38941: makeNodeComponent("rectangle38941"),
+    rectangle38942: makeNodeComponent("rectangle38942"),
+    section: makeNodeComponent("section"),
+    figmaPaste3: makeNodeComponent("figmaPaste3"),
+    rectangle38944: makeNodeComponent("rectangle38944"),
+    rectangle38945: makeNodeComponent("rectangle38945"),
+    footer2: makeNodeComponent("footer2"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

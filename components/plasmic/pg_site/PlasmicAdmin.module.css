@@ -39,9 +39,6 @@
 .img > picture > img {
   object-fit: cover;
 }
-.img > :global(.__wab_img-spacer) > img {
-  object-fit: cover;
-}
 .h1__i2Y6T {
   position: relative;
   width: 100%;

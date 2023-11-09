@@ -38,9 +38,6 @@
 .img__eWmLj > picture > img {
   object-fit: cover;
 }
-.img__eWmLj > :global(.__wab_img-spacer) > img {
-  object-fit: cover;
-}
 .h1__swAts {
   position: relative;
   width: 100%;
@@ -93,9 +90,6 @@
   flex-shrink: 0;
 }
 .img__kvjds > picture > img {
-  object-fit: cover;
-}
-.img__kvjds > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .freeBox__svEGk {

@@ -44,6 +44,7 @@ import {
 } from "@plasmicapp/react-web";
 import NavBar from "../../NavBar"; // plasmic-import: zoXit50v16ZA/component
 import Card from "../../Card"; // plasmic-import: at931Xm9Xbfa/component
+import Footer2 from "../../Footer2"; // plasmic-import: DUd-yxFV_3vR/component
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources"; // plasmic-import: J9NgeB3kJyHt/codeComponent
 
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -69,12 +70,13 @@ export type PlasmicArtistPage__OverridesType = {
   navBar?: p.Flex<typeof NavBar>;
   bandInfo?: p.Flex<"section">;
   name?: p.Flex<"section">;
+  h1?: p.Flex<"h1">;
   description?: p.Flex<"section">;
-  upcoming?: p.Flex<"section">;
-  upcomingTxt?: p.Flex<"section">;
-  links?: p.Flex<"section">;
-  linkText?: p.Flex<"section">;
-  links2?: p.Flex<"h1">;
+  about?: p.Flex<"div">;
+  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow?: p.Flex<"div">;
+  events?: p.Flex<"div">;
+  about2?: p.Flex<"div">;
+  footer2?: p.Flex<typeof Footer2>;
 };
 
 export interface DefaultArtistPageProps {}
@@ -118,7 +120,7 @@ function PlasmicArtistPage__RenderFunc(props: {
     artists: usePlasmicDataOp(() => {
       return {
         sourceId: "8ePA6ZChMTTHShz67XBagq",
-        opId: "161ebbc2-fd50-4077-b1d4-9660a2edc376",
+        opId: "d6b15012-d004-44a7-9dfc-cdaa6e6d4d80",
         userArgs: {
           filters: [$ctx.params.slug]
         },
@@ -134,7 +136,7 @@ function PlasmicArtistPage__RenderFunc(props: {
             }
             throw e;
           }
-        })()}.$.161ebbc2-fd50-4077-b1d4-9660a2edc376.$.`,
+        })()}.$.d6b15012-d004-44a7-9dfc-cdaa6e6d4d80.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -209,6 +211,19 @@ function PlasmicArtistPage__RenderFunc(props: {
           data-plasmic-override={overrides.postGenre}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
+          bkgc={(() => {
+            try {
+              return $queries.artists.data[0].Color;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return undefined;
+              }
+              throw e;
+            }
+          })()}
           className={classNames(
             projectcss.all,
             projectcss.root_reset,
@@ -230,12 +245,25 @@ function PlasmicArtistPage__RenderFunc(props: {
             data-plasmic-name={"bandInfo"}
             data-plasmic-override={overrides.bandInfo}
             className={classNames(projectcss.all, sty.bandInfo)}
+            style={(() => {
+              try {
+                return { background: $queries.artists.data[0].Color };
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return undefined;
+                }
+                throw e;
+              }
+            })()}
           >
             <p.PlasmicImg
               alt={""}
               className={classNames(sty.img__giNpW)}
-              displayHeight={"auto"}
-              displayMaxHeight={"300px"}
+              displayHeight={"100vw"}
+              displayMaxHeight={"500px"}
               displayMaxWidth={"100%"}
               displayMinHeight={"0"}
               displayMinWidth={"0"}
@@ -262,11 +290,13 @@ function PlasmicArtistPage__RenderFunc(props: {
               className={classNames(projectcss.all, sty.name)}
             >
               <h1
+                data-plasmic-name={"h1"}
+                data-plasmic-override={overrides.h1}
                 className={classNames(
                   projectcss.all,
                   projectcss.h1,
                   projectcss.__wab_text,
-                  sty.h1__kt7P8
+                  sty.h1
                 )}
               >
                 <React.Fragment>
@@ -292,249 +322,254 @@ function PlasmicArtistPage__RenderFunc(props: {
               className={classNames(projectcss.all, sty.description)}
             >
               <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__krQwt
-                )}
+                data-plasmic-name={"about"}
+                data-plasmic-override={overrides.about}
+                className={classNames(projectcss.all, sty.about)}
               >
-                <React.Fragment>
-                  {(() => {
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__nVk2F
+                  )}
+                >
+                  {"ABOUT"}
+                </div>
+                <div
+                  data-plasmic-name={
+                    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow"
+                  }
+                  data-plasmic-override={
+                    overrides.askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow
+                  }
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow
+                  )}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $queries.artists.data[0]["Band Description"];
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return 'Asked to define their genre, Funky Lamp usually resorts to "it\'s complicated." As a melting pot of funk rock, alternative, folk, indie, and punk, "it\'s complicated" might capture their sound better than any category could. Their contagious stage preference and memorable choruses see crowds dancing--and singing--along at every show.\n';
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"events"}
+                data-plasmic-override={overrides.events}
+                className={classNames(projectcss.all, sty.events)}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__xqYl6
+                  )}
+                >
+                  {"UPCOMING EVENTS"}
+                </div>
+                {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+                  (() => {
                     try {
-                      return $queries.artists.data[0]["Band Description"];
+                      return $queries.shows.data;
                     } catch (e) {
                       if (
                         e instanceof TypeError ||
                         e?.plasmicType === "PlasmicUndefinedDataError"
                       ) {
-                        return "";
+                        return [];
                       }
                       throw e;
                     }
-                  })()}
-                </React.Fragment>
-              </div>
-            </section>
-            <section
-              data-plasmic-name={"upcoming"}
-              data-plasmic-override={overrides.upcoming}
-              className={classNames(projectcss.all, sty.upcoming)}
-            >
-              <section
-                data-plasmic-name={"upcomingTxt"}
-                data-plasmic-override={overrides.upcomingTxt}
-                className={classNames(projectcss.all, sty.upcomingTxt)}
-              >
-                <h1
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.h1,
-                    projectcss.__wab_text,
-                    sty.h1__znSy
-                  )}
-                >
-                  {"UPCOMING EVENTS"}
-                </h1>
-              </section>
-              {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
-                (() => {
-                  try {
-                    return $queries.shows.data;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return [];
-                    }
-                    throw e;
-                  }
-                })()
-              ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                const currentItem = __plasmic_item_0;
-                const currentIndex = __plasmic_idx_0;
-                return (
-                  <Card
-                    className={classNames("__wab_instance", sty.card___4O1At)}
-                    key={currentIndex}
-                    noTitle={true}
-                  >
-                    <p.PlasmicLink
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.a,
-                        sty.link__unn9Z
-                      )}
-                      component={Link}
-                      href={(() => {
-                        try {
-                          return "/events/" + currentItem.slug;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return undefined;
-                          }
-                          throw e;
-                        }
-                      })()}
-                      platform={"nextjs"}
+                  })()
+                ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                  const currentItem = __plasmic_item_0;
+                  const currentIndex = __plasmic_idx_0;
+                  return (
+                    <Card
+                      className={classNames("__wab_instance", sty.card___4O1At)}
+                      key={currentIndex}
+                      noTitle={true}
                     >
-                      <div
+                      <p.PlasmicLink
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox___0A0O4
+                          projectcss.a,
+                          sty.link__unn9Z
                         )}
-                      >
-                        <p.PlasmicImg
-                          alt={""}
-                          className={classNames(sty.img___58OCa)}
-                          displayHeight={"auto"}
-                          displayMaxHeight={"90px"}
-                          displayMaxWidth={"35%"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"200px"}
-                          loading={"lazy"}
-                          src={(() => {
-                            try {
-                              return currentItem.Photo[0].url;
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return undefined;
-                              }
-                              throw e;
+                        component={Link}
+                        href={(() => {
+                          try {
+                            return "/events/" + currentItem.slug;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return undefined;
                             }
-                          })()}
-                        />
-
+                            throw e;
+                          }
+                        })()}
+                        platform={"nextjs"}
+                      >
                         <div
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox__mnV5
+                            sty.freeBox___0A0O4
                           )}
                         >
+                          <p.PlasmicImg
+                            alt={""}
+                            className={classNames(sty.img___58OCa)}
+                            displayHeight={"auto"}
+                            displayMaxHeight={"90px"}
+                            displayMaxWidth={"35%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"200px"}
+                            loading={"lazy"}
+                            src={(() => {
+                              try {
+                                return currentItem.Photo[0].url;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return undefined;
+                                }
+                                throw e;
+                              }
+                            })()}
+                          />
+
                           <div
                             className={classNames(
                               projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__duPsv
+                              sty.freeBox__mnV5
                             )}
                           >
-                            <React.Fragment>
-                              {(() => {
-                                try {
-                                  return currentItem.EventName;
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return "something here";
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__duPsv
+                              )}
+                            >
+                              <React.Fragment>
+                                {(() => {
+                                  try {
+                                    return currentItem.EventName;
+                                  } catch (e) {
+                                    if (
+                                      e instanceof TypeError ||
+                                      e?.plasmicType ===
+                                        "PlasmicUndefinedDataError"
+                                    ) {
+                                      return "something here";
+                                    }
+                                    throw e;
                                   }
-                                  throw e;
-                                }
-                              })()}
-                            </React.Fragment>
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__m0COk
-                            )}
-                          >
-                            <React.Fragment>
-                              {(() => {
-                                try {
-                                  return currentItem.Location[0];
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return "something here";
+                                })()}
+                              </React.Fragment>
+                            </div>
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__m0COk
+                              )}
+                            >
+                              <React.Fragment>
+                                {(() => {
+                                  try {
+                                    return currentItem.Location[0];
+                                  } catch (e) {
+                                    if (
+                                      e instanceof TypeError ||
+                                      e?.plasmicType ===
+                                        "PlasmicUndefinedDataError"
+                                    ) {
+                                      return "something here";
+                                    }
+                                    throw e;
                                   }
-                                  throw e;
-                                }
-                              })()}
-                            </React.Fragment>
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__sTbZn
-                            )}
-                          >
-                            <React.Fragment>
-                              {(() => {
-                                try {
-                                  return (() => {
-                                    const date = new Date(currentItem.Date);
-                                    const options = {
-                                      weekday: "long",
-                                      month: "numeric",
-                                      day: "numeric",
-                                      year: "2-digit",
-                                      hour: "numeric",
-                                      minute: "numeric",
-                                      hour12: true
-                                    };
-                                    return date.toLocaleString(
-                                      "en-US",
-                                      options
-                                    );
-                                  })();
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return "something here";
+                                })()}
+                              </React.Fragment>
+                            </div>
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__sTbZn
+                              )}
+                            >
+                              <React.Fragment>
+                                {(() => {
+                                  try {
+                                    return (() => {
+                                      const date = new Date(currentItem.Date);
+                                      const options = {
+                                        weekday: "long",
+                                        month: "numeric",
+                                        day: "numeric",
+                                        year: "2-digit",
+                                        hour: "numeric",
+                                        minute: "numeric",
+                                        hour12: true
+                                      };
+                                      return date.toLocaleString(
+                                        "en-US",
+                                        options
+                                      );
+                                    })();
+                                  } catch (e) {
+                                    if (
+                                      e instanceof TypeError ||
+                                      e?.plasmicType ===
+                                        "PlasmicUndefinedDataError"
+                                    ) {
+                                      return "something here";
+                                    }
+                                    throw e;
                                   }
-                                  throw e;
-                                }
-                              })()}
-                            </React.Fragment>
+                                })()}
+                              </React.Fragment>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </p.PlasmicLink>
-                  </Card>
-                );
-              })}
+                      </p.PlasmicLink>
+                    </Card>
+                  );
+                })}
+              </div>
             </section>
-            <section
-              data-plasmic-name={"links"}
-              data-plasmic-override={overrides.links}
-              className={classNames(projectcss.all, sty.links)}
+            <div
+              data-plasmic-name={"about2"}
+              data-plasmic-override={overrides.about2}
+              className={classNames(projectcss.all, sty.about2)}
             >
-              <section
-                data-plasmic-name={"linkText"}
-                data-plasmic-override={overrides.linkText}
-                className={classNames(projectcss.all, sty.linkText)}
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text___80RMm
+                )}
               >
-                <h1
-                  data-plasmic-name={"links2"}
-                  data-plasmic-override={overrides.links2}
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.h1,
-                    projectcss.__wab_text,
-                    sty.links2
-                  )}
-                >
-                  {"LINKS"}
-                </h1>
-              </section>
+                {"LINKS"}
+              </div>
               {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
                 (() => {
                   try {
@@ -670,7 +705,7 @@ function PlasmicArtistPage__RenderFunc(props: {
               {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
                 (() => {
                   try {
-                    return $queries.artists.data[0].SoundCloudLink;
+                    return $queries.artists.data[0]["Tidal  Link"];
                   } catch (e) {
                     if (
                       e instanceof TypeError ||
@@ -733,8 +768,431 @@ function PlasmicArtistPage__RenderFunc(props: {
                   </Card>
                 );
               })}
-            </section>
+              {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+                (() => {
+                  try {
+                    return $queries.artists.data[0].SoundCloudLink;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return [];
+                    }
+                    throw e;
+                  }
+                })()
+              ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                const currentItem = __plasmic_item_0;
+                const currentIndex = __plasmic_idx_0;
+                return (
+                  <Card
+                    className={classNames("__wab_instance", sty.card__vpEtD)}
+                    key={currentIndex}
+                    noTitle={true}
+                  >
+                    <p.PlasmicLink
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.link___7XcLs
+                      )}
+                      component={Link}
+                      href={(() => {
+                        try {
+                          return currentItem;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()}
+                      platform={"nextjs"}
+                    >
+                      {(_par =>
+                        !_par ? [] : Array.isArray(_par) ? _par : [_par])(
+                        (() => {
+                          try {
+                            return $queries.artists.data[0].SoundCloudLink;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return [];
+                            }
+                            throw e;
+                          }
+                        })()
+                      ).map((__plasmic_item_1, __plasmic_idx_1) => {
+                        const currentItem = __plasmic_item_1;
+                        const currentIndex = __plasmic_idx_1;
+                        return (
+                          <p.PlasmicImg
+                            alt={""}
+                            className={classNames(sty.img__nYe1)}
+                            displayHeight={"65px"}
+                            displayMaxHeight={"none"}
+                            displayMaxWidth={"100%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"100%"}
+                            key={currentIndex}
+                            loading={"lazy"}
+                            src={{
+                              src: "/plasmic/pg_site/images/screenshot20231108At65832PMpng.png",
+                              fullWidth: 363,
+                              fullHeight: 76,
+                              aspectRatio: undefined
+                            }}
+                          />
+                        );
+                      })}
+                    </p.PlasmicLink>
+                  </Card>
+                );
+              })}
+              {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+                (() => {
+                  try {
+                    return $queries.artists.data[0]["Instagram  Link"];
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return [];
+                    }
+                    throw e;
+                  }
+                })()
+              ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                const currentItem = __plasmic_item_0;
+                const currentIndex = __plasmic_idx_0;
+                return (
+                  <Card
+                    className={classNames("__wab_instance", sty.card__ynYzg)}
+                    key={currentIndex}
+                    noTitle={true}
+                  >
+                    <p.PlasmicLink
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.link__s7G0M
+                      )}
+                      component={Link}
+                      href={(() => {
+                        try {
+                          return currentItem;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()}
+                      platform={"nextjs"}
+                    >
+                      <p.PlasmicImg
+                        alt={""}
+                        className={classNames(sty.img__uQwtI)}
+                        displayHeight={"65px"}
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"100%"}
+                        loading={"lazy"}
+                        src={{
+                          src: "/plasmic/pg_site/images/screenshot20231108At65917PMpng.png",
+                          fullWidth: 1037,
+                          fullHeight: 209,
+                          aspectRatio: undefined
+                        }}
+                      />
+                    </p.PlasmicLink>
+                  </Card>
+                );
+              })}
+              {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+                (() => {
+                  try {
+                    return $queries.artists.data[0]["Youtube Link"];
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return [];
+                    }
+                    throw e;
+                  }
+                })()
+              ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                const currentItem = __plasmic_item_0;
+                const currentIndex = __plasmic_idx_0;
+                return (
+                  <Card
+                    className={classNames("__wab_instance", sty.card__famw4)}
+                    key={currentIndex}
+                    noTitle={true}
+                  >
+                    <p.PlasmicLink
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.link__qx9V1
+                      )}
+                      component={Link}
+                      href={(() => {
+                        try {
+                          return currentItem;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()}
+                      platform={"nextjs"}
+                    >
+                      <p.PlasmicImg
+                        alt={""}
+                        className={classNames(sty.img__mm4Lf)}
+                        displayHeight={"65px"}
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"100%"}
+                        loading={"lazy"}
+                        src={{
+                          src: "/plasmic/pg_site/images/screenshot20231108At65953PMpng.png",
+                          fullWidth: 1045,
+                          fullHeight: 205,
+                          aspectRatio: undefined
+                        }}
+                      />
+                    </p.PlasmicLink>
+                  </Card>
+                );
+              })}
+              {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+                (() => {
+                  try {
+                    return $queries.artists.data[0]["Merch Link"];
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return [];
+                    }
+                    throw e;
+                  }
+                })()
+              ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                const currentItem = __plasmic_item_0;
+                const currentIndex = __plasmic_idx_0;
+                return (
+                  <Card
+                    className={classNames("__wab_instance", sty.card__gtXMv)}
+                    key={currentIndex}
+                    noTitle={true}
+                  >
+                    <p.PlasmicLink
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.link__rr9E9
+                      )}
+                      component={Link}
+                      href={(() => {
+                        try {
+                          return currentItem;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()}
+                      platform={"nextjs"}
+                    >
+                      <p.PlasmicImg
+                        alt={""}
+                        className={classNames(sty.img__isOXg)}
+                        displayHeight={"65px"}
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"100%"}
+                        loading={"lazy"}
+                        src={{
+                          src: "/plasmic/pg_site/images/screenshot20231108At70106PMpng.png",
+                          fullWidth: 973,
+                          fullHeight: 165,
+                          aspectRatio: undefined
+                        }}
+                      />
+                    </p.PlasmicLink>
+                  </Card>
+                );
+              })}
+              {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+                (() => {
+                  try {
+                    return $queries.artists.data[0]["X Link"];
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return [];
+                    }
+                    throw e;
+                  }
+                })()
+              ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                const currentItem = __plasmic_item_0;
+                const currentIndex = __plasmic_idx_0;
+                return (
+                  <Card
+                    className={classNames("__wab_instance", sty.card__nWlRg)}
+                    key={currentIndex}
+                    noTitle={true}
+                  >
+                    <p.PlasmicLink
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.link__ilTvj
+                      )}
+                      component={Link}
+                      href={(() => {
+                        try {
+                          return currentItem;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()}
+                      platform={"nextjs"}
+                    >
+                      <p.PlasmicImg
+                        alt={""}
+                        className={classNames(sty.img__cOgFz)}
+                        displayHeight={"65px"}
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"100%"}
+                        loading={"lazy"}
+                        src={{
+                          src: "/plasmic/pg_site/images/screenshot20231108At70122PMpng.png",
+                          fullWidth: 1013,
+                          fullHeight: 211,
+                          aspectRatio: undefined
+                        }}
+                      />
+                    </p.PlasmicLink>
+                  </Card>
+                );
+              })}
+              {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+                (() => {
+                  try {
+                    return $queries.artists.data[0]["Amazon Music Link"];
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return [];
+                    }
+                    throw e;
+                  }
+                })()
+              ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                const currentItem = __plasmic_item_0;
+                const currentIndex = __plasmic_idx_0;
+                return (
+                  <Card
+                    className={classNames("__wab_instance", sty.card__n5Y)}
+                    key={currentIndex}
+                    noTitle={true}
+                  >
+                    <p.PlasmicLink
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.link__suBaM
+                      )}
+                      component={Link}
+                      href={(() => {
+                        try {
+                          return currentItem;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()}
+                      platform={"nextjs"}
+                    >
+                      <p.PlasmicImg
+                        alt={""}
+                        className={classNames(sty.img__xxXc8)}
+                        displayHeight={"65px"}
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"100%"}
+                        loading={"lazy"}
+                        src={{
+                          src: "/plasmic/pg_site/images/screenshot20231108At70146PMpng.png",
+                          fullWidth: 1007,
+                          fullHeight: 206,
+                          aspectRatio: undefined
+                        }}
+                      />
+                    </p.PlasmicLink>
+                  </Card>
+                );
+              })}
+            </div>
           </section>
+          <Footer2
+            data-plasmic-name={"footer2"}
+            data-plasmic-override={overrides.footer2}
+            className={classNames("__wab_instance", sty.footer2)}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -747,31 +1205,44 @@ const PlasmicDescendants = {
     "navBar",
     "bandInfo",
     "name",
+    "h1",
     "description",
-    "upcoming",
-    "upcomingTxt",
-    "links",
-    "linkText",
-    "links2"
+    "about",
+    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow",
+    "events",
+    "about2",
+    "footer2"
   ],
   navBar: ["navBar"],
   bandInfo: [
     "bandInfo",
     "name",
+    "h1",
     "description",
-    "upcoming",
-    "upcomingTxt",
-    "links",
-    "linkText",
-    "links2"
+    "about",
+    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow",
+    "events",
+    "about2"
   ],
-  name: ["name"],
-  description: ["description"],
-  upcoming: ["upcoming", "upcomingTxt"],
-  upcomingTxt: ["upcomingTxt"],
-  links: ["links", "linkText", "links2"],
-  linkText: ["linkText", "links2"],
-  links2: ["links2"]
+  name: ["name", "h1"],
+  h1: ["h1"],
+  description: [
+    "description",
+    "about",
+    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow",
+    "events"
+  ],
+  about: [
+    "about",
+    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow"
+  ],
+  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow:
+    [
+      "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow"
+    ],
+  events: ["events"],
+  about2: ["about2"],
+  footer2: ["footer2"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -781,12 +1252,13 @@ type NodeDefaultElementType = {
   navBar: typeof NavBar;
   bandInfo: "section";
   name: "section";
+  h1: "h1";
   description: "section";
-  upcoming: "section";
-  upcomingTxt: "section";
-  links: "section";
-  linkText: "section";
-  links2: "h1";
+  about: "div";
+  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow: "div";
+  events: "div";
+  about2: "div";
+  footer2: typeof Footer2;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -823,7 +1295,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
       () =>
         deriveRenderOpts(props, {
           name: nodeName,
-          descendantNames: [...PlasmicDescendants[nodeName]],
+          descendantNames: PlasmicDescendants[nodeName],
           internalArgPropNames: PlasmicArtistPage__ArgProps,
           internalVariantPropNames: PlasmicArtistPage__VariantProps
         }),
@@ -852,12 +1324,16 @@ export const PlasmicArtistPage = Object.assign(
     navBar: makeNodeComponent("navBar"),
     bandInfo: makeNodeComponent("bandInfo"),
     _name: makeNodeComponent("name"),
+    h1: makeNodeComponent("h1"),
     description: makeNodeComponent("description"),
-    upcoming: makeNodeComponent("upcoming"),
-    upcomingTxt: makeNodeComponent("upcomingTxt"),
-    links: makeNodeComponent("links"),
-    linkText: makeNodeComponent("linkText"),
-    links2: makeNodeComponent("links2"),
+    about: makeNodeComponent("about"),
+    askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow:
+      makeNodeComponent(
+        "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow"
+      ),
+    events: makeNodeComponent("events"),
+    about2: makeNodeComponent("about2"),
+    footer2: makeNodeComponent("footer2"),
 
     // Metadata about props expected for PlasmicArtistPage
     internalVariantProps: PlasmicArtistPage__VariantProps,

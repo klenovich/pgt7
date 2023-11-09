@@ -62,9 +62,6 @@
 .img__vXnXr > picture > img {
   object-fit: cover;
 }
-.img__vXnXr > :global(.__wab_img-spacer) > img {
-  object-fit: cover;
-}
 .name {
   display: grid;
   position: relative;
@@ -230,9 +227,6 @@
   flex-shrink: 0;
 }
 .img__o0QAc > picture > img {
-  object-fit: cover;
-}
-.img__o0QAc > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .freeBox__mgXo7 {

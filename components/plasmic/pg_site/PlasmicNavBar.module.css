@@ -32,25 +32,16 @@
 .img__l836 > picture > img {
   object-fit: cover;
 }
-.img__l836 > :global(.__wab_img-spacer) > img {
-  object-fit: cover;
-}
 .img__o6RKl {
   object-fit: cover;
 }
 .img__o6RKl > picture > img {
   object-fit: cover;
 }
-.img__o6RKl > :global(.__wab_img-spacer) > img {
-  object-fit: cover;
-}
 .img__fm7Qy {
   object-fit: cover;
 }
 .img__fm7Qy > picture > img {
-  object-fit: cover;
-}
-.img__fm7Qy > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 .img__iAAj8 {
@@ -67,9 +58,6 @@
 .img__iAAj8 > picture > img {
   object-fit: cover;
 }
-.img__iAAj8 > :global(.__wab_img-spacer) > img {
-  object-fit: cover;
-}
 @media (min-width: 0px) and (max-width: 768px) {
   .img__iAAj8 {
     display: none !important;
@@ -84,9 +72,6 @@
   align-self: flex-start;
 }
 .img__b7KuT > picture > img {
-  object-fit: cover;
-}
-.img__b7KuT > :global(.__wab_img-spacer) > img {
   object-fit: cover;
 }
 @media (min-width: 0px) and (max-width: 768px) {

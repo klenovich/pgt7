@@ -1,0 +1,153 @@
+.root {
+  display: grid;
+  align-content: flex-start;
+  justify-items: center;
+  width: 100%;
+  position: relative;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
+  grid-template-columns:
+    var(--plsmc-viewport-gap) 1fr minmax(0, var(--plsmc-wide-chunk))
+    min(
+      var(--plsmc-standard-width),
+      calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
+    )
+    minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
+  padding: 8px 0 0px;
+}
+.root > * {
+  grid-column: 4;
+}
+.figmaPaste4 {
+  display: block;
+  position: relative;
+  width: 327px;
+  height: 425px;
+  margin-bottom: 20px;
+}
+.rectangle38946 {
+  background: url("/plasmic/pg_site/images/rectangle38946.jpg") center center / cover no-repeat;
+  width: 155px;
+  height: 155px;
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 172px;
+}
+.rectangle38947 {
+  background: url("/plasmic/pg_site/images/rectangle38947.jpg") -32px -11px / 233px 168px no-repeat;
+  width: 155px;
+  height: 155px;
+  display: block;
+  position: absolute;
+  left: 172px;
+  top: 0px;
+}
+.rectangle38948 {
+  background: url("/plasmic/pg_site/images/rectangle38948.jpg") center center / cover no-repeat;
+  width: 155px;
+  height: 155px;
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.rectangle38949 {
+  background: rgba(0, 0, 0, 1);
+  width: 155px;
+  height: 155px;
+  display: block;
+  position: absolute;
+  left: 172px;
+  top: 172px;
+}
+.text__zMi28 {
+  display: block;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 100%;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  left: 29px;
+  top: 60px;
+}
+.text__irxP {
+  display: block;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 100%;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  left: 207px;
+  top: 60px;
+}
+.text__uruHn {
+  display: block;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 100%;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  left: 23px;
+  top: 232px;
+}
+.rectangle38884 {
+  background: url("/plasmic/pg_site/images/rectangle38884.jpg") -64px -3px / 282px 216px no-repeat;
+  width: 155px;
+  height: 155px;
+  display: block;
+  position: absolute;
+  left: 172px;
+  top: 172px;
+}
+.text__akzFu {
+  display: block;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 100%;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  left: 216px;
+  top: 232px;
+}
+.rectangle38950 {
+  background: rgba(0, 0, 0, 1);
+  width: 327px;
+  height: 52px;
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 344px;
+}
+.text__ti18O {
+  display: block;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 100%;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  left: 91px;
+  top: 353px;
+}
+.text__kxD5 {
+  display: block;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  left: 0px;
+  top: 407px;
+}

@@ -201,7 +201,7 @@ function PlasmicForm__RenderFunc(props: {
                           userArgs: {
                             variables: [$state.form.value]
                           },
-                          cacheKey: `plasmic.$.51719504-1ffd-4f7d-ac7c-073f92dd01da.$.`,
+                          cacheKey: null,
                           invalidatedKeys: ["plasmic_refresh_all"],
                           roleId: null
                         }
@@ -334,7 +334,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
       () =>
         deriveRenderOpts(props, {
           name: nodeName,
-          descendantNames: [...PlasmicDescendants[nodeName]],
+          descendantNames: PlasmicDescendants[nodeName],
           internalArgPropNames: PlasmicForm__ArgProps,
           internalVariantPropNames: PlasmicForm__VariantProps
         }),

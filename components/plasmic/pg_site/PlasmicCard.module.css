@@ -74,9 +74,6 @@
 .img__siqW > picture > img {
   object-fit: cover;
 }
-.img__siqW > :global(.__wab_img-spacer) > img {
-  object-fit: cover;
-}
 .freeBox__bWjyk {
   display: flex;
   position: relative;
