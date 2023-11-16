@@ -43,8 +43,8 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
-import { FormWrapper } from "@plasmicpkgs/antd5/skinny/registerForm"; // plasmic-import: TgJFzUZpvQ/codeComponent
-import { formHelpers as FormWrapper_Helpers } from "@plasmicpkgs/antd5/skinny/registerForm"; // plasmic-import: TgJFzUZpvQ/codeComponentHelper
+import { FormWrapper } from "@plasmicpkgs/antd5/skinny/SchemaForm"; // plasmic-import: TgJFzUZpvQ/codeComponent
+import { formHelpers as FormWrapper_Helpers } from "@plasmicpkgs/antd5/skinny/SchemaForm"; // plasmic-import: TgJFzUZpvQ/codeComponentHelper
 import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton"; // plasmic-import: bx9Xzvf5_eu/codeComponent
 
 import "@plasmicapp/react-web/lib/plasmic.css";

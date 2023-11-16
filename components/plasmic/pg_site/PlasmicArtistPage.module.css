@@ -80,13 +80,13 @@
       calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
     )
     minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
-  padding: 11px 0 8px;
+  padding: 20px 0 8px;
 }
 .name > * {
   grid-column: 4;
 }
 .h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: left;
   justify-self: flex-start;
   margin-left: -18px;

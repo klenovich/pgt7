@@ -1,0 +1,98 @@
+.article {
+  display: flex;
+  width: 357px;
+  height: auto;
+  flex-direction: column;
+  position: relative;
+}
+.rectangle38928 {
+  background: rgba(255, 255, 255, 1);
+  width: 357px;
+  height: auto;
+  display: flex;
+  position: relative;
+  left: auto;
+  top: auto;
+  flex-direction: column;
+  border-radius: 12px;
+}
+.text__jWsSp {
+  display: block;
+  font-size: 18px;
+  letter-spacing: 0em;
+  line-height: 1.39687;
+  color: rgba(0, 0, 0, 1);
+  width: 194px;
+  height: 24px;
+  position: relative;
+  left: auto;
+  top: auto;
+  margin-top: 10px;
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+.text___90OA {
+  display: block;
+  font-size: 18px;
+  text-align: right;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 1.39687;
+  color: rgba(0, 0, 0, 1);
+  width: 132px;
+  height: 27px;
+  position: relative;
+  left: auto;
+  top: auto;
+  align-self: flex-end;
+  margin-top: -25px;
+  margin-right: 9px;
+  flex-shrink: 0;
+}
+.rectangle38952 {
+  background: url("/plasmic/pg_site/images/rectangle38952.jpg") center center / cover no-repeat;
+  width: 325px;
+  height: 349px;
+  display: block;
+  position: relative;
+  left: auto;
+  top: auto;
+  margin-left: 15px;
+  margin-top: 5px;
+  flex-shrink: 0;
+  border-radius: 12px;
+}
+.text__q3J36 {
+  display: block;
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 100%;
+  color: rgba(0, 0, 0, 1);
+  width: 325px;
+  height: auto;
+  position: relative;
+  left: auto;
+  top: auto;
+  margin-left: 15px;
+  margin-bottom: 13px;
+  margin-top: 10px;
+}
+.text__sP4Ri {
+  display: block;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 1.39687;
+  color: rgba(0, 0, 0, 1);
+  width: 324px;
+  height: auto;
+  position: relative;
+  left: auto;
+  top: auto;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}

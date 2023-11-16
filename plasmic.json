@@ -213,29 +213,29 @@
           "id": "TgJFzUZpvQ",
           "name": "FormWrapper",
           "displayName": "plasmic-antd5-form",
-          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerForm",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/SchemaForm",
           "helper": {
             "name": "formHelpers",
-            "importPath": "@plasmicpkgs/antd5/skinny/registerForm"
+            "importPath": "@plasmicpkgs/antd5/skinny/Form"
           }
         },
         {
           "id": "EYHwZh9ILg",
           "name": "FormItemWrapper",
           "displayName": "plasmic-antd5-form-item",
-          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerForm"
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/FormItem"
         },
         {
           "id": "zEXrWX9naj",
           "name": "FormGroup",
           "displayName": "plasmic-antd5-form-group",
-          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerForm"
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/FormGroup"
         },
         {
           "id": "M2mN_XzxO4",
           "name": "FormListWrapper",
           "displayName": "plasmic-antd5-form-list",
-          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerForm"
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/FormList"
         },
         {
           "id": "Vf5hntD2SZ5",
@@ -520,7 +520,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "hjKYmYi6HMwK6TRyk7ew5R",
@@ -801,6 +802,47 @@
           "cssFilePath": "plasmic/pg_site/PlasmicFooter2.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "7-eI8frsoj5D",
+          "name": "Journal",
+          "type": "managed",
+          "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+          "renderModuleFilePath": "plasmic/pg_site/PlasmicJournal.tsx",
+          "importSpec": {
+            "modulePath": "../pages/journal.tsx"
+          },
+          "cssFilePath": "plasmic/pg_site/PlasmicJournal.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/journal"
+        },
+        {
+          "id": "EN_ThhJDYaVx",
+          "name": "ArticleAll",
+          "type": "managed",
+          "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+          "renderModuleFilePath": "plasmic/pg_site/PlasmicArticleAll.tsx",
+          "importSpec": {
+            "modulePath": "ArticleAll.tsx"
+          },
+          "cssFilePath": "plasmic/pg_site/PlasmicArticleAll.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "uxCP9nNPQHMp",
+          "name": "JournalPost",
+          "type": "managed",
+          "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+          "renderModuleFilePath": "plasmic/pg_site/PlasmicJournalPost.tsx",
+          "importSpec": {
+            "modulePath": "../pages/journal/[slug].tsx"
+          },
+          "cssFilePath": "plasmic/pg_site/PlasmicJournalPost.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/journal/[slug]"
         }
       ],
       "icons": [
@@ -945,6 +987,11 @@
           "id": "5xIATDVxPtkV",
           "name": "Screenshot 2023-11-08 at 7.01.46 PM.png",
           "filePath": "../public/plasmic/pg_site/images/screenshot20231108At70146PMpng.png"
+        },
+        {
+          "id": "c8KdZ9p-QA74",
+          "name": "Rectangle 38952",
+          "filePath": "../public/plasmic/pg_site/images/rectangle38952.jpg"
         }
       ],
       "indirect": false,
