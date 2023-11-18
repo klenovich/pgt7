@@ -45,7 +45,7 @@ import {
 import NavBar from "../../NavBar"; // plasmic-import: zoXit50v16ZA/component
 import Card from "../../Card"; // plasmic-import: at931Xm9Xbfa/component
 import Footer2 from "../../Footer2"; // plasmic-import: DUd-yxFV_3vR/component
-import { Fetcher } from "@plasmicapp/react-web/lib/data-sources"; // plasmic-import: J9NgeB3kJyHt/codeComponent
+import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 
 import { useScreenVariants as useScreenVariantst9JqZjUtfPcp } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: t9JQZjUtfPcp/globalVariant
 

@@ -44,7 +44,7 @@ import {
 } from "@plasmicapp/react-web";
 import NavBar from "../../NavBar"; // plasmic-import: zoXit50v16ZA/component
 import Footer2 from "../../Footer2"; // plasmic-import: DUd-yxFV_3vR/component
-import { Fetcher } from "@plasmicapp/react-web/lib/data-sources"; // plasmic-import: J9NgeB3kJyHt/codeComponent
+import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 

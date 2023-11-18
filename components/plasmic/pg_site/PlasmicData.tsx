@@ -36,7 +36,7 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
-import { RichList } from "@plasmicpkgs/plasmic-rich-components"; // plasmic-import: Hh2OL1EveIF/codeComponent
+import { RichList } from "@plasmicpkgs/plasmic-rich-components";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
