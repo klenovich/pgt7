@@ -43,8 +43,8 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
-import { FormWrapper } from "@plasmicpkgs/antd5/skinny/SchemaForm";
-import { formHelpers as FormWrapper_Helpers } from "@plasmicpkgs/antd5/skinny/Form";
+import { FormWrapper } from "@plasmicpkgs/antd5/";
+import { formHelpers as FormWrapper_Helpers } from "@plasmicpkgs/antd5/";
 import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
