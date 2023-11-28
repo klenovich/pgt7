@@ -18,9 +18,6 @@
 .root > * {
   grid-column: 4;
 }
-.root > * {
-  grid-column: 4;
-}
 .figmaPaste4 {
   display: block;
   position: relative;
