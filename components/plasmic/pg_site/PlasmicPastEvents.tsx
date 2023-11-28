@@ -421,9 +421,9 @@ function PlasmicPastEvents__RenderFunc(props: {
             onClick={async event => {
               const $steps = {};
 
-              $steps["goToPastEvents"] = true
+              $steps["goToEvents"] = true
                 ? (() => {
-                    const actionArgs = { destination: `/past-events` };
+                    const actionArgs = { destination: `/events` };
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&
@@ -439,11 +439,11 @@ function PlasmicPastEvents__RenderFunc(props: {
                   })()
                 : undefined;
               if (
-                $steps["goToPastEvents"] != null &&
-                typeof $steps["goToPastEvents"] === "object" &&
-                typeof $steps["goToPastEvents"].then === "function"
+                $steps["goToEvents"] != null &&
+                typeof $steps["goToEvents"] === "object" &&
+                typeof $steps["goToEvents"].then === "function"
               ) {
-                $steps["goToPastEvents"] = await $steps["goToPastEvents"];
+                $steps["goToEvents"] = await $steps["goToEvents"];
               }
             }}
           >

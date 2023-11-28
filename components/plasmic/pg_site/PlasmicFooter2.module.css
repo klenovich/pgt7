@@ -18,6 +18,9 @@
 .root > * {
   grid-column: 4;
 }
+.root > * {
+  grid-column: 4;
+}
 .figmaPaste4 {
   display: block;
   position: relative;
@@ -61,7 +64,7 @@
   left: 172px;
   top: 172px;
 }
-.text__zMi28 {
+.link__zMi28 {
   display: block;
   font-size: 30px;
   font-family: "Roboto", sans-serif;
@@ -73,7 +76,7 @@
   left: 29px;
   top: 60px;
 }
-.text__irxP {
+.link__irxP {
   display: block;
   font-size: 30px;
   font-family: "Roboto", sans-serif;
@@ -85,7 +88,7 @@
   left: 207px;
   top: 60px;
 }
-.text__uruHn {
+.link__uruHn {
   display: block;
   font-size: 30px;
   font-family: "Roboto", sans-serif;
@@ -106,7 +109,7 @@
   left: 172px;
   top: 172px;
 }
-.text__akzFu {
+.link__akzFu {
   display: block;
   font-size: 30px;
   font-family: "Roboto", sans-serif;

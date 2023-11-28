@@ -38,43 +38,42 @@
           "id": "FNIk-CnxQYXU",
           "name": "RichLayout",
           "displayName": "hostless-rich-layout",
-          "componentImportPath": "@plasmicpkgs/plasmic-rich-components"
+          "componentImportPath": "@plasmicpkgs/plasmic-rich-components/skinny/rich-layout"
         },
         {
           "id": "k4RvFQUTZKCU",
           "name": "RichTable",
           "displayName": "hostless-rich-table",
-          "componentImportPath": "@plasmicpkgs/plasmic-rich-components",
+          "componentImportPath": "@plasmicpkgs/plasmic-rich-components/skinny/rich-table",
           "helper": {
             "name": "tableHelpers",
-            "importPath": "@plasmicpkgs/plasmic-rich-components"
+            "importPath": "@plasmicpkgs/plasmic-rich-components/skinny/rich-table"
           }
         },
         {
           "id": "zV8WqibK3ZnC",
           "name": "RichDetails",
           "displayName": "hostless-rich-details",
-          "componentImportPath": "@plasmicpkgs/plasmic-rich-components"
+          "componentImportPath": "@plasmicpkgs/plasmic-rich-components/skinny/rich-details"
         },
         {
           "id": "Hh2OL1EveIF",
           "name": "RichList",
           "displayName": "hostless-rich-list",
-          "componentImportPath": "@plasmicpkgs/plasmic-rich-components"
+          "componentImportPath": "@plasmicpkgs/plasmic-rich-components/skinny/rich-list"
         },
         {
           "id": "UzObi2yVH_DH",
           "name": "RichCalendar",
           "displayName": "hostless-rich-calendar",
-          "componentImportPath": "@plasmicpkgs/plasmic-rich-components",
+          "componentImportPath": "@plasmicpkgs/plasmic-rich-components/skinny/rich-calendar",
           "helper": {
             "name": "calendarHelpers",
-            "importPath": "@plasmicpkgs/plasmic-rich-components"
+            "importPath": "@plasmicpkgs/plasmic-rich-components/skinny/rich-calendar"
           }
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "ohDidvG9XsCeFumugENU3J",
@@ -520,8 +519,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "hjKYmYi6HMwK6TRyk7ew5R",
@@ -579,8 +577,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-cms"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "7nJ7UcFmq9UzB6eXfC5z4a",
@@ -602,8 +599,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-nav"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "oATn9WrAqtDeaLtJDt8hxD",
@@ -843,6 +839,33 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/journal/[slug]"
+        },
+        {
+          "id": "lOAhjoWYBUsL",
+          "name": "JournalPost2",
+          "type": "managed",
+          "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+          "renderModuleFilePath": "plasmic/pg_site/PlasmicJournalPost2.tsx",
+          "importSpec": {
+            "modulePath": "JournalPost2.tsx"
+          },
+          "cssFilePath": "plasmic/pg_site/PlasmicJournalPost2.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "4o-o7RtBziJg",
+          "name": "Journal2",
+          "type": "managed",
+          "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+          "renderModuleFilePath": "plasmic/pg_site/PlasmicJournal2.tsx",
+          "importSpec": {
+            "modulePath": "../pages/all-journal.tsx"
+          },
+          "cssFilePath": "plasmic/pg_site/PlasmicJournal2.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/all-journal"
         }
       ],
       "icons": [
@@ -1034,6 +1057,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.322",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.322/dist/plasmic.schema.json"
+  "cliVersion": "0.1.323",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.323/dist/plasmic.schema.json"
 }

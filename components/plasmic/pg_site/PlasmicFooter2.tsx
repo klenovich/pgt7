@@ -58,11 +58,11 @@ export const PlasmicFooter2__ArgProps = new Array<ArgPropType>();
 export type PlasmicFooter2__OverridesType = {
   root?: p.Flex<"section">;
   figmaPaste4?: p.Flex<"div">;
-  rectangle38946?: p.Flex<"div">;
-  rectangle38947?: p.Flex<"div">;
-  rectangle38948?: p.Flex<"div">;
+  rectangle38946?: p.Flex<"a"> & Partial<LinkProps>;
+  rectangle38947?: p.Flex<"a"> & Partial<LinkProps>;
+  rectangle38948?: p.Flex<"a"> & Partial<LinkProps>;
   rectangle38949?: p.Flex<"div">;
-  rectangle38884?: p.Flex<"div">;
+  rectangle38884?: p.Flex<"a"> & Partial<LinkProps>;
   rectangle38950?: p.Flex<"div">;
 };
 
@@ -123,22 +123,43 @@ function PlasmicFooter2__RenderFunc(props: {
         data-plasmic-override={overrides.figmaPaste4}
         className={classNames(projectcss.all, sty.figmaPaste4)}
       >
-        <div
+        <p.PlasmicLink
           data-plasmic-name={"rectangle38946"}
           data-plasmic-override={overrides.rectangle38946}
-          className={classNames(projectcss.all, sty.rectangle38946)}
+          className={classNames(
+            projectcss.all,
+            projectcss.a,
+            sty.rectangle38946
+          )}
+          component={Link}
+          href={`/journal`}
+          platform={"nextjs"}
         />
 
-        <div
+        <p.PlasmicLink
           data-plasmic-name={"rectangle38947"}
           data-plasmic-override={overrides.rectangle38947}
-          className={classNames(projectcss.all, sty.rectangle38947)}
+          className={classNames(
+            projectcss.all,
+            projectcss.a,
+            sty.rectangle38947
+          )}
+          component={Link}
+          href={`/events`}
+          platform={"nextjs"}
         />
 
-        <div
+        <p.PlasmicLink
           data-plasmic-name={"rectangle38948"}
           data-plasmic-override={overrides.rectangle38948}
-          className={classNames(projectcss.all, sty.rectangle38948)}
+          className={classNames(
+            projectcss.all,
+            projectcss.a,
+            sty.rectangle38948
+          )}
+          component={Link}
+          href={`/artists`}
+          platform={"nextjs"}
         />
 
         <div
@@ -147,48 +168,71 @@ function PlasmicFooter2__RenderFunc(props: {
           className={classNames(projectcss.all, sty.rectangle38949)}
         />
 
-        <div
+        <p.PlasmicLink
           className={classNames(
             projectcss.all,
+            projectcss.a,
             projectcss.__wab_text,
-            sty.text__zMi28
+            sty.link__zMi28
           )}
+          component={Link}
+          href={`/artists`}
+          platform={"nextjs"}
         >
           {"ARTISTS"}
-        </div>
-        <div
+        </p.PlasmicLink>
+        <p.PlasmicLink
           className={classNames(
             projectcss.all,
+            projectcss.a,
             projectcss.__wab_text,
-            sty.text__irxP
+            sty.link__irxP
           )}
+          component={Link}
+          href={`/events`}
+          platform={"nextjs"}
         >
           {"SHOWS"}
-        </div>
-        <div
+        </p.PlasmicLink>
+        <p.PlasmicLink
           className={classNames(
             projectcss.all,
+            projectcss.a,
             projectcss.__wab_text,
-            sty.text__uruHn
+            sty.link__uruHn
           )}
+          component={Link}
+          href={`/journal`}
+          platform={"nextjs"}
         >
           {"JOURNAL"}
-        </div>
-        <div
+        </p.PlasmicLink>
+        <p.PlasmicLink
           data-plasmic-name={"rectangle38884"}
           data-plasmic-override={overrides.rectangle38884}
-          className={classNames(projectcss.all, sty.rectangle38884)}
-        />
-
-        <div
           className={classNames(
             projectcss.all,
-            projectcss.__wab_text,
-            sty.text__akzFu
+            projectcss.a,
+            sty.rectangle38884
           )}
+          component={Link}
+          href={"/team"}
+          platform={"nextjs"}
+        />
+
+        <p.PlasmicLink
+          className={classNames(
+            projectcss.all,
+            projectcss.a,
+            projectcss.__wab_text,
+            sty.link__akzFu
+          )}
+          component={Link}
+          href={"/team"}
+          platform={"nextjs"}
         >
           {"TEAM"}
-        </div>
+        </p.PlasmicLink>
         <div
           data-plasmic-name={"rectangle38950"}
           data-plasmic-override={overrides.rectangle38950}
@@ -251,11 +295,11 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "section";
   figmaPaste4: "div";
-  rectangle38946: "div";
-  rectangle38947: "div";
-  rectangle38948: "div";
+  rectangle38946: "a";
+  rectangle38947: "a";
+  rectangle38948: "a";
   rectangle38949: "div";
-  rectangle38884: "div";
+  rectangle38884: "a";
   rectangle38950: "div";
 };
 

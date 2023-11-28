@@ -44,6 +44,7 @@ import {
 } from "@plasmicapp/react-web";
 import NavBar from "../../NavBar"; // plasmic-import: zoXit50v16ZA/component
 import Card from "../../Card"; // plasmic-import: at931Xm9Xbfa/component
+import Footer2 from "../../Footer2"; // plasmic-import: DUd-yxFV_3vR/component
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -69,14 +70,18 @@ export type PlasmicEventPage__OverridesType = {
   navBar?: p.Flex<typeof NavBar>;
   bandInfo?: p.Flex<"section">;
   name?: p.Flex<"section">;
+  h1?: p.Flex<"h1">;
   description?: p.Flex<"section">;
-  upcoming?: p.Flex<"section">;
-  upcomingTxt?: p.Flex<"section">;
+  about?: p.Flex<"div">;
+  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow?: p.Flex<"div">;
+  about2?: p.Flex<"div">;
+  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow3?: p.Flex<"div">;
+  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow4?: p.Flex<"div">;
+  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow5?: p.Flex<"div">;
+  about3?: p.Flex<"div">;
   card?: p.Flex<typeof Card>;
   link?: p.Flex<"a"> & Partial<LinkProps>;
-  section?: p.Flex<"section">;
-  name2?: p.Flex<"section">;
-  description2?: p.Flex<"section">;
+  footer2?: p.Flex<typeof Footer2>;
 };
 
 export interface DefaultEventPageProps {}
@@ -254,11 +259,13 @@ function PlasmicEventPage__RenderFunc(props: {
               className={classNames(projectcss.all, sty.name)}
             >
               <h1
+                data-plasmic-name={"h1"}
+                data-plasmic-override={overrides.h1}
                 className={classNames(
                   projectcss.all,
                   projectcss.h1,
                   projectcss.__wab_text,
-                  sty.h1__ziqK
+                  sty.h1
                 )}
               >
                 <React.Fragment>
@@ -270,7 +277,7 @@ function PlasmicEventPage__RenderFunc(props: {
                         e instanceof TypeError ||
                         e?.plasmicType === "PlasmicUndefinedDataError"
                       ) {
-                        return "Page title";
+                        return "POST GENRE";
                       }
                       throw e;
                     }
@@ -284,303 +291,370 @@ function PlasmicEventPage__RenderFunc(props: {
               className={classNames(projectcss.all, sty.description)}
             >
               <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text___1Hvtj
-                )}
+                data-plasmic-name={"about"}
+                data-plasmic-override={overrides.about}
+                className={classNames(projectcss.all, sty.about)}
               >
-                <React.Fragment>
-                  {(() => {
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__erDJg
+                  )}
+                >
+                  {"ABOUT"}
+                </div>
+                <div
+                  data-plasmic-name={
+                    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow"
+                  }
+                  data-plasmic-override={
+                    overrides.askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow
+                  }
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow
+                  )}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $queries.event.data[0].EventDesc;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return 'Asked to define their genre, Funky Lamp usually resorts to "it\'s complicated." As a melting pot of funk rock, alternative, folk, indie, and punk, "it\'s complicated" might capture their sound better than any category could. Their contagious stage preference and memorable choruses see crowds dancing--and singing--along at every show.\n';
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"about2"}
+                data-plasmic-override={overrides.about2}
+                className={classNames(projectcss.all, sty.about2)}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__uuK0N
+                  )}
+                >
+                  {"Location & Time"}
+                </div>
+                <div
+                  data-plasmic-name={
+                    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow3"
+                  }
+                  data-plasmic-override={
+                    overrides.askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow3
+                  }
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow3
+                  )}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return (
+                          "Location: " + $queries.event.data[0]["Location Name"]
+                        );
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "POST GENRE";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                </div>
+                <div
+                  data-plasmic-name={
+                    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow4"
+                  }
+                  data-plasmic-override={
+                    overrides.askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow4
+                  }
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow4
+                  )}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return (() => {
+                          const eventDate = new Date(
+                            $queries.event.data[0].Date
+                          );
+                          const options = {
+                            weekday: "long",
+                            month: "long",
+                            day: "numeric"
+                          };
+                          const formattedDate = eventDate.toLocaleDateString(
+                            "en-US",
+                            options
+                          );
+                          return `Date: ${formattedDate}`;
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "POST GENRE";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                </div>
+                <div
+                  data-plasmic-name={
+                    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow5"
+                  }
+                  data-plasmic-override={
+                    overrides.askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow5
+                  }
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow5
+                  )}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return (() => {
+                          const eventDate = new Date(
+                            $queries.event.data[0].Date
+                          );
+                          const musicTime = new Date(
+                            eventDate.getTime() + 30 * 60000
+                          );
+                          const formattedTime = `Time: Doors ${eventDate.toLocaleTimeString(
+                            [],
+                            {
+                              hour: "2-digit",
+                              minute: "2-digit"
+                            }
+                          )} / Music ${musicTime.toLocaleTimeString([], {
+                            hour: "2-digit",
+                            minute: "2-digit"
+                          })}`;
+                          return formattedTime;
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "POST GENRE";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"about3"}
+                data-plasmic-override={overrides.about3}
+                className={classNames(projectcss.all, sty.about3)}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___4ZaYz
+                  )}
+                >
+                  {"Artists"}
+                </div>
+                {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+                  (() => {
                     try {
-                      return $queries.event.data[0].EventDesc;
+                      return $queries.artistshere.data;
                     } catch (e) {
                       if (
                         e instanceof TypeError ||
                         e?.plasmicType === "PlasmicUndefinedDataError"
                       ) {
-                        return "xxxxx\n";
+                        return [];
                       }
                       throw e;
                     }
-                  })()}
-                </React.Fragment>
-              </div>
-            </section>
-            <section
-              data-plasmic-name={"upcoming"}
-              data-plasmic-override={overrides.upcoming}
-              className={classNames(projectcss.all, sty.upcoming)}
-            >
-              <section
-                data-plasmic-name={"upcomingTxt"}
-                data-plasmic-override={overrides.upcomingTxt}
-                className={classNames(projectcss.all, sty.upcomingTxt)}
-              >
-                <h1
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.h1,
-                    projectcss.__wab_text,
-                    sty.h1___5EWD
-                  )}
-                >
-                  {"ARTISTS"}
-                </h1>
-              </section>
-              {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
-                (() => {
-                  try {
-                    return $queries.artistshere.data;
-                  } catch (e) {
-                    if (
-                      e instanceof TypeError ||
-                      e?.plasmicType === "PlasmicUndefinedDataError"
-                    ) {
-                      return [];
-                    }
-                    throw e;
-                  }
-                })()
-              ).map((__plasmic_item_0, __plasmic_idx_0) => {
-                const currentItem = __plasmic_item_0;
-                const currentIndex = __plasmic_idx_0;
-                return (
-                  <Card
-                    data-plasmic-name={"card"}
-                    data-plasmic-override={overrides.card}
-                    className={classNames("__wab_instance", sty.card)}
-                    key={currentIndex}
-                    noTitle={true}
-                  >
-                    <p.PlasmicLink
-                      data-plasmic-name={"link"}
-                      data-plasmic-override={overrides.link}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.a,
-                        sty.link
-                      )}
-                      component={Link}
-                      href={(() => {
-                        try {
-                          return "/artists/" + currentItem.slug;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return undefined;
-                          }
-                          throw e;
-                        }
-                      })()}
-                      platform={"nextjs"}
+                  })()
+                ).map((__plasmic_item_0, __plasmic_idx_0) => {
+                  const currentItem = __plasmic_item_0;
+                  const currentIndex = __plasmic_idx_0;
+                  return (
+                    <Card
+                      data-plasmic-name={"card"}
+                      data-plasmic-override={overrides.card}
+                      className={classNames("__wab_instance", sty.card)}
+                      key={currentIndex}
+                      noTitle={true}
                     >
-                      <div
+                      <p.PlasmicLink
+                        data-plasmic-name={"link"}
+                        data-plasmic-override={overrides.link}
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox___76XTf
+                          projectcss.a,
+                          sty.link
                         )}
-                      >
-                        <p.PlasmicImg
-                          alt={""}
-                          className={classNames(sty.img__o0QAc)}
-                          displayHeight={"auto"}
-                          displayMaxHeight={"90px"}
-                          displayMaxWidth={"35%"}
-                          displayMinHeight={"0"}
-                          displayMinWidth={"0"}
-                          displayWidth={"200px"}
-                          loading={"lazy"}
-                          src={(() => {
-                            try {
-                              return currentItem.Photo[0].url;
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return undefined;
-                              }
-                              throw e;
+                        component={Link}
+                        href={(() => {
+                          try {
+                            return "/artists/" + currentItem.slug;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return undefined;
                             }
-                          })()}
-                        />
-
+                            throw e;
+                          }
+                        })()}
+                        platform={"nextjs"}
+                      >
                         <div
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox__mgXo7
+                            sty.freeBox___76XTf
                           )}
                         >
+                          <p.PlasmicImg
+                            alt={""}
+                            className={classNames(sty.img__o0QAc)}
+                            displayHeight={"auto"}
+                            displayMaxHeight={"90px"}
+                            displayMaxWidth={"35%"}
+                            displayMinHeight={"0"}
+                            displayMinWidth={"0"}
+                            displayWidth={"200px"}
+                            loading={"lazy"}
+                            src={(() => {
+                              try {
+                                return currentItem.Photo[0].url;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return undefined;
+                                }
+                                throw e;
+                              }
+                            })()}
+                          />
+
                           <div
                             className={classNames(
                               projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__rSRs
+                              sty.freeBox__mgXo7
                             )}
                           >
-                            <React.Fragment>
-                              {(() => {
-                                try {
-                                  return currentItem.Name;
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return "something here";
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__rSRs
+                              )}
+                            >
+                              <React.Fragment>
+                                {(() => {
+                                  try {
+                                    return currentItem.Name;
+                                  } catch (e) {
+                                    if (
+                                      e instanceof TypeError ||
+                                      e?.plasmicType ===
+                                        "PlasmicUndefinedDataError"
+                                    ) {
+                                      return "POST GENRE ";
+                                    }
+                                    throw e;
                                   }
-                                  throw e;
-                                }
-                              })()}
-                            </React.Fragment>
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__zKqhw
-                            )}
-                          >
-                            <React.Fragment>
-                              {(() => {
-                                try {
-                                  return currentItem.Location;
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return "something here";
+                                })()}
+                              </React.Fragment>
+                            </div>
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__zKqhw
+                              )}
+                            >
+                              <React.Fragment>
+                                {(() => {
+                                  try {
+                                    return currentItem.Location;
+                                  } catch (e) {
+                                    if (
+                                      e instanceof TypeError ||
+                                      e?.plasmicType ===
+                                        "PlasmicUndefinedDataError"
+                                    ) {
+                                      return "POST GENRE ";
+                                    }
+                                    throw e;
                                   }
-                                  throw e;
-                                }
-                              })()}
-                            </React.Fragment>
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__igPho
-                            )}
-                          >
-                            <React.Fragment>
-                              {(() => {
-                                try {
-                                  return currentItem.Genre;
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return "something here";
+                                })()}
+                              </React.Fragment>
+                            </div>
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__igPho
+                              )}
+                            >
+                              <React.Fragment>
+                                {(() => {
+                                  try {
+                                    return currentItem.Genre;
+                                  } catch (e) {
+                                    if (
+                                      e instanceof TypeError ||
+                                      e?.plasmicType ===
+                                        "PlasmicUndefinedDataError"
+                                    ) {
+                                      return "POST GENRE ";
+                                    }
+                                    throw e;
                                   }
-                                  throw e;
-                                }
-                              })()}
-                            </React.Fragment>
+                                })()}
+                              </React.Fragment>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </p.PlasmicLink>
-                  </Card>
-                );
-              })}
+                      </p.PlasmicLink>
+                    </Card>
+                  );
+                })}
+              </div>
             </section>
-            <section
-              data-plasmic-name={"section"}
-              data-plasmic-override={overrides.section}
-              className={classNames(projectcss.all, sty.section)}
-            >
-              <section
-                data-plasmic-name={"name2"}
-                data-plasmic-override={overrides.name2}
-                className={classNames(projectcss.all, sty.name2)}
-              >
-                <h1
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.h1,
-                    projectcss.__wab_text,
-                    sty.h1__xb6KO
-                  )}
-                >
-                  <React.Fragment>
-                    {(() => {
-                      try {
-                        return $queries.event.data[0]["Location Name"];
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return "Page title";
-                        }
-                        throw e;
-                      }
-                    })()}
-                  </React.Fragment>
-                </h1>
-              </section>
-              <section
-                data-plasmic-name={"description2"}
-                data-plasmic-override={overrides.description2}
-                className={classNames(projectcss.all, sty.description2)}
-              >
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__gwOzI
-                  )}
-                >
-                  <React.Fragment>
-                    {(() => {
-                      try {
-                        return $queries.locationInfo.data.Description;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return "xxxxx\n";
-                        }
-                        throw e;
-                      }
-                    })()}
-                  </React.Fragment>
-                </div>
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__mWyNj
-                  )}
-                >
-                  <React.Fragment>
-                    {(() => {
-                      try {
-                        return $queries.locationInfo.data.Address;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return "xxxxx\n";
-                        }
-                        throw e;
-                      }
-                    })()}
-                  </React.Fragment>
-                </div>
-              </section>
-            </section>
+            <Footer2
+              data-plasmic-name={"footer2"}
+              data-plasmic-override={overrides.footer2}
+              className={classNames("__wab_instance", sty.footer2)}
+            />
           </section>
         </div>
       </div>
@@ -594,37 +668,80 @@ const PlasmicDescendants = {
     "navBar",
     "bandInfo",
     "name",
+    "h1",
     "description",
-    "upcoming",
-    "upcomingTxt",
+    "about",
+    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow",
+    "about2",
+    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow3",
+    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow4",
+    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow5",
+    "about3",
     "card",
     "link",
-    "section",
-    "name2",
-    "description2"
+    "footer2"
   ],
   navBar: ["navBar"],
   bandInfo: [
     "bandInfo",
     "name",
+    "h1",
     "description",
-    "upcoming",
-    "upcomingTxt",
+    "about",
+    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow",
+    "about2",
+    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow3",
+    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow4",
+    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow5",
+    "about3",
     "card",
     "link",
-    "section",
-    "name2",
-    "description2"
+    "footer2"
   ],
-  name: ["name"],
-  description: ["description"],
-  upcoming: ["upcoming", "upcomingTxt", "card", "link"],
-  upcomingTxt: ["upcomingTxt"],
+  name: ["name", "h1"],
+  h1: ["h1"],
+  description: [
+    "description",
+    "about",
+    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow",
+    "about2",
+    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow3",
+    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow4",
+    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow5",
+    "about3",
+    "card",
+    "link"
+  ],
+  about: [
+    "about",
+    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow"
+  ],
+  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow:
+    [
+      "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow"
+    ],
+  about2: [
+    "about2",
+    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow3",
+    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow4",
+    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow5"
+  ],
+  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow3:
+    [
+      "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow3"
+    ],
+  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow4:
+    [
+      "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow4"
+    ],
+  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow5:
+    [
+      "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow5"
+    ],
+  about3: ["about3", "card", "link"],
   card: ["card", "link"],
   link: ["link"],
-  section: ["section", "name2", "description2"],
-  name2: ["name2"],
-  description2: ["description2"]
+  footer2: ["footer2"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -634,14 +751,18 @@ type NodeDefaultElementType = {
   navBar: typeof NavBar;
   bandInfo: "section";
   name: "section";
+  h1: "h1";
   description: "section";
-  upcoming: "section";
-  upcomingTxt: "section";
+  about: "div";
+  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow: "div";
+  about2: "div";
+  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow3: "div";
+  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow4: "div";
+  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow5: "div";
+  about3: "div";
   card: typeof Card;
   link: "a";
-  section: "section";
-  name2: "section";
-  description2: "section";
+  footer2: typeof Footer2;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -707,14 +828,30 @@ export const PlasmicEventPage = Object.assign(
     navBar: makeNodeComponent("navBar"),
     bandInfo: makeNodeComponent("bandInfo"),
     _name: makeNodeComponent("name"),
+    h1: makeNodeComponent("h1"),
     description: makeNodeComponent("description"),
-    upcoming: makeNodeComponent("upcoming"),
-    upcomingTxt: makeNodeComponent("upcomingTxt"),
+    about: makeNodeComponent("about"),
+    askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow:
+      makeNodeComponent(
+        "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow"
+      ),
+    about2: makeNodeComponent("about2"),
+    askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow3:
+      makeNodeComponent(
+        "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow3"
+      ),
+    askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow4:
+      makeNodeComponent(
+        "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow4"
+      ),
+    askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow5:
+      makeNodeComponent(
+        "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow5"
+      ),
+    about3: makeNodeComponent("about3"),
     card: makeNodeComponent("card"),
     link: makeNodeComponent("link"),
-    section: makeNodeComponent("section"),
-    name2: makeNodeComponent("name2"),
-    description2: makeNodeComponent("description2"),
+    footer2: makeNodeComponent("footer2"),
 
     // Metadata about props expected for PlasmicEventPage
     internalVariantProps: PlasmicEventPage__VariantProps,

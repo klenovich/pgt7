@@ -42,6 +42,9 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
+import NavBar from "../../NavBar"; // plasmic-import: zoXit50v16ZA/component
+import JournalPost2 from "../../JournalPost2"; // plasmic-import: lOAhjoWYBUsL/component
+import Footer2 from "../../Footer2"; // plasmic-import: DUd-yxFV_3vR/component
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -67,6 +70,13 @@ export type PlasmicJournalPost__OverridesType = {
   article?: p.Flex<"div">;
   rectangle38928?: p.Flex<"div">;
   rectangle38952?: p.Flex<"div">;
+  navBar?: p.Flex<typeof NavBar>;
+  section?: p.Flex<"section">;
+  about?: p.Flex<"div">;
+  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow?: p.Flex<"div">;
+  h1?: p.Flex<"h1">;
+  link?: p.Flex<"a"> & Partial<LinkProps>;
+  footer2?: p.Flex<typeof Footer2>;
 };
 
 export interface DefaultJournalPostProps {}
@@ -127,6 +137,45 @@ function PlasmicJournalPost__RenderFunc(props: {
             throw e;
           }
         })()}.$.fba1c2b1-76a2-477a-807f-28a64624a419.$.`,
+        invalidatedKeys: null,
+        roleId: null
+      };
+    }),
+    post2: usePlasmicDataOp(() => {
+      return {
+        sourceId: "8ePA6ZChMTTHShz67XBagq",
+        opId: "e9dad4a9-9e18-4392-abbf-6a5bfa6921b8",
+        userArgs: {
+          filters: [
+            $queries.query.data[0]["Author Name"],
+            $queries.query.data[0].slug
+          ]
+        },
+        cacheKey: `plasmic.$.${(() => {
+          try {
+            return undefined;
+          } catch (e) {
+            if (
+              e instanceof TypeError ||
+              e?.plasmicType === "PlasmicUndefinedDataError"
+            ) {
+              return "";
+            }
+            throw e;
+          }
+        })()}.$.e9dad4a9-9e18-4392-abbf-6a5bfa6921b8.$.`,
+        invalidatedKeys: null,
+        roleId: null
+      };
+    }),
+    authorinfo: usePlasmicDataOp(() => {
+      return {
+        sourceId: "8ePA6ZChMTTHShz67XBagq",
+        opId: "a9d40df5-4b8f-4a06-8a52-f19cedfa4f3c",
+        userArgs: {
+          filters: [$queries.query.data[0]["Team Members"][0]]
+        },
+        cacheKey: `plasmic.$.a9d40df5-4b8f-4a06-8a52-f19cedfa4f3c.$.`,
         invalidatedKeys: null,
         roleId: null
       };
@@ -353,6 +402,490 @@ function PlasmicJournalPost__RenderFunc(props: {
               </div>
             );
           })}
+          <NavBar
+            data-plasmic-name={"navBar"}
+            data-plasmic-override={overrides.navBar}
+            className={classNames("__wab_instance", sty.navBar)}
+          />
+
+          <section
+            data-plasmic-name={"section"}
+            data-plasmic-override={overrides.section}
+            className={classNames(projectcss.all, sty.section)}
+          >
+            <JournalPost2
+              className={classNames("__wab_instance", sty.journalPost2___4IyZr)}
+              slot={
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__yJqg1
+                  )}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return (() => {
+                          const date = new Date($queries.query.data[0].Date);
+                          const options = {
+                            year: "numeric",
+                            month: "short",
+                            day: "numeric"
+                          };
+                          return date.toLocaleDateString("en-US", options);
+                        })();
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "10 Nov 2023";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                </div>
+              }
+              slot2={
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__cA6MH
+                  )}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $queries.query.data[0].Title;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "POST GENRE";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                </div>
+              }
+              slot3={
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $queries.query.data[0]["Post Body"];
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "POST GENRE POST GENRE POST GENRE POST GENRE POST GENRE POST GENRE POST GENRE POST GENRE POST GENRE POST GENRE POST GENRE ";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
+              }
+              slot4={
+                <p.PlasmicImg
+                  alt={""}
+                  className={classNames(sty.img__ivAda)}
+                  displayHeight={"349px"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"100%"}
+                  loading={"lazy"}
+                  src={(() => {
+                    try {
+                      return $queries.query.data[0].Picture[0].url;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return undefined;
+                      }
+                      throw e;
+                    }
+                  })()}
+                />
+              }
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__j7W7
+                )}
+                onClick={async event => {
+                  const $steps = {};
+
+                  $steps["goToPage"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          destination: (() => {
+                            try {
+                              return (
+                                "../team/" + $queries.authorinfo.data[0].slug
+                              );
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return undefined;
+                              }
+                              throw e;
+                            }
+                          })()
+                        };
+                        return (({ destination }) => {
+                          if (
+                            typeof destination === "string" &&
+                            destination.startsWith("#")
+                          ) {
+                            document
+                              .getElementById(destination.substr(1))
+                              .scrollIntoView({ behavior: "smooth" });
+                          } else {
+                            __nextRouter?.push(destination);
+                          }
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["goToPage"] != null &&
+                    typeof $steps["goToPage"] === "object" &&
+                    typeof $steps["goToPage"].then === "function"
+                  ) {
+                    $steps["goToPage"] = await $steps["goToPage"];
+                  }
+                }}
+              >
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return "By: " + $queries.authorinfo.data[0].Name;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "POST GENRE ";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
+              </div>
+            </JournalPost2>
+            <div
+              data-plasmic-name={"about"}
+              data-plasmic-override={overrides.about}
+              className={classNames(projectcss.all, sty.about)}
+              onClick={async event => {
+                const $steps = {};
+
+                $steps["goToPage"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        destination: (() => {
+                          try {
+                            return (
+                              "../team/" + $queries.authorinfo.data[0].slug
+                            );
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return undefined;
+                            }
+                            throw e;
+                          }
+                        })()
+                      };
+                      return (({ destination }) => {
+                        if (
+                          typeof destination === "string" &&
+                          destination.startsWith("#")
+                        ) {
+                          document
+                            .getElementById(destination.substr(1))
+                            .scrollIntoView({ behavior: "smooth" });
+                        } else {
+                          __nextRouter?.push(destination);
+                        }
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["goToPage"] != null &&
+                  typeof $steps["goToPage"] === "object" &&
+                  typeof $steps["goToPage"].then === "function"
+                ) {
+                  $steps["goToPage"] = await $steps["goToPage"];
+                }
+              }}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__wg5Fx
+                )}
+              >
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $queries.authorinfo.data[0].Name;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "ABOUT";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
+              </div>
+              <div
+                data-plasmic-name={
+                  "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow"
+                }
+                data-plasmic-override={
+                  overrides.askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow
+                }
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow
+                )}
+              >
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $queries.authorinfo.data[0].About;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return 'Asked to define their genre, Funky Lamp usually resorts to "it\'s complicated." As a melting pot of funk rock, alternative, folk, indie, and punk, "it\'s complicated" might capture their sound better than any category could. Their contagious stage preference and memorable choruses see crowds dancing--and singing--along at every show.\n';
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
+              </div>
+            </div>
+            <h1
+              data-plasmic-name={"h1"}
+              data-plasmic-override={overrides.h1}
+              className={classNames(
+                projectcss.all,
+                projectcss.h1,
+                projectcss.__wab_text,
+                sty.h1
+              )}
+            >
+              {"More to Read"}
+            </h1>
+            <p.PlasmicLink
+              data-plasmic-name={"link"}
+              data-plasmic-override={overrides.link}
+              className={classNames(projectcss.all, projectcss.a, sty.link)}
+              component={Link}
+              onClick={async event => {
+                const $steps = {};
+
+                $steps["goToJournalPost"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        destination: `/journal/${(() => {
+                          try {
+                            return $queries.post2.data[0].slug;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return undefined;
+                            }
+                            throw e;
+                          }
+                        })()}`
+                      };
+                      return (({ destination }) => {
+                        if (
+                          typeof destination === "string" &&
+                          destination.startsWith("#")
+                        ) {
+                          document
+                            .getElementById(destination.substr(1))
+                            .scrollIntoView({ behavior: "smooth" });
+                        } else {
+                          __nextRouter?.push(destination);
+                        }
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["goToJournalPost"] != null &&
+                  typeof $steps["goToJournalPost"] === "object" &&
+                  typeof $steps["goToJournalPost"].then === "function"
+                ) {
+                  $steps["goToJournalPost"] = await $steps["goToJournalPost"];
+                }
+              }}
+              platform={"nextjs"}
+            >
+              <JournalPost2
+                className={classNames(
+                  "__wab_instance",
+                  sty.journalPost2__wtbmv
+                )}
+                slot={
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__rqO4L
+                    )}
+                  >
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return (() => {
+                            const date = new Date($queries.post2.data[0].Date);
+                            const options = {
+                              year: "numeric",
+                              month: "short",
+                              day: "numeric"
+                            };
+                            return date.toLocaleDateString("en-US", options);
+                          })();
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "10 Nov 2023";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
+                  </div>
+                }
+                slot2={
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___2PDf
+                    )}
+                  >
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $queries.post2.data[0].Title;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "POST GENRE";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
+                  </div>
+                }
+                slot3={
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return $queries.post2.data[0]["Post Body"];
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "POST GENRE POST GENRE POST GENRE POST GENRE POST GENRE POST GENRE POST GENRE POST GENRE POST GENRE POST GENRE POST GENRE ";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                }
+                slot4={
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__s4YJw)}
+                    displayHeight={"349px"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"100%"}
+                    loading={"lazy"}
+                    src={(() => {
+                      try {
+                        return $queries.post2.data[0].Picture[0].url;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
+                        }
+                        throw e;
+                      }
+                    })()}
+                  />
+                }
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__mItSv
+                  )}
+                >
+                  <React.Fragment>
+                    {(() => {
+                      try {
+                        return "By: " + $queries.authorinfo.data[0].Name;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "POST GENRE ";
+                        }
+                        throw e;
+                      }
+                    })()}
+                  </React.Fragment>
+                </div>
+              </JournalPost2>
+            </p.PlasmicLink>
+          </section>
+          <Footer2
+            data-plasmic-name={"footer2"}
+            data-plasmic-override={overrides.footer2}
+            className={classNames("__wab_instance", sty.footer2)}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -360,10 +893,41 @@ function PlasmicJournalPost__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "article", "rectangle38928", "rectangle38952"],
+  root: [
+    "root",
+    "article",
+    "rectangle38928",
+    "rectangle38952",
+    "navBar",
+    "section",
+    "about",
+    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow",
+    "h1",
+    "link",
+    "footer2"
+  ],
   article: ["article", "rectangle38928", "rectangle38952"],
   rectangle38928: ["rectangle38928", "rectangle38952"],
-  rectangle38952: ["rectangle38952"]
+  rectangle38952: ["rectangle38952"],
+  navBar: ["navBar"],
+  section: [
+    "section",
+    "about",
+    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow",
+    "h1",
+    "link"
+  ],
+  about: [
+    "about",
+    "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow"
+  ],
+  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow:
+    [
+      "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow"
+    ],
+  h1: ["h1"],
+  link: ["link"],
+  footer2: ["footer2"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -373,6 +937,13 @@ type NodeDefaultElementType = {
   article: "div";
   rectangle38928: "div";
   rectangle38952: "div";
+  navBar: typeof NavBar;
+  section: "section";
+  about: "div";
+  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow: "div";
+  h1: "h1";
+  link: "a";
+  footer2: typeof Footer2;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -438,6 +1009,16 @@ export const PlasmicJournalPost = Object.assign(
     article: makeNodeComponent("article"),
     rectangle38928: makeNodeComponent("rectangle38928"),
     rectangle38952: makeNodeComponent("rectangle38952"),
+    navBar: makeNodeComponent("navBar"),
+    section: makeNodeComponent("section"),
+    about: makeNodeComponent("about"),
+    askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow:
+      makeNodeComponent(
+        "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow"
+      ),
+    h1: makeNodeComponent("h1"),
+    link: makeNodeComponent("link"),
+    footer2: makeNodeComponent("footer2"),
 
     // Metadata about props expected for PlasmicJournalPost
     internalVariantProps: PlasmicJournalPost__VariantProps,

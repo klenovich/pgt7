@@ -36,7 +36,7 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
-import { RichList } from "@plasmicpkgs/plasmic-rich-components";
+import { RichList } from "@plasmicpkgs/plasmic-rich-components/skinny/rich-list";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 

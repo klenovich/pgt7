@@ -118,7 +118,7 @@ function PlasmicNavBar__RenderFunc(props: {
           data-plasmic-override={overrides.link}
           className={classNames(projectcss.all, projectcss.a, sty.link)}
           component={Link}
-          href={"#"}
+          href={hasVariant(globalVariants, "screen", "mobileOnly") ? `/` : `/`}
           platform={"nextjs"}
         >
           <p.PlasmicImg
