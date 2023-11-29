@@ -73,7 +73,8 @@
           }
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "ohDidvG9XsCeFumugENU3J",
@@ -461,7 +462,8 @@
           }
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
@@ -519,7 +521,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "hjKYmYi6HMwK6TRyk7ew5R",
@@ -577,7 +580,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-cms"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "7nJ7UcFmq9UzB6eXfC5z4a",
@@ -599,7 +603,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-nav"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "oATn9WrAqtDeaLtJDt8hxD",
@@ -635,20 +640,6 @@
           "scheme": "blackbox",
           "componentType": "component",
           "plumeType": "button"
-        },
-        {
-          "id": "yTxv42yHQfoR",
-          "name": "Form",
-          "type": "managed",
-          "projectId": "oATn9WrAqtDeaLtJDt8hxD",
-          "renderModuleFilePath": "plasmic/pg_site/PlasmicForm.tsx",
-          "importSpec": {
-            "modulePath": "../pages/form.tsx"
-          },
-          "cssFilePath": "plasmic/pg_site/PlasmicForm.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/form"
         },
         {
           "id": "XzcuAqtDaHyQ",
@@ -866,6 +857,48 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/all-journal"
+        },
+        {
+          "id": "7F91C3rit7JS",
+          "name": "Team",
+          "type": "managed",
+          "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+          "renderModuleFilePath": "plasmic/pg_site/PlasmicTeam.tsx",
+          "importSpec": {
+            "modulePath": "../pages/team.tsx"
+          },
+          "cssFilePath": "plasmic/pg_site/PlasmicTeam.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/team"
+        },
+        {
+          "id": "JPz3EuOfzdf1",
+          "name": "TeamIndividual",
+          "type": "managed",
+          "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+          "renderModuleFilePath": "plasmic/pg_site/PlasmicTeamIndividual.tsx",
+          "importSpec": {
+            "modulePath": "../pages/team/[slug].tsx"
+          },
+          "cssFilePath": "plasmic/pg_site/PlasmicTeamIndividual.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/team/[slug]"
+        },
+        {
+          "id": "LYexCHscrrI3",
+          "name": "TeamIndividual2",
+          "type": "managed",
+          "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+          "renderModuleFilePath": "plasmic/pg_site/PlasmicTeamIndividual2.tsx",
+          "importSpec": {
+            "modulePath": "../pages/journalist/[slug].tsx"
+          },
+          "cssFilePath": "plasmic/pg_site/PlasmicTeamIndividual2.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/journalist/[slug]"
         }
       ],
       "icons": [
@@ -1015,6 +1048,11 @@
           "id": "c8KdZ9p-QA74",
           "name": "Rectangle 38952",
           "filePath": "../public/plasmic/pg_site/images/rectangle38952.jpg"
+        },
+        {
+          "id": "CsE2NXB10pI6",
+          "name": "Screenshot 2023-11-28 at 3.51.20 PM.png",
+          "filePath": "../public/plasmic/pg_site/images/screenshot20231128At35120PMpng.png"
         }
       ],
       "indirect": false,
