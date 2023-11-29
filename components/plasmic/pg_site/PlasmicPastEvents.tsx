@@ -44,7 +44,7 @@ import {
 } from "@plasmicapp/react-web";
 import NavBar from "../../NavBar"; // plasmic-import: zoXit50v16ZA/component
 import Card from "../../Card"; // plasmic-import: at931Xm9Xbfa/component
-import { Fetcher } from "@plasmicapp/react-web/lib/data-sources"; // plasmic-import: J9NgeB3kJyHt/codeComponent
+import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -421,9 +421,9 @@ function PlasmicPastEvents__RenderFunc(props: {
             onClick={async event => {
               const $steps = {};
 
-              $steps["goToPastEvents"] = true
+              $steps["goToEvents"] = true
                 ? (() => {
-                    const actionArgs = { destination: `/past-events` };
+                    const actionArgs = { destination: `/events` };
                     return (({ destination }) => {
                       if (
                         typeof destination === "string" &&
@@ -439,11 +439,11 @@ function PlasmicPastEvents__RenderFunc(props: {
                   })()
                 : undefined;
               if (
-                $steps["goToPastEvents"] != null &&
-                typeof $steps["goToPastEvents"] === "object" &&
-                typeof $steps["goToPastEvents"].then === "function"
+                $steps["goToEvents"] != null &&
+                typeof $steps["goToEvents"] === "object" &&
+                typeof $steps["goToEvents"].then === "function"
               ) {
-                $steps["goToPastEvents"] = await $steps["goToPastEvents"];
+                $steps["goToEvents"] = await $steps["goToEvents"];
               }
             }}
           >
@@ -505,7 +505,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
       () =>
         deriveRenderOpts(props, {
           name: nodeName,
-          descendantNames: [...PlasmicDescendants[nodeName]],
+          descendantNames: PlasmicDescendants[nodeName],
           internalArgPropNames: PlasmicPastEvents__ArgProps,
           internalVariantPropNames: PlasmicPastEvents__VariantProps
         }),

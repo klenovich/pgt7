@@ -4,37 +4,40 @@ import * as React from "react";
 import * as ph from "@plasmicapp/react-web/lib/host";
 import GlobalContextsProvider from "../components/plasmic/pg_site/PlasmicGlobalContextsProvider";
 import { ScreenVariantProvider } from "../components/plasmic/pg_site/PlasmicGlobalVariant__Screen";
-import { PlasmicForm } from "../components/plasmic/pg_site/PlasmicForm";
+import { UnnamedGroupContext } from "../components/plasmic/pg_site/PlasmicGlobalVariant__UnnamedGroup";
+import { PlasmicTeam } from "../components/plasmic/pg_site/PlasmicTeam";
 import { useRouter } from "next/router";
 
-function Form() {
-  // Use PlasmicForm to render this component as it was
+function Team() {
+  // Use PlasmicTeam to render this component as it was
   // designed in Plasmic, by activating the appropriate variants,
   // attaching the appropriate event handlers, etc.  You
   // can also install whatever React hooks you need here to manage state or
   // fetch data.
   //
-  // Props you can pass into PlasmicForm are:
+  // Props you can pass into PlasmicTeam are:
   // 1. Variants you want to activate,
   // 2. Contents for slots you want to fill,
   // 3. Overrides for any named node in the component to attach behavior and data,
   // 4. Props to set on the root node.
   //
-  // By default, PlasmicForm is wrapped by your project's global
+  // By default, PlasmicTeam is wrapped by your project's global
   // variant context providers. These wrappers may be moved to
   // Next.js Custom App component
   // (https://nextjs.org/docs/advanced-features/custom-app).
   return (
-    <GlobalContextsProvider>
-      <ph.PageParamsProvider
-        route={useRouter()?.pathname}
-        params={useRouter()?.query}
-        query={useRouter()?.query}
-      >
-        <PlasmicForm />
-      </ph.PageParamsProvider>
-    </GlobalContextsProvider>
+    <UnnamedGroupContext.Provider value={undefined}>
+      <GlobalContextsProvider>
+        <ph.PageParamsProvider
+          route={useRouter()?.pathname}
+          params={useRouter()?.query}
+          query={useRouter()?.query}
+        >
+          <PlasmicTeam />
+        </ph.PageParamsProvider>
+      </GlobalContextsProvider>
+    </UnnamedGroupContext.Provider>
   );
 }
 
-export default Form;
+export default Team;

@@ -1,0 +1,162 @@
+.article {
+  display: flex;
+  width: 357px;
+  height: auto;
+  flex-direction: column;
+  position: relative;
+}
+.rectangle38928 {
+  background: rgba(255, 255, 255, 1);
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  left: auto;
+  top: auto;
+  flex-direction: column;
+  margin-bottom: 20px;
+  min-width: 0;
+  border-radius: 12px;
+}
+.freeBox__yLk3K {
+  display: flex;
+  width: 194px;
+  height: 24px;
+  position: relative;
+  left: auto;
+  top: auto;
+  margin-top: 10px;
+  margin-left: 10px;
+  flex-direction: row;
+  flex-shrink: 0;
+}
+.slotTargetChildren {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 1);
+  line-height: 1.39687;
+  letter-spacing: 0em;
+}
+.freeBox___8XoBf {
+  display: flex;
+  width: 132px;
+  height: 27px;
+  position: relative;
+  left: auto;
+  top: auto;
+  align-self: flex-end;
+  margin-top: -25px;
+  margin-right: 9px;
+  justify-content: flex-end;
+  flex-direction: row;
+  flex-shrink: 0;
+}
+.slotTargetSlot {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 1);
+  text-align: right;
+  line-height: 1.39687;
+  letter-spacing: 0em;
+}
+.freeBox___2Web2 {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin-top: 5px;
+  margin-left: 15px;
+  padding-right: 15px;
+}
+.slotTargetSlot4 > :global(.__wab_text),
+.slotTargetSlot4 > :global(.__wab_expr_html_text),
+.slotTargetSlot4 > :global(.__wab_slot-string-wrapper),
+.slotTargetSlot4 > :global(.__wab_slot) > :global(.__wab_text),
+.slotTargetSlot4 > :global(.__wab_slot) > :global(.__wab_expr_html_text),
+.slotTargetSlot4 > :global(.__wab_slot) > :global(.__wab_slot-string-wrapper),
+.slotTargetSlot4
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_text),
+.slotTargetSlot4
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_expr_html_text),
+.slotTargetSlot4
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_slot-string-wrapper),
+.slotTargetSlot4
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_text),
+.slotTargetSlot4
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_expr_html_text),
+.slotTargetSlot4
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_slot-string-wrapper) {
+  text-decoration-line: none;
+}
+.img__aD9Zg {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  left: auto;
+  top: auto;
+  width: 325px;
+  height: 349px;
+  margin-top: 0;
+  margin-left: 0;
+  background: url("/plasmic/pg_site/images/rectangle38952.jpg") center center / cover no-repeat;
+  flex-shrink: 0;
+  border-radius: 12px;
+}
+.img__aD9Zg > picture > img {
+  object-fit: cover;
+}
+.freeBox__fng9D {
+  display: flex;
+  width: 325px;
+  height: auto;
+  position: relative;
+  left: auto;
+  top: auto;
+  margin-left: 15px;
+  margin-bottom: 13px;
+  margin-top: 10px;
+  flex-direction: row;
+}
+.slotTargetSlot2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 1);
+  line-height: 100%;
+  letter-spacing: -0.05em;
+}
+.freeBox__r4XXg {
+  display: flex;
+  width: 100%;
+  height: auto;
+  position: relative;
+  left: auto;
+  top: auto;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  flex-direction: row;
+  max-width: 370px;
+  min-width: 0;
+}
+.slotTargetSlot3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  line-height: 1.39687;
+  letter-spacing: 0em;
+}

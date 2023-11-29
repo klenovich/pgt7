@@ -44,7 +44,8 @@ import {
 } from "@plasmicapp/react-web";
 import NavBar from "../../NavBar"; // plasmic-import: zoXit50v16ZA/component
 import Card from "../../Card"; // plasmic-import: at931Xm9Xbfa/component
-import { Fetcher } from "@plasmicapp/react-web/lib/data-sources"; // plasmic-import: J9NgeB3kJyHt/codeComponent
+import Footer2 from "../../Footer2"; // plasmic-import: DUd-yxFV_3vR/component
+import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -67,9 +68,11 @@ export const PlasmicArtists__ArgProps = new Array<ArgPropType>();
 export type PlasmicArtists__OverridesType = {
   root?: p.Flex<"div">;
   navBar?: p.Flex<typeof NavBar>;
+  section?: p.Flex<"section">;
   h1?: p.Flex<"h1">;
   allArtists?: p.Flex<typeof Card>;
   link?: p.Flex<"a"> & Partial<LinkProps>;
+  footer2?: p.Flex<typeof Footer2>;
 };
 
 export interface DefaultArtistsProps {}
@@ -193,169 +196,167 @@ function PlasmicArtists__RenderFunc(props: {
             }}
           />
 
-          <h1
-            data-plasmic-name={"h1"}
-            data-plasmic-override={overrides.h1}
-            className={classNames(
-              projectcss.all,
-              projectcss.h1,
-              projectcss.__wab_text,
-              sty.h1
-            )}
+          <section
+            data-plasmic-name={"section"}
+            data-plasmic-override={overrides.section}
+            className={classNames(projectcss.all, sty.section)}
           >
-            {"ARTISTS"}
-          </h1>
-          {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
-            (() => {
-              try {
-                return $queries.artists.data;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return [];
+            <h1
+              data-plasmic-name={"h1"}
+              data-plasmic-override={overrides.h1}
+              className={classNames(
+                projectcss.all,
+                projectcss.h1,
+                projectcss.__wab_text,
+                sty.h1
+              )}
+            >
+              {"BAND & ARTISTS"}
+            </h1>
+            {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
+              (() => {
+                try {
+                  return $queries.artists.data;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return [];
+                  }
+                  throw e;
                 }
-                throw e;
-              }
-            })()
-          ).map((__plasmic_item_0, __plasmic_idx_0) => {
-            const currentItem = __plasmic_item_0;
-            const currentIndex = __plasmic_idx_0;
-            return (
-              <Card
-                data-plasmic-name={"allArtists"}
-                data-plasmic-override={overrides.allArtists}
-                className={classNames("__wab_instance", sty.allArtists)}
-                key={currentIndex}
-                noTitle={true}
-              >
-                <p.PlasmicLink
-                  data-plasmic-name={"link"}
-                  data-plasmic-override={overrides.link}
-                  className={classNames(projectcss.all, projectcss.a, sty.link)}
-                  component={Link}
-                  href={(() => {
-                    try {
-                      return "/artists/" + currentItem.slug;
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return undefined;
-                      }
-                      throw e;
-                    }
-                  })()}
-                  platform={"nextjs"}
+              })()
+            ).map((__plasmic_item_0, __plasmic_idx_0) => {
+              const currentItem = __plasmic_item_0;
+              const currentIndex = __plasmic_idx_0;
+              return (
+                <Card
+                  data-plasmic-name={"allArtists"}
+                  data-plasmic-override={overrides.allArtists}
+                  className={classNames("__wab_instance", sty.allArtists)}
+                  key={currentIndex}
+                  noTitle={true}
                 >
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox___1Mevp)}
-                  >
-                    <p.PlasmicImg
-                      alt={""}
-                      className={classNames(sty.img__oSrFe)}
-                      displayHeight={"auto"}
-                      displayMaxHeight={"90px"}
-                      displayMaxWidth={"35%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"200px"}
-                      loading={"lazy"}
-                      src={(() => {
-                        try {
-                          return currentItem.Photo[0].url;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return undefined;
-                          }
-                          throw e;
+                  <p.PlasmicLink
+                    data-plasmic-name={"link"}
+                    data-plasmic-override={overrides.link}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      sty.link
+                    )}
+                    component={Link}
+                    href={(() => {
+                      try {
+                        return "/artists/" + currentItem.slug;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return undefined;
                         }
-                      })()}
-                    />
-
+                        throw e;
+                      }
+                    })()}
+                    platform={"nextjs"}
+                  >
                     <div
-                      className={classNames(projectcss.all, sty.freeBox__hnOrz)}
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox___1Mevp
+                      )}
                     >
+                      <p.PlasmicImg
+                        alt={""}
+                        className={classNames(sty.img__oSrFe)}
+                        displayHeight={"auto"}
+                        displayMaxHeight={"90px"}
+                        displayMaxWidth={"35%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"200px"}
+                        loading={"lazy"}
+                        src={(() => {
+                          try {
+                            return currentItem.Photo[0].url;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return undefined;
+                            }
+                            throw e;
+                          }
+                        })()}
+                      />
+
                       <div
                         className={classNames(
                           projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__mJv8H
+                          sty.freeBox__hnOrz
                         )}
                       >
-                        <React.Fragment>
-                          {(() => {
-                            try {
-                              return currentItem.Name;
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return "something here";
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__mJv8H
+                          )}
+                        >
+                          <React.Fragment>
+                            {(() => {
+                              try {
+                                return currentItem.Name;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return "something here";
+                                }
+                                throw e;
                               }
-                              throw e;
-                            }
-                          })()}
-                        </React.Fragment>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__wvLwe
-                        )}
-                      >
-                        <React.Fragment>
-                          {(() => {
-                            try {
-                              return currentItem.Location;
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return "something here";
+                            })()}
+                          </React.Fragment>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__wvLwe
+                          )}
+                        >
+                          <React.Fragment>
+                            {(() => {
+                              try {
+                                return currentItem.Location;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return "something here";
+                                }
+                                throw e;
                               }
-                              throw e;
-                            }
-                          })()}
-                        </React.Fragment>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__mqBtq
-                        )}
-                      >
-                        <React.Fragment>
-                          {(() => {
-                            try {
-                              return currentItem.Genre;
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return "something here";
-                              }
-                              throw e;
-                            }
-                          })()}
-                        </React.Fragment>
+                            })()}
+                          </React.Fragment>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </p.PlasmicLink>
-              </Card>
-            );
-          })}
+                  </p.PlasmicLink>
+                </Card>
+              );
+            })}
+          </section>
+          <Footer2
+            data-plasmic-name={"footer2"}
+            data-plasmic-override={overrides.footer2}
+            className={classNames("__wab_instance", sty.footer2)}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -363,11 +364,13 @@ function PlasmicArtists__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "navBar", "h1", "allArtists", "link"],
+  root: ["root", "navBar", "section", "h1", "allArtists", "link", "footer2"],
   navBar: ["navBar"],
+  section: ["section", "h1", "allArtists", "link"],
   h1: ["h1"],
   allArtists: ["allArtists", "link"],
-  link: ["link"]
+  link: ["link"],
+  footer2: ["footer2"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -375,9 +378,11 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   navBar: typeof NavBar;
+  section: "section";
   h1: "h1";
   allArtists: typeof Card;
   link: "a";
+  footer2: typeof Footer2;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -414,7 +419,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
       () =>
         deriveRenderOpts(props, {
           name: nodeName,
-          descendantNames: [...PlasmicDescendants[nodeName]],
+          descendantNames: PlasmicDescendants[nodeName],
           internalArgPropNames: PlasmicArtists__ArgProps,
           internalVariantPropNames: PlasmicArtists__VariantProps
         }),
@@ -441,9 +446,11 @@ export const PlasmicArtists = Object.assign(
   {
     // Helper components rendering sub-elements
     navBar: makeNodeComponent("navBar"),
+    section: makeNodeComponent("section"),
     h1: makeNodeComponent("h1"),
     allArtists: makeNodeComponent("allArtists"),
     link: makeNodeComponent("link"),
+    footer2: makeNodeComponent("footer2"),
 
     // Metadata about props expected for PlasmicArtists
     internalVariantProps: PlasmicArtists__VariantProps,

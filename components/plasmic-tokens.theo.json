@@ -2039,6 +2039,26 @@
         "projectId": "ohDidvG9XsCeFumugENU3J",
         "id": "BwOcdtoxJOlu"
       }
+    },
+    {
+      "name": "Unnamed Style Token",
+      "type": "spacing",
+      "value": "1px",
+      "category": "spacing",
+      "meta": {
+        "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+        "id": "4-GkVGSzlHXX"
+      }
+    },
+    {
+      "name": "Unnamed Style Token 2",
+      "type": "color",
+      "value": "#FFFFFF",
+      "category": "color",
+      "meta": {
+        "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+        "id": "QTMcw4GWoWdC"
+      }
     }
   ],
   "global": {

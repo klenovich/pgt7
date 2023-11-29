@@ -38,38 +38,38 @@
           "id": "FNIk-CnxQYXU",
           "name": "RichLayout",
           "displayName": "hostless-rich-layout",
-          "componentImportPath": "@plasmicpkgs/plasmic-rich-components"
+          "componentImportPath": "@plasmicpkgs/plasmic-rich-components/skinny/rich-layout"
         },
         {
           "id": "k4RvFQUTZKCU",
           "name": "RichTable",
           "displayName": "hostless-rich-table",
-          "componentImportPath": "@plasmicpkgs/plasmic-rich-components",
+          "componentImportPath": "@plasmicpkgs/plasmic-rich-components/skinny/rich-table",
           "helper": {
             "name": "tableHelpers",
-            "importPath": "@plasmicpkgs/plasmic-rich-components"
+            "importPath": "@plasmicpkgs/plasmic-rich-components/skinny/rich-table"
           }
         },
         {
           "id": "zV8WqibK3ZnC",
           "name": "RichDetails",
           "displayName": "hostless-rich-details",
-          "componentImportPath": "@plasmicpkgs/plasmic-rich-components"
+          "componentImportPath": "@plasmicpkgs/plasmic-rich-components/skinny/rich-details"
         },
         {
           "id": "Hh2OL1EveIF",
           "name": "RichList",
           "displayName": "hostless-rich-list",
-          "componentImportPath": "@plasmicpkgs/plasmic-rich-components"
+          "componentImportPath": "@plasmicpkgs/plasmic-rich-components/skinny/rich-list"
         },
         {
           "id": "UzObi2yVH_DH",
           "name": "RichCalendar",
           "displayName": "hostless-rich-calendar",
-          "componentImportPath": "@plasmicpkgs/plasmic-rich-components",
+          "componentImportPath": "@plasmicpkgs/plasmic-rich-components/skinny/rich-calendar",
           "helper": {
             "name": "calendarHelpers",
-            "importPath": "@plasmicpkgs/plasmic-rich-components"
+            "importPath": "@plasmicpkgs/plasmic-rich-components/skinny/rich-calendar"
           }
         }
       ],
@@ -213,29 +213,29 @@
           "id": "TgJFzUZpvQ",
           "name": "FormWrapper",
           "displayName": "plasmic-antd5-form",
-          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerForm",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/SchemaForm",
           "helper": {
             "name": "formHelpers",
-            "importPath": "@plasmicpkgs/antd5/skinny/registerForm"
+            "importPath": "@plasmicpkgs/antd5/skinny/Form"
           }
         },
         {
           "id": "EYHwZh9ILg",
           "name": "FormItemWrapper",
           "displayName": "plasmic-antd5-form-item",
-          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerForm"
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/FormItem"
         },
         {
           "id": "zEXrWX9naj",
           "name": "FormGroup",
           "displayName": "plasmic-antd5-form-group",
-          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerForm"
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/FormGroup"
         },
         {
           "id": "M2mN_XzxO4",
           "name": "FormListWrapper",
           "displayName": "plasmic-antd5-form-list",
-          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerForm"
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/FormList"
         },
         {
           "id": "Vf5hntD2SZ5",
@@ -642,20 +642,6 @@
           "plumeType": "button"
         },
         {
-          "id": "yTxv42yHQfoR",
-          "name": "Form",
-          "type": "managed",
-          "projectId": "oATn9WrAqtDeaLtJDt8hxD",
-          "renderModuleFilePath": "plasmic/pg_site/PlasmicForm.tsx",
-          "importSpec": {
-            "modulePath": "../pages/form.tsx"
-          },
-          "cssFilePath": "plasmic/pg_site/PlasmicForm.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/form"
-        },
-        {
           "id": "XzcuAqtDaHyQ",
           "name": "ArtistPage",
           "type": "managed",
@@ -790,6 +776,129 @@
           "cssFilePath": "plasmic/pg_site/PlasmicFooter.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "DUd-yxFV_3vR",
+          "name": "Footer2",
+          "type": "managed",
+          "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+          "renderModuleFilePath": "plasmic/pg_site/PlasmicFooter2.tsx",
+          "importSpec": {
+            "modulePath": "Footer2.tsx"
+          },
+          "cssFilePath": "plasmic/pg_site/PlasmicFooter2.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "7-eI8frsoj5D",
+          "name": "Journal",
+          "type": "managed",
+          "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+          "renderModuleFilePath": "plasmic/pg_site/PlasmicJournal.tsx",
+          "importSpec": {
+            "modulePath": "../pages/journal.tsx"
+          },
+          "cssFilePath": "plasmic/pg_site/PlasmicJournal.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/journal"
+        },
+        {
+          "id": "EN_ThhJDYaVx",
+          "name": "ArticleAll",
+          "type": "managed",
+          "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+          "renderModuleFilePath": "plasmic/pg_site/PlasmicArticleAll.tsx",
+          "importSpec": {
+            "modulePath": "ArticleAll.tsx"
+          },
+          "cssFilePath": "plasmic/pg_site/PlasmicArticleAll.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "uxCP9nNPQHMp",
+          "name": "JournalPost",
+          "type": "managed",
+          "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+          "renderModuleFilePath": "plasmic/pg_site/PlasmicJournalPost.tsx",
+          "importSpec": {
+            "modulePath": "../pages/journal/[slug].tsx"
+          },
+          "cssFilePath": "plasmic/pg_site/PlasmicJournalPost.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/journal/[slug]"
+        },
+        {
+          "id": "lOAhjoWYBUsL",
+          "name": "JournalPost2",
+          "type": "managed",
+          "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+          "renderModuleFilePath": "plasmic/pg_site/PlasmicJournalPost2.tsx",
+          "importSpec": {
+            "modulePath": "JournalPost2.tsx"
+          },
+          "cssFilePath": "plasmic/pg_site/PlasmicJournalPost2.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "4o-o7RtBziJg",
+          "name": "Journal2",
+          "type": "managed",
+          "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+          "renderModuleFilePath": "plasmic/pg_site/PlasmicJournal2.tsx",
+          "importSpec": {
+            "modulePath": "../pages/all-journal.tsx"
+          },
+          "cssFilePath": "plasmic/pg_site/PlasmicJournal2.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/all-journal"
+        },
+        {
+          "id": "7F91C3rit7JS",
+          "name": "Team",
+          "type": "managed",
+          "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+          "renderModuleFilePath": "plasmic/pg_site/PlasmicTeam.tsx",
+          "importSpec": {
+            "modulePath": "../pages/team.tsx"
+          },
+          "cssFilePath": "plasmic/pg_site/PlasmicTeam.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/team"
+        },
+        {
+          "id": "JPz3EuOfzdf1",
+          "name": "TeamIndividual",
+          "type": "managed",
+          "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+          "renderModuleFilePath": "plasmic/pg_site/PlasmicTeamIndividual.tsx",
+          "importSpec": {
+            "modulePath": "../pages/team/[slug].tsx"
+          },
+          "cssFilePath": "plasmic/pg_site/PlasmicTeamIndividual.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/team/[slug]"
+        },
+        {
+          "id": "LYexCHscrrI3",
+          "name": "TeamIndividual2",
+          "type": "managed",
+          "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+          "renderModuleFilePath": "plasmic/pg_site/PlasmicTeamIndividual2.tsx",
+          "importSpec": {
+            "modulePath": "../pages/journalist/[slug].tsx"
+          },
+          "cssFilePath": "plasmic/pg_site/PlasmicTeamIndividual2.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/journalist/[slug]"
         }
       ],
       "icons": [
@@ -859,6 +968,91 @@
           "id": "PRgaL8Pe1HtC",
           "name": "Screenshot 2023-10-27 at 3.23.08 PM.png",
           "filePath": "../public/plasmic/pg_site/images/screenshot20231027At32308PMpng.png"
+        },
+        {
+          "id": "vrdgKvT-1pUd",
+          "name": "Rectangle 38940",
+          "filePath": "../public/plasmic/pg_site/images/rectangle38940.jpg"
+        },
+        {
+          "id": "CfIuFhPHL3qW",
+          "name": "Rectangle 38941",
+          "filePath": "../public/plasmic/pg_site/images/rectangle38941.jpg"
+        },
+        {
+          "id": "LhzOq1OxNo4Z",
+          "name": "Rectangle 38942",
+          "filePath": "../public/plasmic/pg_site/images/rectangle38942.jpg"
+        },
+        {
+          "id": "rOBpFayLbxJG",
+          "name": "Rectangle 38944",
+          "filePath": "../public/plasmic/pg_site/images/rectangle38944.jpg"
+        },
+        {
+          "id": "7nN89j8zulTu",
+          "name": "Rectangle 38945",
+          "filePath": "../public/plasmic/pg_site/images/rectangle38945.jpg"
+        },
+        {
+          "id": "sGl262TFCxcb",
+          "name": "Rectangle 38946",
+          "filePath": "../public/plasmic/pg_site/images/rectangle38946.jpg"
+        },
+        {
+          "id": "huYoyBHWOgaT",
+          "name": "Rectangle 38947",
+          "filePath": "../public/plasmic/pg_site/images/rectangle38947.jpg"
+        },
+        {
+          "id": "cPB7c6VAlGVp",
+          "name": "Rectangle 38948",
+          "filePath": "../public/plasmic/pg_site/images/rectangle38948.jpg"
+        },
+        {
+          "id": "zsi9yd0Nv41O",
+          "name": "Rectangle 38884",
+          "filePath": "../public/plasmic/pg_site/images/rectangle38884.jpg"
+        },
+        {
+          "id": "UQTPXisGQoIi",
+          "name": "Screenshot 2023-11-08 at 6.58.32 PM.png",
+          "filePath": "../public/plasmic/pg_site/images/screenshot20231108At65832PMpng.png"
+        },
+        {
+          "id": "nXtBFK7sTtf8",
+          "name": "Screenshot 2023-11-08 at 6.59.17 PM.png",
+          "filePath": "../public/plasmic/pg_site/images/screenshot20231108At65917PMpng.png"
+        },
+        {
+          "id": "jlJWtgBs8Cmm",
+          "name": "Screenshot 2023-11-08 at 6.59.53 PM.png",
+          "filePath": "../public/plasmic/pg_site/images/screenshot20231108At65953PMpng.png"
+        },
+        {
+          "id": "tel99_jP4VZD",
+          "name": "Screenshot 2023-11-08 at 7.01.06 PM.png",
+          "filePath": "../public/plasmic/pg_site/images/screenshot20231108At70106PMpng.png"
+        },
+        {
+          "id": "O9XqbVGLS8Uw",
+          "name": "Screenshot 2023-11-08 at 7.01.22 PM.png",
+          "filePath": "../public/plasmic/pg_site/images/screenshot20231108At70122PMpng.png"
+        },
+        {
+          "id": "5xIATDVxPtkV",
+          "name": "Screenshot 2023-11-08 at 7.01.46 PM.png",
+          "filePath": "../public/plasmic/pg_site/images/screenshot20231108At70146PMpng.png"
+        },
+        {
+          "id": "c8KdZ9p-QA74",
+          "name": "Rectangle 38952",
+          "filePath": "../public/plasmic/pg_site/images/rectangle38952.jpg"
+        },
+        {
+          "id": "CsE2NXB10pI6",
+          "name": "Screenshot 2023-11-28 at 3.51.20 PM.png",
+          "filePath": "../public/plasmic/pg_site/images/screenshot20231128At35120PMpng.png"
         }
       ],
       "indirect": false,
@@ -901,6 +1095,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.318",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.318/dist/plasmic.schema.json"
+  "cliVersion": "0.1.323",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.323/dist/plasmic.schema.json"
 }

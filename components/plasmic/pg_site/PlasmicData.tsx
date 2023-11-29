@@ -36,7 +36,7 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
-import { RichList } from "@plasmicpkgs/plasmic-rich-components"; // plasmic-import: Hh2OL1EveIF/codeComponent
+import { RichList } from "@plasmicpkgs/plasmic-rich-components/skinny/rich-list";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -160,7 +160,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
       () =>
         deriveRenderOpts(props, {
           name: nodeName,
-          descendantNames: [...PlasmicDescendants[nodeName]],
+          descendantNames: PlasmicDescendants[nodeName],
           internalArgPropNames: PlasmicData__ArgProps,
           internalVariantPropNames: PlasmicData__VariantProps
         }),
