@@ -73,8 +73,7 @@
           }
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "ohDidvG9XsCeFumugENU3J",
@@ -460,10 +459,21 @@
             "name": "paginationHelpers",
             "importPath": "@plasmicpkgs/antd5/skinny/registerPagination"
           }
+        },
+        {
+          "id": "Zjjf7sP4JdQI",
+          "name": "AntdBreadcrumb",
+          "displayName": "plasmic-antd5-breadcrumb",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
+        },
+        {
+          "id": "2ZOevuBPH-SX",
+          "name": "AntdBreadcrumbItem",
+          "displayName": "plasmic-antd5-breadcrumb-item",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
@@ -580,8 +590,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-cms"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "7nJ7UcFmq9UzB6eXfC5z4a",
@@ -899,6 +908,20 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/journalist/[slug]"
+        },
+        {
+          "id": "vuYIHjrA3sdV",
+          "name": "Sponsors",
+          "type": "managed",
+          "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+          "renderModuleFilePath": "plasmic/pg_site/PlasmicSponsors.tsx",
+          "importSpec": {
+            "modulePath": "../pages/sponsors.tsx"
+          },
+          "cssFilePath": "plasmic/pg_site/PlasmicSponsors.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/sponsors"
         }
       ],
       "icons": [
@@ -1073,6 +1096,21 @@
         }
       ],
       "customFunctions": []
+    },
+    {
+      "projectId": "mqxdhm5p6WHAt7hW1mdcCX",
+      "projectApiToken": "UksWJg8OaU7Et0wrGHCnNaKVdXs3QaJA2LrcWX3oELzI4W0RognhFJL3XL0Xuq4LIYLIftyRKwslnLp67oHuw",
+      "projectName": "jquery",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/jquery/plasmic_jquery.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "codeComponents": [],
+      "customFunctions": []
     }
   ],
   "globalVariants": {
@@ -1095,6 +1133,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.323",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.323/dist/plasmic.schema.json"
+  "cliVersion": "0.1.325",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.325/dist/plasmic.schema.json"
 }
