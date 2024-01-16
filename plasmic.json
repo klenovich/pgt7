@@ -919,7 +919,7 @@
           "projectId": "oATn9WrAqtDeaLtJDt8hxD",
           "renderModuleFilePath": "plasmic/pg_site/PlasmicSponsors.tsx",
           "importSpec": {
-            "modulePath": "../pages/sponsorsc.tsx"
+            "modulePath": "../pages/sponsors.tsx"
           },
           "cssFilePath": "plasmic/pg_site/PlasmicSponsors.module.css",
           "scheme": "blackbox",
