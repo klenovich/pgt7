@@ -36,7 +36,6 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
-import { Iframe } from "@plasmicpkgs/plasmic-basic-components";
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -59,7 +58,6 @@ export const PlasmicSponsors__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicSponsors__OverridesType = {
   root?: p.Flex<"div">;
-  iframe?: p.Flex<typeof Iframe>;
   embedHtml?: p.Flex<typeof Embed>;
 };
 
@@ -123,18 +121,13 @@ function PlasmicSponsors__RenderFunc(props: {
             sty.root
           )}
         >
-          <Iframe
-            data-plasmic-name={"iframe"}
-            data-plasmic-override={overrides.iframe}
-            className={classNames("__wab_instance", sty.iframe)}
-            preview={true}
-            src={"https://postgenre.world/LFO2-SPONSORPACKET.pdf"}
-          />
-
           <Embed
             data-plasmic-name={"embedHtml"}
             data-plasmic-override={overrides.embedHtml}
             className={classNames("__wab_instance", sty.embedHtml)}
+            code={
+              '<meta http-equiv="Refresh" content="0; url=\'https://postgenre.world/LFO2-SPONSORPACKET.pdf\'" />'
+            }
           />
         </div>
       </div>
@@ -143,8 +136,7 @@ function PlasmicSponsors__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "iframe", "embedHtml"],
-  iframe: ["iframe"],
+  root: ["root", "embedHtml"],
   embedHtml: ["embedHtml"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -152,7 +144,6 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  iframe: typeof Iframe;
   embedHtml: typeof Embed;
 };
 
@@ -216,7 +207,6 @@ export const PlasmicSponsors = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    iframe: makeNodeComponent("iframe"),
     embedHtml: makeNodeComponent("embedHtml"),
 
     // Metadata about props expected for PlasmicSponsors

@@ -476,12 +476,12 @@
         {
           "type": "renderModule",
           "assetId": "vuYIHjrA3sdV",
-          "checksum": "ded134673d7e333520b9c251b2f5cd5d"
+          "checksum": "40e228e20db59fe881b1da97bd63d075"
         },
         {
           "type": "cssRules",
           "assetId": "vuYIHjrA3sdV",
-          "checksum": "ded134673d7e333520b9c251b2f5cd5d"
+          "checksum": "40e228e20db59fe881b1da97bd63d075"
         }
       ],
       "codegenVersion": "0.0.1"

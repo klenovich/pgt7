@@ -73,7 +73,8 @@
           }
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "ohDidvG9XsCeFumugENU3J",
@@ -473,7 +474,8 @@
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
@@ -590,7 +592,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-cms"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "7nJ7UcFmq9UzB6eXfC5z4a",
@@ -916,12 +919,12 @@
           "projectId": "oATn9WrAqtDeaLtJDt8hxD",
           "renderModuleFilePath": "plasmic/pg_site/PlasmicSponsors.tsx",
           "importSpec": {
-            "modulePath": "../pages/sponsors.tsx"
+            "modulePath": "../pages/sponsorsc.tsx"
           },
           "cssFilePath": "plasmic/pg_site/PlasmicSponsors.module.css",
           "scheme": "blackbox",
           "componentType": "page",
-          "path": "/sponsors"
+          "path": "/sponsorsc"
         }
       ],
       "icons": [
@@ -1110,7 +1113,8 @@
       "globalContextsFilePath": "",
       "splitsProviderFilePath": "",
       "codeComponents": [],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     }
   ],
   "globalVariants": {
