@@ -213,7 +213,7 @@ function PlasmicArtistPage__RenderFunc(props: {
           data-plasmic-for-node={forNode}
           bkgc={(() => {
             try {
-              return $queries.artists.data[0].Color;
+              return $queries.artists.data;
             } catch (e) {
               if (
                 e instanceof TypeError ||
