@@ -314,7 +314,7 @@ function PlasmicGenesis1__RenderFunc(props: {
                     sty.figmaPaste2
                   )}
                   component={Link}
-                  href={"https://indietix.org/events/postgenre/genesis3"}
+                  href={"https://indietix.org/events/postgenre/genesis1"}
                   platform={"nextjs"}
                 >
                   <div
