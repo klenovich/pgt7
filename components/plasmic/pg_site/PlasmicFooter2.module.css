@@ -29,40 +29,39 @@
   background: url("/plasmic/pg_site/images/rectangle38946.jpg") center center / cover no-repeat;
   width: 155px;
   height: 155px;
-  display: block;
   position: absolute;
   left: 0px;
   top: 172px;
+  display: none;
 }
 .rectangle38947 {
   background: url("/plasmic/pg_site/images/rectangle38947.jpg") -32px -11px / 233px 168px no-repeat;
   width: 155px;
   height: 155px;
-  display: block;
   position: absolute;
   left: 172px;
   top: 0px;
+  display: none;
 }
 .rectangle38948 {
   background: url("/plasmic/pg_site/images/rectangle38948.jpg") center center / cover no-repeat;
   width: 155px;
   height: 155px;
-  display: block;
   position: absolute;
   left: 0px;
   top: 0px;
+  display: none;
 }
 .rectangle38949 {
   background: rgba(0, 0, 0, 1);
   width: 155px;
   height: 155px;
-  display: block;
   position: absolute;
   left: 172px;
   top: 172px;
+  display: none;
 }
 .link__zMi28 {
-  display: block;
   font-size: 30px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -72,9 +71,9 @@
   position: absolute;
   left: 29px;
   top: 60px;
+  display: none;
 }
 .link__irxP {
-  display: block;
   font-size: 30px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -84,9 +83,9 @@
   position: absolute;
   left: 207px;
   top: 60px;
+  display: none;
 }
 .link__uruHn {
-  display: block;
   font-size: 30px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -96,18 +95,18 @@
   position: absolute;
   left: 23px;
   top: 232px;
+  display: none;
 }
 .rectangle38884 {
   background: url("/plasmic/pg_site/images/rectangle38884.jpg") -64px -3px / 282px 216px no-repeat;
   width: 155px;
   height: 155px;
-  display: block;
   position: absolute;
   left: 172px;
   top: 172px;
+  display: none;
 }
 .link__akzFu {
-  display: block;
   font-size: 30px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -117,6 +116,7 @@
   position: absolute;
   left: 216px;
   top: 232px;
+  display: none;
 }
 .rectangle38950 {
   background: rgba(0, 0, 0, 1);
@@ -125,7 +125,7 @@
   display: block;
   position: absolute;
   left: 0px;
-  top: 344px;
+  top: 1px;
 }
 .text__ti18O {
   display: block;
@@ -136,8 +136,30 @@
   line-height: 100%;
   color: rgba(255, 255, 255, 1);
   position: absolute;
-  left: 91px;
-  top: 353px;
+  left: 90.5px;
+  top: 12.203125px;
+}
+.rectangle38951 {
+  background: rgba(0, 0, 0, 1);
+  width: 327px;
+  height: 52px;
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 64px;
+}
+.text__mgvh {
+  display: block;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 100%;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  left: 69px;
+  top: 13px;
+  text-align: center;
 }
 .text__kxD5 {
   display: block;
@@ -149,5 +171,5 @@
   color: rgba(0, 0, 0, 1);
   position: absolute;
   left: 0px;
-  top: 407px;
+  top: 130px;
 }
