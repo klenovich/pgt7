@@ -276,7 +276,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 sty.text__shQh3
               )}
             >
-              {"LIVE FROM OAKLAND:\nSERIES 2 \nTickets Available Now!"}
+              {"LIVE FROM OAKLAND:\nGENESIS\nTickets Available Now!"}
             </div>
           </section>
           <section
