@@ -17,8 +17,47 @@ import Head from "next/head";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
 
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
+import {
+  Flex as Flex__,
+  MultiChoiceArg,
+  PlasmicDataSourceContextProvider as PlasmicDataSourceContextProvider__,
+  PlasmicIcon as PlasmicIcon__,
+  PlasmicImg as PlasmicImg__,
+  PlasmicLink as PlasmicLink__,
+  PlasmicPageGuard as PlasmicPageGuard__,
+  SingleBooleanChoiceArg,
+  SingleChoiceArg,
+  Stack as Stack__,
+  StrictProps,
+  Trans as Trans__,
+  classNames,
+  createPlasmicElementProxy,
+  deriveRenderOpts,
+  ensureGlobalVariants,
+  generateOnMutateForSpec,
+  generateStateOnChangeProp,
+  generateStateOnChangePropForCodeComponents,
+  generateStateValueProp,
+  get as $stateGet,
+  hasVariant,
+  initializeCodeComponentStates,
+  initializePlasmicStates,
+  makeFragment,
+  omit,
+  pick,
+  renderPlasmicSlot,
+  set as $stateSet,
+  useCurrentUser,
+  useDollarState,
+  usePlasmicTranslator,
+  useTrigger,
+  wrapWithClassName
+} from "@plasmicapp/react-web";
+import {
+  DataCtxReader as DataCtxReader__,
+  useDataEnv,
+  useGlobalActions
+} from "@plasmicapp/react-web/lib/host";
 
 import {
   executePlasmicDataOp,
@@ -26,22 +65,6 @@ import {
   usePlasmicInvalidate
 } from "@plasmicapp/react-web/lib/data-sources";
 
-import {
-  hasVariant,
-  classNames,
-  wrapWithClassName,
-  createPlasmicElementProxy,
-  makeFragment,
-  MultiChoiceArg,
-  SingleBooleanChoiceArg,
-  SingleChoiceArg,
-  pick,
-  omit,
-  useTrigger,
-  StrictProps,
-  deriveRenderOpts,
-  ensureGlobalVariants
-} from "@plasmicapp/react-web";
 import NavBar from "../../NavBar"; // plasmic-import: zoXit50v16ZA/component
 import Card from "../../Card"; // plasmic-import: at931Xm9Xbfa/component
 import JournalPost2 from "../../JournalPost2"; // plasmic-import: lOAhjoWYBUsL/component
@@ -67,20 +90,20 @@ type ArgPropType = keyof PlasmicTeamIndividual__ArgsType;
 export const PlasmicTeamIndividual__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicTeamIndividual__OverridesType = {
-  postGenre?: p.Flex<"div">;
-  navBar?: p.Flex<typeof NavBar>;
-  bandInfo?: p.Flex<"section">;
-  name?: p.Flex<"section">;
-  h1?: p.Flex<"h1">;
-  description?: p.Flex<"section">;
-  about?: p.Flex<"div">;
-  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow?: p.Flex<"div">;
-  events?: p.Flex<"div">;
-  about2?: p.Flex<"div">;
-  journalPost2?: p.Flex<typeof JournalPost2>;
-  about3?: p.Flex<"a"> & Partial<LinkProps>;
-  allBlogPosts?: p.Flex<"div">;
-  footer2?: p.Flex<typeof Footer2>;
+  postGenre?: Flex__<"div">;
+  navBar?: Flex__<typeof NavBar>;
+  bandInfo?: Flex__<"section">;
+  name?: Flex__<"section">;
+  h1?: Flex__<"h1">;
+  description?: Flex__<"section">;
+  about?: Flex__<"div">;
+  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow?: Flex__<"div">;
+  events?: Flex__<"div">;
+  about2?: Flex__<"div">;
+  journalPost2?: Flex__<typeof JournalPost2>;
+  about3?: Flex__<"a"> & Partial<LinkProps>;
+  allBlogPosts?: Flex__<"div">;
+  footer2?: Flex__<typeof Footer2>;
 };
 
 export interface DefaultTeamIndividualProps {}
@@ -110,11 +133,11 @@ function PlasmicTeamIndividual__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
 
   let [$queries, setDollarQueries] = React.useState<
     Record<string, ReturnType<typeof usePlasmicDataOp>>
@@ -273,7 +296,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
               }
             })()}
           >
-            <p.PlasmicImg
+            <PlasmicImg__
               alt={""}
               className={classNames(sty.img__h2I4P)}
               displayHeight={"100vw"}
@@ -416,7 +439,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                       key={currentIndex}
                       noTitle={true}
                     >
-                      <p.PlasmicLink
+                      <PlasmicLink__
                         className={classNames(
                           projectcss.all,
                           projectcss.a,
@@ -444,7 +467,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                             sty.freeBox___1O5T1
                           )}
                         >
-                          <p.PlasmicImg
+                          <PlasmicImg__
                             alt={""}
                             className={classNames(sty.img__bxp7H)}
                             displayHeight={"auto"}
@@ -564,7 +587,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                             </div>
                           </div>
                         </div>
-                      </p.PlasmicLink>
+                      </PlasmicLink__>
                     </Card>
                   );
                 })}
@@ -607,7 +630,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                     key={currentIndex}
                     noTitle={true}
                   >
-                    <p.PlasmicLink
+                    <PlasmicLink__
                       className={classNames(
                         projectcss.all,
                         projectcss.a,
@@ -629,7 +652,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                       })()}
                       platform={"nextjs"}
                     >
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img__oflTy)}
                         displayHeight={"auto"}
@@ -646,7 +669,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                           aspectRatio: undefined
                         }}
                       />
-                    </p.PlasmicLink>
+                    </PlasmicLink__>
                   </Card>
                 );
               })}
@@ -673,7 +696,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                     key={currentIndex}
                     noTitle={true}
                   >
-                    <p.PlasmicLink
+                    <PlasmicLink__
                       className={classNames(
                         projectcss.all,
                         projectcss.a,
@@ -695,7 +718,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                       })()}
                       platform={"nextjs"}
                     >
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img__yXeG)}
                         displayHeight={"auto"}
@@ -712,7 +735,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                           aspectRatio: undefined
                         }}
                       />
-                    </p.PlasmicLink>
+                    </PlasmicLink__>
                   </Card>
                 );
               })}
@@ -739,7 +762,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                     key={currentIndex}
                     noTitle={true}
                   >
-                    <p.PlasmicLink
+                    <PlasmicLink__
                       className={classNames(
                         projectcss.all,
                         projectcss.a,
@@ -761,7 +784,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                       })()}
                       platform={"nextjs"}
                     >
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img__uivUb)}
                         displayHeight={"auto"}
@@ -778,7 +801,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                           aspectRatio: undefined
                         }}
                       />
-                    </p.PlasmicLink>
+                    </PlasmicLink__>
                   </Card>
                 );
               })}
@@ -805,7 +828,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                     key={currentIndex}
                     noTitle={true}
                   >
-                    <p.PlasmicLink
+                    <PlasmicLink__
                       className={classNames(
                         projectcss.all,
                         projectcss.a,
@@ -846,7 +869,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                         const currentItem = __plasmic_item_1;
                         const currentIndex = __plasmic_idx_1;
                         return (
-                          <p.PlasmicImg
+                          <PlasmicImg__
                             alt={""}
                             className={classNames(sty.img__ed2Ts)}
                             displayHeight={"65px"}
@@ -866,7 +889,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                           />
                         );
                       })}
-                    </p.PlasmicLink>
+                    </PlasmicLink__>
                   </Card>
                 );
               })}
@@ -893,7 +916,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                     key={currentIndex}
                     noTitle={true}
                   >
-                    <p.PlasmicLink
+                    <PlasmicLink__
                       className={classNames(
                         projectcss.all,
                         projectcss.a,
@@ -915,7 +938,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                       })()}
                       platform={"nextjs"}
                     >
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img__eXoG6)}
                         displayHeight={"65px"}
@@ -932,7 +955,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                           aspectRatio: undefined
                         }}
                       />
-                    </p.PlasmicLink>
+                    </PlasmicLink__>
                   </Card>
                 );
               })}
@@ -959,7 +982,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                     key={currentIndex}
                     noTitle={true}
                   >
-                    <p.PlasmicLink
+                    <PlasmicLink__
                       className={classNames(
                         projectcss.all,
                         projectcss.a,
@@ -981,7 +1004,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                       })()}
                       platform={"nextjs"}
                     >
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img__bfhI7)}
                         displayHeight={"65px"}
@@ -998,7 +1021,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                           aspectRatio: undefined
                         }}
                       />
-                    </p.PlasmicLink>
+                    </PlasmicLink__>
                   </Card>
                 );
               })}
@@ -1025,7 +1048,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                     key={currentIndex}
                     noTitle={true}
                   >
-                    <p.PlasmicLink
+                    <PlasmicLink__
                       className={classNames(
                         projectcss.all,
                         projectcss.a,
@@ -1047,7 +1070,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                       })()}
                       platform={"nextjs"}
                     >
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img___0YKiV)}
                         displayHeight={"65px"}
@@ -1064,7 +1087,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                           aspectRatio: undefined
                         }}
                       />
-                    </p.PlasmicLink>
+                    </PlasmicLink__>
                   </Card>
                 );
               })}
@@ -1091,7 +1114,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                     key={currentIndex}
                     noTitle={true}
                   >
-                    <p.PlasmicLink
+                    <PlasmicLink__
                       className={classNames(
                         projectcss.all,
                         projectcss.a,
@@ -1113,7 +1136,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                       })()}
                       platform={"nextjs"}
                     >
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img___8X0Gx)}
                         displayHeight={"65px"}
@@ -1130,7 +1153,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                           aspectRatio: undefined
                         }}
                       />
-                    </p.PlasmicLink>
+                    </PlasmicLink__>
                   </Card>
                 );
               })}
@@ -1157,7 +1180,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                     key={currentIndex}
                     noTitle={true}
                   >
-                    <p.PlasmicLink
+                    <PlasmicLink__
                       className={classNames(
                         projectcss.all,
                         projectcss.a,
@@ -1179,7 +1202,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                       })()}
                       platform={"nextjs"}
                     >
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img__gedsm)}
                         displayHeight={"65px"}
@@ -1196,7 +1219,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                           aspectRatio: undefined
                         }}
                       />
-                    </p.PlasmicLink>
+                    </PlasmicLink__>
                   </Card>
                 );
               })}
@@ -1221,7 +1244,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
               const currentItem = __plasmic_item_0;
               const currentIndex = __plasmic_idx_0;
               return (
-                <p.PlasmicLink
+                <PlasmicLink__
                   className={classNames(
                     projectcss.all,
                     projectcss.a,
@@ -1339,7 +1362,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                       </div>
                     }
                     slot4={
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img___0FvJt)}
                         displayHeight={"349px"}
@@ -1381,10 +1404,10 @@ function PlasmicTeamIndividual__RenderFunc(props: {
                       })()}
                     </React.Fragment>
                   </JournalPost2>
-                </p.PlasmicLink>
+                </PlasmicLink__>
               );
             })}
-            <p.PlasmicLink
+            <PlasmicLink__
               data-plasmic-name={"about3"}
               data-plasmic-override={overrides.about3}
               className={classNames(projectcss.all, projectcss.a, sty.about3)}
@@ -1415,7 +1438,7 @@ function PlasmicTeamIndividual__RenderFunc(props: {
               >
                 {"ALL BLOG POSTS >"}
               </div>
-            </p.PlasmicLink>
+            </PlasmicLink__>
           </section>
           <Footer2
             data-plasmic-name={"footer2"}

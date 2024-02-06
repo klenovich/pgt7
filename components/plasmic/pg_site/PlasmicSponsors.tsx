@@ -17,26 +17,48 @@ import Head from "next/head";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
 
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
-
 import {
-  hasVariant,
-  classNames,
-  wrapWithClassName,
-  createPlasmicElementProxy,
-  makeFragment,
+  Flex as Flex__,
   MultiChoiceArg,
+  PlasmicDataSourceContextProvider as PlasmicDataSourceContextProvider__,
+  PlasmicIcon as PlasmicIcon__,
+  PlasmicImg as PlasmicImg__,
+  PlasmicLink as PlasmicLink__,
+  PlasmicPageGuard as PlasmicPageGuard__,
   SingleBooleanChoiceArg,
   SingleChoiceArg,
-  pick,
-  omit,
-  useTrigger,
+  Stack as Stack__,
   StrictProps,
+  Trans as Trans__,
+  classNames,
+  createPlasmicElementProxy,
   deriveRenderOpts,
-  ensureGlobalVariants
+  ensureGlobalVariants,
+  generateOnMutateForSpec,
+  generateStateOnChangeProp,
+  generateStateOnChangePropForCodeComponents,
+  generateStateValueProp,
+  get as $stateGet,
+  hasVariant,
+  initializeCodeComponentStates,
+  initializePlasmicStates,
+  makeFragment,
+  omit,
+  pick,
+  renderPlasmicSlot,
+  set as $stateSet,
+  useCurrentUser,
+  useDollarState,
+  usePlasmicTranslator,
+  useTrigger,
+  wrapWithClassName
 } from "@plasmicapp/react-web";
-import { Iframe } from "@plasmicpkgs/plasmic-basic-components";
+import {
+  DataCtxReader as DataCtxReader__,
+  useDataEnv,
+  useGlobalActions
+} from "@plasmicapp/react-web/lib/host";
+
 import { Embed } from "@plasmicpkgs/plasmic-basic-components";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -58,9 +80,8 @@ type ArgPropType = keyof PlasmicSponsors__ArgsType;
 export const PlasmicSponsors__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicSponsors__OverridesType = {
-  root?: p.Flex<"div">;
-  iframe?: p.Flex<typeof Iframe>;
-  embedHtml?: p.Flex<typeof Embed>;
+  root?: Flex__<"div">;
+  embedHtml?: Flex__<typeof Embed>;
 };
 
 export interface DefaultSponsorsProps {}
@@ -90,11 +111,11 @@ function PlasmicSponsors__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
 
   return (
     <React.Fragment>
@@ -123,18 +144,13 @@ function PlasmicSponsors__RenderFunc(props: {
             sty.root
           )}
         >
-          <Iframe
-            data-plasmic-name={"iframe"}
-            data-plasmic-override={overrides.iframe}
-            className={classNames("__wab_instance", sty.iframe)}
-            preview={true}
-            src={"https://postgenre.world/LFO2-SPONSORPACKET.pdf"}
-          />
-
           <Embed
             data-plasmic-name={"embedHtml"}
             data-plasmic-override={overrides.embedHtml}
             className={classNames("__wab_instance", sty.embedHtml)}
+            code={
+              '<meta http-equiv="Refresh" content="0; url=\'https://postgenre.world/LFO2-SPONSORPACKET.pdf\'" />'
+            }
           />
         </div>
       </div>
@@ -143,8 +159,7 @@ function PlasmicSponsors__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "iframe", "embedHtml"],
-  iframe: ["iframe"],
+  root: ["root", "embedHtml"],
   embedHtml: ["embedHtml"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -152,7 +167,6 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  iframe: typeof Iframe;
   embedHtml: typeof Embed;
 };
 
@@ -216,7 +230,6 @@ export const PlasmicSponsors = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    iframe: makeNodeComponent("iframe"),
     embedHtml: makeNodeComponent("embedHtml"),
 
     // Metadata about props expected for PlasmicSponsors

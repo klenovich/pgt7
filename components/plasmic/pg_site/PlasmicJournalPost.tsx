@@ -17,8 +17,47 @@ import Head from "next/head";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
 
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
+import {
+  Flex as Flex__,
+  MultiChoiceArg,
+  PlasmicDataSourceContextProvider as PlasmicDataSourceContextProvider__,
+  PlasmicIcon as PlasmicIcon__,
+  PlasmicImg as PlasmicImg__,
+  PlasmicLink as PlasmicLink__,
+  PlasmicPageGuard as PlasmicPageGuard__,
+  SingleBooleanChoiceArg,
+  SingleChoiceArg,
+  Stack as Stack__,
+  StrictProps,
+  Trans as Trans__,
+  classNames,
+  createPlasmicElementProxy,
+  deriveRenderOpts,
+  ensureGlobalVariants,
+  generateOnMutateForSpec,
+  generateStateOnChangeProp,
+  generateStateOnChangePropForCodeComponents,
+  generateStateValueProp,
+  get as $stateGet,
+  hasVariant,
+  initializeCodeComponentStates,
+  initializePlasmicStates,
+  makeFragment,
+  omit,
+  pick,
+  renderPlasmicSlot,
+  set as $stateSet,
+  useCurrentUser,
+  useDollarState,
+  usePlasmicTranslator,
+  useTrigger,
+  wrapWithClassName
+} from "@plasmicapp/react-web";
+import {
+  DataCtxReader as DataCtxReader__,
+  useDataEnv,
+  useGlobalActions
+} from "@plasmicapp/react-web/lib/host";
 
 import {
   executePlasmicDataOp,
@@ -26,22 +65,6 @@ import {
   usePlasmicInvalidate
 } from "@plasmicapp/react-web/lib/data-sources";
 
-import {
-  hasVariant,
-  classNames,
-  wrapWithClassName,
-  createPlasmicElementProxy,
-  makeFragment,
-  MultiChoiceArg,
-  SingleBooleanChoiceArg,
-  SingleChoiceArg,
-  pick,
-  omit,
-  useTrigger,
-  StrictProps,
-  deriveRenderOpts,
-  ensureGlobalVariants
-} from "@plasmicapp/react-web";
 import NavBar from "../../NavBar"; // plasmic-import: zoXit50v16ZA/component
 import JournalPost2 from "../../JournalPost2"; // plasmic-import: lOAhjoWYBUsL/component
 import Footer2 from "../../Footer2"; // plasmic-import: DUd-yxFV_3vR/component
@@ -66,17 +89,17 @@ type ArgPropType = keyof PlasmicJournalPost__ArgsType;
 export const PlasmicJournalPost__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicJournalPost__OverridesType = {
-  root?: p.Flex<"div">;
-  article?: p.Flex<"div">;
-  rectangle38928?: p.Flex<"div">;
-  rectangle38952?: p.Flex<"div">;
-  navBar?: p.Flex<typeof NavBar>;
-  section?: p.Flex<"section">;
-  about?: p.Flex<"div">;
-  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow?: p.Flex<"div">;
-  h1?: p.Flex<"h1">;
-  link?: p.Flex<"a"> & Partial<LinkProps>;
-  footer2?: p.Flex<typeof Footer2>;
+  root?: Flex__<"div">;
+  article?: Flex__<"div">;
+  rectangle38928?: Flex__<"div">;
+  rectangle38952?: Flex__<"div">;
+  navBar?: Flex__<typeof NavBar>;
+  section?: Flex__<"section">;
+  about?: Flex__<"div">;
+  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow?: Flex__<"div">;
+  h1?: Flex__<"h1">;
+  link?: Flex__<"a"> & Partial<LinkProps>;
+  footer2?: Flex__<typeof Footer2>;
 };
 
 export interface DefaultJournalPostProps {}
@@ -106,11 +129,11 @@ function PlasmicJournalPost__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
 
   let [$queries, setDollarQueries] = React.useState<
     Record<string, ReturnType<typeof usePlasmicDataOp>>
@@ -491,7 +514,7 @@ function PlasmicJournalPost__RenderFunc(props: {
                 </React.Fragment>
               }
               slot4={
-                <p.PlasmicImg
+                <PlasmicImg__
                   alt={""}
                   className={classNames(sty.img__ivAda)}
                   displayHeight={"349px"}
@@ -699,7 +722,7 @@ function PlasmicJournalPost__RenderFunc(props: {
             >
               {"More to Read"}
             </h1>
-            <p.PlasmicLink
+            <PlasmicLink__
               data-plasmic-name={"link"}
               data-plasmic-override={overrides.link}
               className={classNames(projectcss.all, projectcss.a, sty.link)}
@@ -829,7 +852,7 @@ function PlasmicJournalPost__RenderFunc(props: {
                   </React.Fragment>
                 }
                 slot4={
-                  <p.PlasmicImg
+                  <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img__s4YJw)}
                     displayHeight={"349px"}
@@ -879,7 +902,7 @@ function PlasmicJournalPost__RenderFunc(props: {
                   </React.Fragment>
                 </div>
               </JournalPost2>
-            </p.PlasmicLink>
+            </PlasmicLink__>
           </section>
           <Footer2
             data-plasmic-name={"footer2"}

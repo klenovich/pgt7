@@ -17,25 +17,47 @@ import Head from "next/head";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
 
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
-
 import {
-  hasVariant,
-  classNames,
-  wrapWithClassName,
-  createPlasmicElementProxy,
-  makeFragment,
+  Flex as Flex__,
   MultiChoiceArg,
+  PlasmicDataSourceContextProvider as PlasmicDataSourceContextProvider__,
+  PlasmicIcon as PlasmicIcon__,
+  PlasmicImg as PlasmicImg__,
+  PlasmicLink as PlasmicLink__,
+  PlasmicPageGuard as PlasmicPageGuard__,
   SingleBooleanChoiceArg,
   SingleChoiceArg,
-  pick,
-  omit,
-  useTrigger,
+  Stack as Stack__,
   StrictProps,
+  Trans as Trans__,
+  classNames,
+  createPlasmicElementProxy,
   deriveRenderOpts,
-  ensureGlobalVariants
+  ensureGlobalVariants,
+  generateOnMutateForSpec,
+  generateStateOnChangeProp,
+  generateStateOnChangePropForCodeComponents,
+  generateStateValueProp,
+  get as $stateGet,
+  hasVariant,
+  initializeCodeComponentStates,
+  initializePlasmicStates,
+  makeFragment,
+  omit,
+  pick,
+  renderPlasmicSlot,
+  set as $stateSet,
+  useCurrentUser,
+  useDollarState,
+  usePlasmicTranslator,
+  useTrigger,
+  wrapWithClassName
 } from "@plasmicapp/react-web";
+import {
+  DataCtxReader as DataCtxReader__,
+  useDataEnv,
+  useGlobalActions
+} from "@plasmicapp/react-web/lib/host";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -56,14 +78,14 @@ type ArgPropType = keyof PlasmicFooter2__ArgsType;
 export const PlasmicFooter2__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicFooter2__OverridesType = {
-  root?: p.Flex<"section">;
-  figmaPaste4?: p.Flex<"div">;
-  rectangle38946?: p.Flex<"a"> & Partial<LinkProps>;
-  rectangle38947?: p.Flex<"a"> & Partial<LinkProps>;
-  rectangle38948?: p.Flex<"a"> & Partial<LinkProps>;
-  rectangle38949?: p.Flex<"div">;
-  rectangle38884?: p.Flex<"a"> & Partial<LinkProps>;
-  rectangle38950?: p.Flex<"div">;
+  root?: Flex__<"section">;
+  figmaPaste4?: Flex__<"div">;
+  rectangle38946?: Flex__<"a"> & Partial<LinkProps>;
+  rectangle38947?: Flex__<"a"> & Partial<LinkProps>;
+  rectangle38948?: Flex__<"a"> & Partial<LinkProps>;
+  rectangle38949?: Flex__<"div">;
+  rectangle38884?: Flex__<"a"> & Partial<LinkProps>;
+  rectangle38950?: Flex__<"div">;
 };
 
 export interface DefaultFooter2Props {
@@ -95,11 +117,11 @@ function PlasmicFooter2__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
 
   return (
     <section
@@ -123,7 +145,7 @@ function PlasmicFooter2__RenderFunc(props: {
         data-plasmic-override={overrides.figmaPaste4}
         className={classNames(projectcss.all, sty.figmaPaste4)}
       >
-        <p.PlasmicLink
+        <PlasmicLink__
           data-plasmic-name={"rectangle38946"}
           data-plasmic-override={overrides.rectangle38946}
           className={classNames(
@@ -136,7 +158,7 @@ function PlasmicFooter2__RenderFunc(props: {
           platform={"nextjs"}
         />
 
-        <p.PlasmicLink
+        <PlasmicLink__
           data-plasmic-name={"rectangle38947"}
           data-plasmic-override={overrides.rectangle38947}
           className={classNames(
@@ -149,7 +171,7 @@ function PlasmicFooter2__RenderFunc(props: {
           platform={"nextjs"}
         />
 
-        <p.PlasmicLink
+        <PlasmicLink__
           data-plasmic-name={"rectangle38948"}
           data-plasmic-override={overrides.rectangle38948}
           className={classNames(
@@ -168,7 +190,7 @@ function PlasmicFooter2__RenderFunc(props: {
           className={classNames(projectcss.all, sty.rectangle38949)}
         />
 
-        <p.PlasmicLink
+        <PlasmicLink__
           className={classNames(
             projectcss.all,
             projectcss.a,
@@ -180,8 +202,8 @@ function PlasmicFooter2__RenderFunc(props: {
           platform={"nextjs"}
         >
           {"ARTISTS"}
-        </p.PlasmicLink>
-        <p.PlasmicLink
+        </PlasmicLink__>
+        <PlasmicLink__
           className={classNames(
             projectcss.all,
             projectcss.a,
@@ -193,8 +215,8 @@ function PlasmicFooter2__RenderFunc(props: {
           platform={"nextjs"}
         >
           {"SHOWS"}
-        </p.PlasmicLink>
-        <p.PlasmicLink
+        </PlasmicLink__>
+        <PlasmicLink__
           className={classNames(
             projectcss.all,
             projectcss.a,
@@ -206,8 +228,8 @@ function PlasmicFooter2__RenderFunc(props: {
           platform={"nextjs"}
         >
           {"JOURNAL"}
-        </p.PlasmicLink>
-        <p.PlasmicLink
+        </PlasmicLink__>
+        <PlasmicLink__
           data-plasmic-name={"rectangle38884"}
           data-plasmic-override={overrides.rectangle38884}
           className={classNames(
@@ -220,7 +242,7 @@ function PlasmicFooter2__RenderFunc(props: {
           platform={"nextjs"}
         />
 
-        <p.PlasmicLink
+        <PlasmicLink__
           className={classNames(
             projectcss.all,
             projectcss.a,
@@ -232,7 +254,7 @@ function PlasmicFooter2__RenderFunc(props: {
           platform={"nextjs"}
         >
           {"TEAM"}
-        </p.PlasmicLink>
+        </PlasmicLink__>
         <div
           data-plasmic-name={"rectangle38950"}
           data-plasmic-override={overrides.rectangle38950}

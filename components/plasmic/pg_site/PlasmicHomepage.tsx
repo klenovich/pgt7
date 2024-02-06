@@ -17,8 +17,47 @@ import Head from "next/head";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
 
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
+import {
+  Flex as Flex__,
+  MultiChoiceArg,
+  PlasmicDataSourceContextProvider as PlasmicDataSourceContextProvider__,
+  PlasmicIcon as PlasmicIcon__,
+  PlasmicImg as PlasmicImg__,
+  PlasmicLink as PlasmicLink__,
+  PlasmicPageGuard as PlasmicPageGuard__,
+  SingleBooleanChoiceArg,
+  SingleChoiceArg,
+  Stack as Stack__,
+  StrictProps,
+  Trans as Trans__,
+  classNames,
+  createPlasmicElementProxy,
+  deriveRenderOpts,
+  ensureGlobalVariants,
+  generateOnMutateForSpec,
+  generateStateOnChangeProp,
+  generateStateOnChangePropForCodeComponents,
+  generateStateValueProp,
+  get as $stateGet,
+  hasVariant,
+  initializeCodeComponentStates,
+  initializePlasmicStates,
+  makeFragment,
+  omit,
+  pick,
+  renderPlasmicSlot,
+  set as $stateSet,
+  useCurrentUser,
+  useDollarState,
+  usePlasmicTranslator,
+  useTrigger,
+  wrapWithClassName
+} from "@plasmicapp/react-web";
+import {
+  DataCtxReader as DataCtxReader__,
+  useDataEnv,
+  useGlobalActions
+} from "@plasmicapp/react-web/lib/host";
 
 import {
   executePlasmicDataOp,
@@ -26,22 +65,6 @@ import {
   usePlasmicInvalidate
 } from "@plasmicapp/react-web/lib/data-sources";
 
-import {
-  hasVariant,
-  classNames,
-  wrapWithClassName,
-  createPlasmicElementProxy,
-  makeFragment,
-  MultiChoiceArg,
-  SingleBooleanChoiceArg,
-  SingleChoiceArg,
-  pick,
-  omit,
-  useTrigger,
-  StrictProps,
-  deriveRenderOpts,
-  ensureGlobalVariants
-} from "@plasmicapp/react-web";
 import NavBar from "../../NavBar"; // plasmic-import: zoXit50v16ZA/component
 import Card from "../../Card"; // plasmic-import: at931Xm9Xbfa/component
 import Footer2 from "../../Footer2"; // plasmic-import: DUd-yxFV_3vR/component
@@ -68,23 +91,34 @@ type ArgPropType = keyof PlasmicHomepage__ArgsType;
 export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
-  postGenre?: p.Flex<"div">;
-  navBar?: p.Flex<typeof NavBar>;
-  mainPage?: p.Flex<"section">;
-  upcomingEvents?: p.Flex<"section">;
-  h1?: p.Flex<"h1">;
-  allArtists?: p.Flex<typeof Card>;
-  link?: p.Flex<"a"> & Partial<LinkProps>;
-  whatis?: p.Flex<"section">;
-  figmaPaste2?: p.Flex<"div">;
-  rectangle38940?: p.Flex<"div">;
-  rectangle38941?: p.Flex<"div">;
-  rectangle38942?: p.Flex<"div">;
-  section?: p.Flex<"section">;
-  figmaPaste3?: p.Flex<"div">;
-  rectangle38944?: p.Flex<"div">;
-  rectangle38945?: p.Flex<"div">;
-  footer2?: p.Flex<typeof Footer2>;
+  postGenre?: Flex__<"div">;
+  navBar?: Flex__<typeof NavBar>;
+  mainPage?: Flex__<"section">;
+  upcomingEvents?: Flex__<"section">;
+  allArtists?: Flex__<typeof Card>;
+  figmaPaste?: Flex__<"div">;
+  rectangle38929?: Flex__<"a"> & Partial<LinkProps>;
+  pitterPatter9FiftySevenSouthsiders?: Flex__<"div">;
+  locationFriday112023?: Flex__<"div">;
+  rectangle38930?: Flex__<"div">;
+  atwoodChurchSaturday020324Time700Pm?: Flex__<"a"> & Partial<LinkProps>;
+  rectangle38931?: Flex__<"a"> & Partial<LinkProps>;
+  rectangle38955?: Flex__<"a"> & Partial<LinkProps>;
+  atwoodChurchFriday021724Time700Pm?: Flex__<"a"> & Partial<LinkProps>;
+  rectangle38956?: Flex__<"a"> & Partial<LinkProps>;
+  rectangle38957?: Flex__<"a"> & Partial<LinkProps>;
+  atwoodChurchFriday030124Time700Pm?: Flex__<"a"> & Partial<LinkProps>;
+  rectangle38958?: Flex__<"a"> & Partial<LinkProps>;
+  whatis?: Flex__<"section">;
+  figmaPaste2?: Flex__<"div">;
+  rectangle38940?: Flex__<"div">;
+  rectangle38941?: Flex__<"div">;
+  rectangle38942?: Flex__<"div">;
+  section?: Flex__<"section">;
+  figmaPaste3?: Flex__<"div">;
+  rectangle38944?: Flex__<"div">;
+  rectangle38945?: Flex__<"div">;
+  footer2?: Flex__<typeof Footer2>;
 };
 
 export interface DefaultHomepageProps {}
@@ -114,11 +148,11 @@ function PlasmicHomepage__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
 
   let [$queries, setDollarQueries] = React.useState<
     Record<string, ReturnType<typeof usePlasmicDataOp>>
@@ -217,11 +251,11 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-override={overrides.mainPage}
             className={classNames(projectcss.all, sty.mainPage)}
           >
-            <p.PlasmicImg
+            <PlasmicImg__
               alt={""}
               className={classNames(sty.img__mzptP)}
-              displayHeight={"90vh"}
-              displayMaxHeight={"90vh"}
+              displayHeight={"70vh"}
+              displayMaxHeight={"70vh"}
               displayMaxWidth={"100%"}
               displayMinHeight={"0"}
               displayMinWidth={"0"}
@@ -234,6 +268,16 @@ function PlasmicHomepage__RenderFunc(props: {
                 aspectRatio: undefined
               }}
             />
+
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__shQh3
+              )}
+            >
+              {"LIVE FROM OAKLAND:\nSERIES 2 \nTickets Available Now!"}
+            </div>
           </section>
           <section
             data-plasmic-name={"upcomingEvents"}
@@ -241,25 +285,6 @@ function PlasmicHomepage__RenderFunc(props: {
             className={classNames(projectcss.all, sty.upcomingEvents)}
           >
             <div className={classNames(projectcss.all, sty.freeBox__wTiqA)}>
-              <h1
-                data-plasmic-name={"h1"}
-                data-plasmic-override={overrides.h1}
-                className={classNames(
-                  projectcss.all,
-                  projectcss.h1,
-                  projectcss.__wab_text,
-                  sty.h1
-                )}
-              >
-                <React.Fragment>
-                  <span
-                    className={"plasmic_default__all plasmic_default__span"}
-                    style={{ fontWeight: 700 }}
-                  >
-                    {"Upcoming Events"}
-                  </span>
-                </React.Fragment>
-              </h1>
               {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
                 (() => {
                   try {
@@ -288,13 +313,11 @@ function PlasmicHomepage__RenderFunc(props: {
                     noTitle={true}
                     title={"Card title"}
                   >
-                    <p.PlasmicLink
-                      data-plasmic-name={"link"}
-                      data-plasmic-override={overrides.link}
+                    <PlasmicLink__
                       className={classNames(
                         projectcss.all,
                         projectcss.a,
-                        sty.link
+                        sty.link__yfvQn
                       )}
                       component={Link}
                       href={(() => {
@@ -361,7 +384,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           sty.freeBox__g8Dgx
                         )}
                       >
-                        <p.PlasmicImg
+                        <PlasmicImg__
                           alt={""}
                           className={classNames(sty.img__gdke)}
                           displayHeight={"auto"}
@@ -479,10 +502,222 @@ function PlasmicHomepage__RenderFunc(props: {
                           </div>
                         </div>
                       </div>
-                    </p.PlasmicLink>
+                    </PlasmicLink__>
                   </Card>
                 );
               })}
+              <div
+                data-plasmic-name={"figmaPaste"}
+                data-plasmic-override={overrides.figmaPaste}
+                className={classNames(projectcss.all, sty.figmaPaste)}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__giFr5
+                  )}
+                >
+                  {"Live From Oakland: Genesis"}
+                </div>
+                <PlasmicLink__
+                  data-plasmic-name={"rectangle38929"}
+                  data-plasmic-override={overrides.rectangle38929}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.rectangle38929
+                  )}
+                  component={Link}
+                  href={"/genesis1"}
+                  platform={"nextjs"}
+                />
+
+                <div
+                  data-plasmic-name={"pitterPatter9FiftySevenSouthsiders"}
+                  data-plasmic-override={
+                    overrides.pitterPatter9FiftySevenSouthsiders
+                  }
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.pitterPatter9FiftySevenSouthsiders
+                  )}
+                >
+                  {"Pitter Patter, 9FiftySeven, \nSouthsiders "}
+                </div>
+                <div
+                  data-plasmic-name={"locationFriday112023"}
+                  data-plasmic-override={overrides.locationFriday112023}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.locationFriday112023
+                  )}
+                >
+                  {"location\nFriday 11/20/23 \n"}
+                </div>
+                <div
+                  data-plasmic-name={"rectangle38930"}
+                  data-plasmic-override={overrides.rectangle38930}
+                  className={classNames(projectcss.all, sty.rectangle38930)}
+                />
+
+                <PlasmicLink__
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    projectcss.__wab_text,
+                    sty.link__wyYiH
+                  )}
+                  component={Link}
+                  href={"/genesis1"}
+                  platform={"nextjs"}
+                >
+                  {"Heading North, Claycoast,\n9Fiftyseven"}
+                </PlasmicLink__>
+                <PlasmicLink__
+                  data-plasmic-name={"atwoodChurchSaturday020324Time700Pm"}
+                  data-plasmic-override={
+                    overrides.atwoodChurchSaturday020324Time700Pm
+                  }
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    projectcss.__wab_text,
+                    sty.atwoodChurchSaturday020324Time700Pm
+                  )}
+                  component={Link}
+                  href={"/genesis1"}
+                  platform={"nextjs"}
+                >
+                  {"Atwood Church\nSaturday 02/03/24 [Doors: 7:00pm] \n"}
+                </PlasmicLink__>
+                <PlasmicLink__
+                  data-plasmic-name={"rectangle38931"}
+                  data-plasmic-override={overrides.rectangle38931}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.rectangle38931
+                  )}
+                  component={Link}
+                  href={"/genesis1"}
+                  platform={"nextjs"}
+                />
+
+                <PlasmicLink__
+                  data-plasmic-name={"rectangle38955"}
+                  data-plasmic-override={overrides.rectangle38955}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.rectangle38955
+                  )}
+                  component={Link}
+                  href={"/genesis2"}
+                  platform={"nextjs"}
+                />
+
+                <PlasmicLink__
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    projectcss.__wab_text,
+                    sty.link__pVuGi
+                  )}
+                  component={Link}
+                  href={"/genesis2"}
+                  platform={"nextjs"}
+                >
+                  {"Moontown, Pitter Patter, FOSH"}
+                </PlasmicLink__>
+                <PlasmicLink__
+                  data-plasmic-name={"atwoodChurchFriday021724Time700Pm"}
+                  data-plasmic-override={
+                    overrides.atwoodChurchFriday021724Time700Pm
+                  }
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    projectcss.__wab_text,
+                    sty.atwoodChurchFriday021724Time700Pm
+                  )}
+                  component={Link}
+                  href={"/genesis2"}
+                  platform={"nextjs"}
+                >
+                  {"Atwood Church\nFriday 02/17/24 [Doors: 7:00pm] \n"}
+                </PlasmicLink__>
+                <PlasmicLink__
+                  data-plasmic-name={"rectangle38956"}
+                  data-plasmic-override={overrides.rectangle38956}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.rectangle38956
+                  )}
+                  component={Link}
+                  href={"/genesis2"}
+                  platform={"nextjs"}
+                />
+
+                <PlasmicLink__
+                  data-plasmic-name={"rectangle38957"}
+                  data-plasmic-override={overrides.rectangle38957}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.rectangle38957
+                  )}
+                  component={Link}
+                  href={"/genesis3"}
+                  platform={"nextjs"}
+                />
+
+                <PlasmicLink__
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    projectcss.__wab_text,
+                    sty.link__oeDaP
+                  )}
+                  component={Link}
+                  href={"/genesis3"}
+                  platform={"nextjs"}
+                >
+                  {"Wild Blue Yonder, Trip Lotus,\nFunky Lamp"}
+                </PlasmicLink__>
+                <PlasmicLink__
+                  data-plasmic-name={"atwoodChurchFriday030124Time700Pm"}
+                  data-plasmic-override={
+                    overrides.atwoodChurchFriday030124Time700Pm
+                  }
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    projectcss.__wab_text,
+                    sty.atwoodChurchFriday030124Time700Pm
+                  )}
+                  component={Link}
+                  href={"/genesis3"}
+                  platform={"nextjs"}
+                >
+                  {"Atwood Church\nFriday 03/01/24 [Doors: 7:00pm] \n"}
+                </PlasmicLink__>
+                <PlasmicLink__
+                  data-plasmic-name={"rectangle38958"}
+                  data-plasmic-override={overrides.rectangle38958}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.rectangle38958
+                  )}
+                  component={Link}
+                  href={"/genesis3"}
+                  platform={"nextjs"}
+                />
+              </div>
             </div>
           </section>
           <section
@@ -625,9 +860,20 @@ const PlasmicDescendants = {
     "navBar",
     "mainPage",
     "upcomingEvents",
-    "h1",
     "allArtists",
-    "link",
+    "figmaPaste",
+    "rectangle38929",
+    "pitterPatter9FiftySevenSouthsiders",
+    "locationFriday112023",
+    "rectangle38930",
+    "atwoodChurchSaturday020324Time700Pm",
+    "rectangle38931",
+    "rectangle38955",
+    "atwoodChurchFriday021724Time700Pm",
+    "rectangle38956",
+    "rectangle38957",
+    "atwoodChurchFriday030124Time700Pm",
+    "rectangle38958",
     "whatis",
     "figmaPaste2",
     "rectangle38940",
@@ -641,10 +887,51 @@ const PlasmicDescendants = {
   ],
   navBar: ["navBar"],
   mainPage: ["mainPage"],
-  upcomingEvents: ["upcomingEvents", "h1", "allArtists", "link"],
-  h1: ["h1"],
-  allArtists: ["allArtists", "link"],
-  link: ["link"],
+  upcomingEvents: [
+    "upcomingEvents",
+    "allArtists",
+    "figmaPaste",
+    "rectangle38929",
+    "pitterPatter9FiftySevenSouthsiders",
+    "locationFriday112023",
+    "rectangle38930",
+    "atwoodChurchSaturday020324Time700Pm",
+    "rectangle38931",
+    "rectangle38955",
+    "atwoodChurchFriday021724Time700Pm",
+    "rectangle38956",
+    "rectangle38957",
+    "atwoodChurchFriday030124Time700Pm",
+    "rectangle38958"
+  ],
+  allArtists: ["allArtists"],
+  figmaPaste: [
+    "figmaPaste",
+    "rectangle38929",
+    "pitterPatter9FiftySevenSouthsiders",
+    "locationFriday112023",
+    "rectangle38930",
+    "atwoodChurchSaturday020324Time700Pm",
+    "rectangle38931",
+    "rectangle38955",
+    "atwoodChurchFriday021724Time700Pm",
+    "rectangle38956",
+    "rectangle38957",
+    "atwoodChurchFriday030124Time700Pm",
+    "rectangle38958"
+  ],
+  rectangle38929: ["rectangle38929"],
+  pitterPatter9FiftySevenSouthsiders: ["pitterPatter9FiftySevenSouthsiders"],
+  locationFriday112023: ["locationFriday112023"],
+  rectangle38930: ["rectangle38930"],
+  atwoodChurchSaturday020324Time700Pm: ["atwoodChurchSaturday020324Time700Pm"],
+  rectangle38931: ["rectangle38931"],
+  rectangle38955: ["rectangle38955"],
+  atwoodChurchFriday021724Time700Pm: ["atwoodChurchFriday021724Time700Pm"],
+  rectangle38956: ["rectangle38956"],
+  rectangle38957: ["rectangle38957"],
+  atwoodChurchFriday030124Time700Pm: ["atwoodChurchFriday030124Time700Pm"],
+  rectangle38958: ["rectangle38958"],
   whatis: [
     "whatis",
     "figmaPaste2",
@@ -675,9 +962,20 @@ type NodeDefaultElementType = {
   navBar: typeof NavBar;
   mainPage: "section";
   upcomingEvents: "section";
-  h1: "h1";
   allArtists: typeof Card;
-  link: "a";
+  figmaPaste: "div";
+  rectangle38929: "a";
+  pitterPatter9FiftySevenSouthsiders: "div";
+  locationFriday112023: "div";
+  rectangle38930: "div";
+  atwoodChurchSaturday020324Time700Pm: "a";
+  rectangle38931: "a";
+  rectangle38955: "a";
+  atwoodChurchFriday021724Time700Pm: "a";
+  rectangle38956: "a";
+  rectangle38957: "a";
+  atwoodChurchFriday030124Time700Pm: "a";
+  rectangle38958: "a";
   whatis: "section";
   figmaPaste2: "div";
   rectangle38940: "div";
@@ -753,9 +1051,28 @@ export const PlasmicHomepage = Object.assign(
     navBar: makeNodeComponent("navBar"),
     mainPage: makeNodeComponent("mainPage"),
     upcomingEvents: makeNodeComponent("upcomingEvents"),
-    h1: makeNodeComponent("h1"),
     allArtists: makeNodeComponent("allArtists"),
-    link: makeNodeComponent("link"),
+    figmaPaste: makeNodeComponent("figmaPaste"),
+    rectangle38929: makeNodeComponent("rectangle38929"),
+    pitterPatter9FiftySevenSouthsiders: makeNodeComponent(
+      "pitterPatter9FiftySevenSouthsiders"
+    ),
+    locationFriday112023: makeNodeComponent("locationFriday112023"),
+    rectangle38930: makeNodeComponent("rectangle38930"),
+    atwoodChurchSaturday020324Time700Pm: makeNodeComponent(
+      "atwoodChurchSaturday020324Time700Pm"
+    ),
+    rectangle38931: makeNodeComponent("rectangle38931"),
+    rectangle38955: makeNodeComponent("rectangle38955"),
+    atwoodChurchFriday021724Time700Pm: makeNodeComponent(
+      "atwoodChurchFriday021724Time700Pm"
+    ),
+    rectangle38956: makeNodeComponent("rectangle38956"),
+    rectangle38957: makeNodeComponent("rectangle38957"),
+    atwoodChurchFriday030124Time700Pm: makeNodeComponent(
+      "atwoodChurchFriday030124Time700Pm"
+    ),
+    rectangle38958: makeNodeComponent("rectangle38958"),
     whatis: makeNodeComponent("whatis"),
     figmaPaste2: makeNodeComponent("figmaPaste2"),
     rectangle38940: makeNodeComponent("rectangle38940"),

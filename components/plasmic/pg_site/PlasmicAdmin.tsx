@@ -17,8 +17,47 @@ import Head from "next/head";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
 
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
+import {
+  Flex as Flex__,
+  MultiChoiceArg,
+  PlasmicDataSourceContextProvider as PlasmicDataSourceContextProvider__,
+  PlasmicIcon as PlasmicIcon__,
+  PlasmicImg as PlasmicImg__,
+  PlasmicLink as PlasmicLink__,
+  PlasmicPageGuard as PlasmicPageGuard__,
+  SingleBooleanChoiceArg,
+  SingleChoiceArg,
+  Stack as Stack__,
+  StrictProps,
+  Trans as Trans__,
+  classNames,
+  createPlasmicElementProxy,
+  deriveRenderOpts,
+  ensureGlobalVariants,
+  generateOnMutateForSpec,
+  generateStateOnChangeProp,
+  generateStateOnChangePropForCodeComponents,
+  generateStateValueProp,
+  get as $stateGet,
+  hasVariant,
+  initializeCodeComponentStates,
+  initializePlasmicStates,
+  makeFragment,
+  omit,
+  pick,
+  renderPlasmicSlot,
+  set as $stateSet,
+  useCurrentUser,
+  useDollarState,
+  usePlasmicTranslator,
+  useTrigger,
+  wrapWithClassName
+} from "@plasmicapp/react-web";
+import {
+  DataCtxReader as DataCtxReader__,
+  useDataEnv,
+  useGlobalActions
+} from "@plasmicapp/react-web/lib/host";
 
 import {
   executePlasmicDataOp,
@@ -26,22 +65,6 @@ import {
   usePlasmicInvalidate
 } from "@plasmicapp/react-web/lib/data-sources";
 
-import {
-  hasVariant,
-  classNames,
-  wrapWithClassName,
-  createPlasmicElementProxy,
-  makeFragment,
-  MultiChoiceArg,
-  SingleBooleanChoiceArg,
-  SingleChoiceArg,
-  pick,
-  omit,
-  useTrigger,
-  StrictProps,
-  deriveRenderOpts,
-  ensureGlobalVariants
-} from "@plasmicapp/react-web";
 import NavBar from "../../NavBar"; // plasmic-import: zoXit50v16ZA/component
 import { Fetcher } from "@plasmicapp/react-web/lib/data-sources";
 
@@ -64,9 +87,9 @@ type ArgPropType = keyof PlasmicAdmin__ArgsType;
 export const PlasmicAdmin__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicAdmin__OverridesType = {
-  root?: p.Flex<"div">;
-  navBar?: p.Flex<typeof NavBar>;
-  img?: p.Flex<typeof p.PlasmicImg>;
+  root?: Flex__<"div">;
+  navBar?: Flex__<typeof NavBar>;
+  img?: Flex__<typeof PlasmicImg__>;
 };
 
 export interface DefaultAdminProps {}
@@ -96,11 +119,11 @@ function PlasmicAdmin__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
 
   let [$queries, setDollarQueries] = React.useState<
     Record<string, ReturnType<typeof usePlasmicDataOp>>
@@ -157,7 +180,7 @@ function PlasmicAdmin__RenderFunc(props: {
             className={classNames("__wab_instance", sty.navBar)}
           />
 
-          <p.PlasmicImg
+          <PlasmicImg__
             data-plasmic-name={"img"}
             data-plasmic-override={overrides.img}
             alt={""}
@@ -360,7 +383,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   navBar: typeof NavBar;
-  img: typeof p.PlasmicImg;
+  img: typeof PlasmicImg__;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";

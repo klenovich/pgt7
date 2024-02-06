@@ -17,8 +17,47 @@ import Head from "next/head";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
 
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
+import {
+  Flex as Flex__,
+  MultiChoiceArg,
+  PlasmicDataSourceContextProvider as PlasmicDataSourceContextProvider__,
+  PlasmicIcon as PlasmicIcon__,
+  PlasmicImg as PlasmicImg__,
+  PlasmicLink as PlasmicLink__,
+  PlasmicPageGuard as PlasmicPageGuard__,
+  SingleBooleanChoiceArg,
+  SingleChoiceArg,
+  Stack as Stack__,
+  StrictProps,
+  Trans as Trans__,
+  classNames,
+  createPlasmicElementProxy,
+  deriveRenderOpts,
+  ensureGlobalVariants,
+  generateOnMutateForSpec,
+  generateStateOnChangeProp,
+  generateStateOnChangePropForCodeComponents,
+  generateStateValueProp,
+  get as $stateGet,
+  hasVariant,
+  initializeCodeComponentStates,
+  initializePlasmicStates,
+  makeFragment,
+  omit,
+  pick,
+  renderPlasmicSlot,
+  set as $stateSet,
+  useCurrentUser,
+  useDollarState,
+  usePlasmicTranslator,
+  useTrigger,
+  wrapWithClassName
+} from "@plasmicapp/react-web";
+import {
+  DataCtxReader as DataCtxReader__,
+  useDataEnv,
+  useGlobalActions
+} from "@plasmicapp/react-web/lib/host";
 
 import {
   executePlasmicDataOp,
@@ -26,22 +65,6 @@ import {
   usePlasmicInvalidate
 } from "@plasmicapp/react-web/lib/data-sources";
 
-import {
-  hasVariant,
-  classNames,
-  wrapWithClassName,
-  createPlasmicElementProxy,
-  makeFragment,
-  MultiChoiceArg,
-  SingleBooleanChoiceArg,
-  SingleChoiceArg,
-  pick,
-  omit,
-  useTrigger,
-  StrictProps,
-  deriveRenderOpts,
-  ensureGlobalVariants
-} from "@plasmicapp/react-web";
 import NavBar from "../../NavBar"; // plasmic-import: zoXit50v16ZA/component
 import Card from "../../Card"; // plasmic-import: at931Xm9Xbfa/component
 import Footer2 from "../../Footer2"; // plasmic-import: DUd-yxFV_3vR/component
@@ -66,17 +89,17 @@ type ArgPropType = keyof PlasmicArtistPage__ArgsType;
 export const PlasmicArtistPage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicArtistPage__OverridesType = {
-  postGenre?: p.Flex<"div">;
-  navBar?: p.Flex<typeof NavBar>;
-  bandInfo?: p.Flex<"section">;
-  name?: p.Flex<"section">;
-  h1?: p.Flex<"h1">;
-  description?: p.Flex<"section">;
-  about?: p.Flex<"div">;
-  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow?: p.Flex<"div">;
-  events?: p.Flex<"div">;
-  about2?: p.Flex<"div">;
-  footer2?: p.Flex<typeof Footer2>;
+  postGenre?: Flex__<"div">;
+  navBar?: Flex__<typeof NavBar>;
+  bandInfo?: Flex__<"section">;
+  name?: Flex__<"section">;
+  h1?: Flex__<"h1">;
+  description?: Flex__<"section">;
+  about?: Flex__<"div">;
+  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow?: Flex__<"div">;
+  events?: Flex__<"div">;
+  about2?: Flex__<"div">;
+  footer2?: Flex__<typeof Footer2>;
 };
 
 export interface DefaultArtistPageProps {}
@@ -106,11 +129,11 @@ function PlasmicArtistPage__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
 
   let [$queries, setDollarQueries] = React.useState<
     Record<string, ReturnType<typeof usePlasmicDataOp>>
@@ -259,7 +282,7 @@ function PlasmicArtistPage__RenderFunc(props: {
               }
             })()}
           >
-            <p.PlasmicImg
+            <PlasmicImg__
               alt={""}
               className={classNames(sty.img__giNpW)}
               displayHeight={"100vw"}
@@ -402,7 +425,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                       key={currentIndex}
                       noTitle={true}
                     >
-                      <p.PlasmicLink
+                      <PlasmicLink__
                         className={classNames(
                           projectcss.all,
                           projectcss.a,
@@ -430,7 +453,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                             sty.freeBox___0A0O4
                           )}
                         >
-                          <p.PlasmicImg
+                          <PlasmicImg__
                             alt={""}
                             className={classNames(sty.img___58OCa)}
                             displayHeight={"auto"}
@@ -550,7 +573,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                             </div>
                           </div>
                         </div>
-                      </p.PlasmicLink>
+                      </PlasmicLink__>
                     </Card>
                   );
                 })}
@@ -593,7 +616,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                     key={currentIndex}
                     noTitle={true}
                   >
-                    <p.PlasmicLink
+                    <PlasmicLink__
                       className={classNames(
                         projectcss.all,
                         projectcss.a,
@@ -615,7 +638,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                       })()}
                       platform={"nextjs"}
                     >
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img__wb7J5)}
                         displayHeight={"auto"}
@@ -632,7 +655,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                           aspectRatio: undefined
                         }}
                       />
-                    </p.PlasmicLink>
+                    </PlasmicLink__>
                   </Card>
                 );
               })}
@@ -659,7 +682,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                     key={currentIndex}
                     noTitle={true}
                   >
-                    <p.PlasmicLink
+                    <PlasmicLink__
                       className={classNames(
                         projectcss.all,
                         projectcss.a,
@@ -681,7 +704,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                       })()}
                       platform={"nextjs"}
                     >
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img__pvhzH)}
                         displayHeight={"auto"}
@@ -698,7 +721,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                           aspectRatio: undefined
                         }}
                       />
-                    </p.PlasmicLink>
+                    </PlasmicLink__>
                   </Card>
                 );
               })}
@@ -725,7 +748,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                     key={currentIndex}
                     noTitle={true}
                   >
-                    <p.PlasmicLink
+                    <PlasmicLink__
                       className={classNames(
                         projectcss.all,
                         projectcss.a,
@@ -747,7 +770,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                       })()}
                       platform={"nextjs"}
                     >
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img___46Hc0)}
                         displayHeight={"auto"}
@@ -764,7 +787,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                           aspectRatio: undefined
                         }}
                       />
-                    </p.PlasmicLink>
+                    </PlasmicLink__>
                   </Card>
                 );
               })}
@@ -791,7 +814,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                     key={currentIndex}
                     noTitle={true}
                   >
-                    <p.PlasmicLink
+                    <PlasmicLink__
                       className={classNames(
                         projectcss.all,
                         projectcss.a,
@@ -832,7 +855,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                         const currentItem = __plasmic_item_1;
                         const currentIndex = __plasmic_idx_1;
                         return (
-                          <p.PlasmicImg
+                          <PlasmicImg__
                             alt={""}
                             className={classNames(sty.img__nYe1)}
                             displayHeight={"65px"}
@@ -852,7 +875,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                           />
                         );
                       })}
-                    </p.PlasmicLink>
+                    </PlasmicLink__>
                   </Card>
                 );
               })}
@@ -879,7 +902,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                     key={currentIndex}
                     noTitle={true}
                   >
-                    <p.PlasmicLink
+                    <PlasmicLink__
                       className={classNames(
                         projectcss.all,
                         projectcss.a,
@@ -901,7 +924,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                       })()}
                       platform={"nextjs"}
                     >
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img__uQwtI)}
                         displayHeight={"65px"}
@@ -918,7 +941,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                           aspectRatio: undefined
                         }}
                       />
-                    </p.PlasmicLink>
+                    </PlasmicLink__>
                   </Card>
                 );
               })}
@@ -945,7 +968,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                     key={currentIndex}
                     noTitle={true}
                   >
-                    <p.PlasmicLink
+                    <PlasmicLink__
                       className={classNames(
                         projectcss.all,
                         projectcss.a,
@@ -967,7 +990,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                       })()}
                       platform={"nextjs"}
                     >
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img__mm4Lf)}
                         displayHeight={"65px"}
@@ -984,7 +1007,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                           aspectRatio: undefined
                         }}
                       />
-                    </p.PlasmicLink>
+                    </PlasmicLink__>
                   </Card>
                 );
               })}
@@ -1011,7 +1034,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                     key={currentIndex}
                     noTitle={true}
                   >
-                    <p.PlasmicLink
+                    <PlasmicLink__
                       className={classNames(
                         projectcss.all,
                         projectcss.a,
@@ -1033,7 +1056,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                       })()}
                       platform={"nextjs"}
                     >
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img__isOXg)}
                         displayHeight={"65px"}
@@ -1050,7 +1073,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                           aspectRatio: undefined
                         }}
                       />
-                    </p.PlasmicLink>
+                    </PlasmicLink__>
                   </Card>
                 );
               })}
@@ -1077,7 +1100,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                     key={currentIndex}
                     noTitle={true}
                   >
-                    <p.PlasmicLink
+                    <PlasmicLink__
                       className={classNames(
                         projectcss.all,
                         projectcss.a,
@@ -1099,7 +1122,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                       })()}
                       platform={"nextjs"}
                     >
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img__cOgFz)}
                         displayHeight={"65px"}
@@ -1116,7 +1139,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                           aspectRatio: undefined
                         }}
                       />
-                    </p.PlasmicLink>
+                    </PlasmicLink__>
                   </Card>
                 );
               })}
@@ -1143,7 +1166,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                     key={currentIndex}
                     noTitle={true}
                   >
-                    <p.PlasmicLink
+                    <PlasmicLink__
                       className={classNames(
                         projectcss.all,
                         projectcss.a,
@@ -1165,7 +1188,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                       })()}
                       platform={"nextjs"}
                     >
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img__xxXc8)}
                         displayHeight={"65px"}
@@ -1182,7 +1205,7 @@ function PlasmicArtistPage__RenderFunc(props: {
                           aspectRatio: undefined
                         }}
                       />
-                    </p.PlasmicLink>
+                    </PlasmicLink__>
                   </Card>
                 );
               })}

@@ -17,8 +17,47 @@ import Head from "next/head";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
 
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
+import {
+  Flex as Flex__,
+  MultiChoiceArg,
+  PlasmicDataSourceContextProvider as PlasmicDataSourceContextProvider__,
+  PlasmicIcon as PlasmicIcon__,
+  PlasmicImg as PlasmicImg__,
+  PlasmicLink as PlasmicLink__,
+  PlasmicPageGuard as PlasmicPageGuard__,
+  SingleBooleanChoiceArg,
+  SingleChoiceArg,
+  Stack as Stack__,
+  StrictProps,
+  Trans as Trans__,
+  classNames,
+  createPlasmicElementProxy,
+  deriveRenderOpts,
+  ensureGlobalVariants,
+  generateOnMutateForSpec,
+  generateStateOnChangeProp,
+  generateStateOnChangePropForCodeComponents,
+  generateStateValueProp,
+  get as $stateGet,
+  hasVariant,
+  initializeCodeComponentStates,
+  initializePlasmicStates,
+  makeFragment,
+  omit,
+  pick,
+  renderPlasmicSlot,
+  set as $stateSet,
+  useCurrentUser,
+  useDollarState,
+  usePlasmicTranslator,
+  useTrigger,
+  wrapWithClassName
+} from "@plasmicapp/react-web";
+import {
+  DataCtxReader as DataCtxReader__,
+  useDataEnv,
+  useGlobalActions
+} from "@plasmicapp/react-web/lib/host";
 
 import {
   executePlasmicDataOp,
@@ -26,22 +65,6 @@ import {
   usePlasmicInvalidate
 } from "@plasmicapp/react-web/lib/data-sources";
 
-import {
-  hasVariant,
-  classNames,
-  wrapWithClassName,
-  createPlasmicElementProxy,
-  makeFragment,
-  MultiChoiceArg,
-  SingleBooleanChoiceArg,
-  SingleChoiceArg,
-  pick,
-  omit,
-  useTrigger,
-  StrictProps,
-  deriveRenderOpts,
-  ensureGlobalVariants
-} from "@plasmicapp/react-web";
 import NavBar from "../../NavBar"; // plasmic-import: zoXit50v16ZA/component
 import Card from "../../Card"; // plasmic-import: at931Xm9Xbfa/component
 import Footer2 from "../../Footer2"; // plasmic-import: DUd-yxFV_3vR/component
@@ -66,12 +89,12 @@ type ArgPropType = keyof PlasmicEvents__ArgsType;
 export const PlasmicEvents__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicEvents__OverridesType = {
-  postGenreEvents?: p.Flex<"div">;
-  navBar?: p.Flex<typeof NavBar>;
-  section?: p.Flex<"section">;
-  allArtists?: p.Flex<typeof Card>;
-  link?: p.Flex<"a"> & Partial<LinkProps>;
-  footer2?: p.Flex<typeof Footer2>;
+  postGenreEvents?: Flex__<"div">;
+  navBar?: Flex__<typeof NavBar>;
+  section?: Flex__<"section">;
+  allArtists?: Flex__<typeof Card>;
+  link?: Flex__<"a"> & Partial<LinkProps>;
+  footer2?: Flex__<typeof Footer2>;
 };
 
 export interface DefaultEventsProps {}
@@ -101,11 +124,11 @@ function PlasmicEvents__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
 
   let [$queries, setDollarQueries] = React.useState<
     Record<string, ReturnType<typeof usePlasmicDataOp>>
@@ -175,7 +198,7 @@ function PlasmicEvents__RenderFunc(props: {
             className={classNames("__wab_instance", sty.navBar)}
           />
 
-          <p.PlasmicImg
+          <PlasmicImg__
             alt={""}
             className={classNames(sty.img__aq5Px)}
             displayHeight={"auto"}
@@ -236,7 +259,7 @@ function PlasmicEvents__RenderFunc(props: {
                   noTitle={true}
                   title={"Card title"}
                 >
-                  <p.PlasmicLink
+                  <PlasmicLink__
                     data-plasmic-name={"link"}
                     data-plasmic-override={overrides.link}
                     className={classNames(
@@ -306,7 +329,7 @@ function PlasmicEvents__RenderFunc(props: {
                     <div
                       className={classNames(projectcss.all, sty.freeBox__w29Yj)}
                     >
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img__dWbwx)}
                         displayHeight={"auto"}
@@ -423,7 +446,7 @@ function PlasmicEvents__RenderFunc(props: {
                         </div>
                       </div>
                     </div>
-                  </p.PlasmicLink>
+                  </PlasmicLink__>
                 </Card>
               );
             })}

@@ -17,8 +17,47 @@ import Head from "next/head";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
 
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
+import {
+  Flex as Flex__,
+  MultiChoiceArg,
+  PlasmicDataSourceContextProvider as PlasmicDataSourceContextProvider__,
+  PlasmicIcon as PlasmicIcon__,
+  PlasmicImg as PlasmicImg__,
+  PlasmicLink as PlasmicLink__,
+  PlasmicPageGuard as PlasmicPageGuard__,
+  SingleBooleanChoiceArg,
+  SingleChoiceArg,
+  Stack as Stack__,
+  StrictProps,
+  Trans as Trans__,
+  classNames,
+  createPlasmicElementProxy,
+  deriveRenderOpts,
+  ensureGlobalVariants,
+  generateOnMutateForSpec,
+  generateStateOnChangeProp,
+  generateStateOnChangePropForCodeComponents,
+  generateStateValueProp,
+  get as $stateGet,
+  hasVariant,
+  initializeCodeComponentStates,
+  initializePlasmicStates,
+  makeFragment,
+  omit,
+  pick,
+  renderPlasmicSlot,
+  set as $stateSet,
+  useCurrentUser,
+  useDollarState,
+  usePlasmicTranslator,
+  useTrigger,
+  wrapWithClassName
+} from "@plasmicapp/react-web";
+import {
+  DataCtxReader as DataCtxReader__,
+  useDataEnv,
+  useGlobalActions
+} from "@plasmicapp/react-web/lib/host";
 
 import {
   executePlasmicDataOp,
@@ -26,22 +65,6 @@ import {
   usePlasmicInvalidate
 } from "@plasmicapp/react-web/lib/data-sources";
 
-import {
-  hasVariant,
-  classNames,
-  wrapWithClassName,
-  createPlasmicElementProxy,
-  makeFragment,
-  MultiChoiceArg,
-  SingleBooleanChoiceArg,
-  SingleChoiceArg,
-  pick,
-  omit,
-  useTrigger,
-  StrictProps,
-  deriveRenderOpts,
-  ensureGlobalVariants
-} from "@plasmicapp/react-web";
 import NavBar from "../../NavBar"; // plasmic-import: zoXit50v16ZA/component
 import Button from "../../Button"; // plasmic-import: n3nqd4CSh5rs/component
 import Card from "../../Card"; // plasmic-import: at931Xm9Xbfa/component
@@ -72,18 +95,18 @@ type ArgPropType = keyof PlasmicTeam__ArgsType;
 export const PlasmicTeam__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicTeam__OverridesType = {
-  postGenre?: p.Flex<"div">;
-  navBar?: p.Flex<typeof NavBar>;
-  mainPage?: p.Flex<"section">;
-  section?: p.Flex<"section">;
-  figmaPaste3?: p.Flex<"div">;
-  rectangle38944?: p.Flex<"div">;
-  button?: p.Flex<typeof Button>;
-  whatis?: p.Flex<"section">;
-  allArtists?: p.Flex<typeof Card>;
-  link?: p.Flex<"a"> & Partial<LinkProps>;
-  upcomingEvents?: p.Flex<"section">;
-  footer2?: p.Flex<typeof Footer2>;
+  postGenre?: Flex__<"div">;
+  navBar?: Flex__<typeof NavBar>;
+  mainPage?: Flex__<"section">;
+  section?: Flex__<"section">;
+  figmaPaste3?: Flex__<"div">;
+  rectangle38944?: Flex__<"div">;
+  button?: Flex__<typeof Button>;
+  whatis?: Flex__<"section">;
+  allArtists?: Flex__<typeof Card>;
+  link?: Flex__<"a"> & Partial<LinkProps>;
+  upcomingEvents?: Flex__<"section">;
+  footer2?: Flex__<typeof Footer2>;
 };
 
 export interface DefaultTeamProps {}
@@ -113,11 +136,11 @@ function PlasmicTeam__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
 
   let [$queries, setDollarQueries] = React.useState<
     Record<string, ReturnType<typeof usePlasmicDataOp>>
@@ -206,7 +229,7 @@ function PlasmicTeam__RenderFunc(props: {
             data-plasmic-override={overrides.mainPage}
             className={classNames(projectcss.all, sty.mainPage)}
           >
-            <p.PlasmicImg
+            <PlasmicImg__
               alt={""}
               className={classNames(sty.img___7SExx)}
               displayHeight={"30vh"}
@@ -330,7 +353,7 @@ function PlasmicTeam__RenderFunc(props: {
                   noTitle={true}
                   title={"Card title"}
                 >
-                  <p.PlasmicLink
+                  <PlasmicLink__
                     data-plasmic-name={"link"}
                     data-plasmic-override={overrides.link}
                     className={classNames(
@@ -400,7 +423,7 @@ function PlasmicTeam__RenderFunc(props: {
                     <div
                       className={classNames(projectcss.all, sty.freeBox__i9TUe)}
                     >
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img__kJkln)}
                         displayHeight={"auto"}
@@ -517,7 +540,7 @@ function PlasmicTeam__RenderFunc(props: {
                         </div>
                       </div>
                     </div>
-                  </p.PlasmicLink>
+                  </PlasmicLink__>
                 </Card>
               );
             })}

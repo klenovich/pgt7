@@ -531,8 +531,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "hjKYmYi6HMwK6TRyk7ew5R",
@@ -612,8 +611,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-nav"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "oATn9WrAqtDeaLtJDt8hxD",
@@ -921,7 +919,49 @@
           "cssFilePath": "plasmic/pg_site/PlasmicSponsors.module.css",
           "scheme": "blackbox",
           "componentType": "page",
-          "path": "/sponsors"
+          "path": "/sponsorsc"
+        },
+        {
+          "id": "EXjmg34ajN5F",
+          "name": "Genesis1",
+          "type": "managed",
+          "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+          "renderModuleFilePath": "plasmic/pg_site/PlasmicGenesis1.tsx",
+          "importSpec": {
+            "modulePath": "../pages/genesis1.tsx"
+          },
+          "cssFilePath": "plasmic/pg_site/PlasmicGenesis1.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/genesis1"
+        },
+        {
+          "id": "LIYgyqSRFQ2h",
+          "name": "Genesis13",
+          "type": "managed",
+          "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+          "renderModuleFilePath": "plasmic/pg_site/PlasmicGenesis13.tsx",
+          "importSpec": {
+            "modulePath": "../pages/genesis2.tsx"
+          },
+          "cssFilePath": "plasmic/pg_site/PlasmicGenesis13.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/genesis2"
+        },
+        {
+          "id": "e15fIcfnMP2S",
+          "name": "Genesis14",
+          "type": "managed",
+          "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+          "renderModuleFilePath": "plasmic/pg_site/PlasmicGenesis14.tsx",
+          "importSpec": {
+            "modulePath": "../pages/genesis3.tsx"
+          },
+          "cssFilePath": "plasmic/pg_site/PlasmicGenesis14.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/genesis3"
         }
       ],
       "icons": [
@@ -1076,6 +1116,106 @@
           "id": "CsE2NXB10pI6",
           "name": "Screenshot 2023-11-28 at 3.51.20 PM.png",
           "filePath": "../public/plasmic/pg_site/images/screenshot20231128At35120PMpng.png"
+        },
+        {
+          "id": "huLT_ly0N6Pk",
+          "name": "Rectangle 38963",
+          "filePath": "../public/plasmic/pg_site/images/rectangle38963.jpg"
+        },
+        {
+          "id": "UzTePYlTbOey",
+          "name": "Rectangle 38956",
+          "filePath": "../public/plasmic/pg_site/images/rectangle38956.jpg"
+        },
+        {
+          "id": "AdmwXZ5TWpU6",
+          "name": "Rectangle 38958",
+          "filePath": "../public/plasmic/pg_site/images/rectangle38958.jpg"
+        },
+        {
+          "id": "95vexXvvf8mO",
+          "name": "LFO2(NewOBIDPoster) 1",
+          "filePath": "../public/plasmic/pg_site/images/lfo2NewObidPoster1.jpg"
+        },
+        {
+          "id": "_8lowedOXn9U",
+          "name": "Rectangle 38977",
+          "filePath": "../public/plasmic/pg_site/images/rectangle38977.jpg"
+        },
+        {
+          "id": "6vzZdQsCxgAh",
+          "name": "Rectangle 38979",
+          "filePath": "../public/plasmic/pg_site/images/rectangle38979.jpg"
+        },
+        {
+          "id": "N2L_9ydKbuH7",
+          "name": "Rectangle 38981",
+          "filePath": "../public/plasmic/pg_site/images/rectangle38981.jpg"
+        },
+        {
+          "id": "6yJE_TFOnB9d",
+          "name": "Screenshot 2024-01-19 at 07.40.21.png",
+          "filePath": "../public/plasmic/pg_site/images/screenshot20240119At074021Png.png"
+        },
+        {
+          "id": "s6rihXDnGhId",
+          "name": "Screenshot 2024-01-19 at 07.41.54.png",
+          "filePath": "../public/plasmic/pg_site/images/screenshot20240119At074154Png.png"
+        },
+        {
+          "id": "8QNuwmSOXVLr",
+          "name": "Screenshot 2024-01-19 at 08.51.05.png",
+          "filePath": "../public/plasmic/pg_site/images/screenshot20240119At085105Png.png"
+        },
+        {
+          "id": "88iPo8dtFa5U",
+          "name": "Screenshot 2024-01-19 at 09.18.51.png",
+          "filePath": "../public/plasmic/pg_site/images/screenshot20240119At091851Png.png"
+        },
+        {
+          "id": "ejPoESnrXhhZ",
+          "name": "Screenshot 2024-01-19 at 09.19.07.png",
+          "filePath": "../public/plasmic/pg_site/images/screenshot20240119At091907Png.png"
+        },
+        {
+          "id": "hVE4xzzpgIY7",
+          "name": "DSC_2461.jpg",
+          "filePath": "../public/plasmic/pg_site/images/dsc2461Jpg.jpg"
+        },
+        {
+          "id": "XSksQ0ncYSAd",
+          "name": "IMG_0490.jpg",
+          "filePath": "../public/plasmic/pg_site/images/img0490Jpg.jpg"
+        },
+        {
+          "id": "vawqTnKIQggA",
+          "name": "Screenshot 2024-02-06 at 17.46.01.png",
+          "filePath": "../public/plasmic/pg_site/images/screenshot20240206At174601Png.png"
+        },
+        {
+          "id": "COpK0RL8rUY1",
+          "name": "Screenshot 2024-02-06 at 17.46.36.png",
+          "filePath": "../public/plasmic/pg_site/images/screenshot20240206At174636Png.png"
+        },
+        {
+          "id": "M88qJvT-ksEm",
+          "name": "Screenshot 2024-02-06 at 17.46.44.png",
+          "filePath": "../public/plasmic/pg_site/images/screenshot20240206At174644Png.png"
+        },
+        {
+          "id": "DGvoXgZQIjGS",
+          "name": "image 7",
+          "filePath": "../public/plasmic/pg_site/images/image7.jpg"
+        },
+        {
+          "id": "WJVjt4w1xCNR",
+          "name": "image 8",
+          "filePath": "../public/plasmic/pg_site/images/image8.jpg"
+        },
+        {
+          "id": "Ot8_3sfR6tCA",
+          "name": "image 9",
+          "filePath": "../public/plasmic/pg_site/images/image9.jpg"
         }
       ],
       "indirect": false,
@@ -1110,7 +1250,8 @@
       "globalContextsFilePath": "",
       "splitsProviderFilePath": "",
       "codeComponents": [],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     }
   ],
   "globalVariants": {
