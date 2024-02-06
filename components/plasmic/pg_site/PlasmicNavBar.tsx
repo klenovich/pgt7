@@ -17,25 +17,48 @@ import Head from "next/head";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
 
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
-
 import {
-  hasVariant,
-  classNames,
-  wrapWithClassName,
-  createPlasmicElementProxy,
-  makeFragment,
+  Flex as Flex__,
   MultiChoiceArg,
+  PlasmicDataSourceContextProvider as PlasmicDataSourceContextProvider__,
+  PlasmicIcon as PlasmicIcon__,
+  PlasmicImg as PlasmicImg__,
+  PlasmicLink as PlasmicLink__,
+  PlasmicPageGuard as PlasmicPageGuard__,
   SingleBooleanChoiceArg,
   SingleChoiceArg,
-  pick,
-  omit,
-  useTrigger,
+  Stack as Stack__,
   StrictProps,
+  Trans as Trans__,
+  classNames,
+  createPlasmicElementProxy,
   deriveRenderOpts,
-  ensureGlobalVariants
+  ensureGlobalVariants,
+  generateOnMutateForSpec,
+  generateStateOnChangeProp,
+  generateStateOnChangePropForCodeComponents,
+  generateStateValueProp,
+  get as $stateGet,
+  hasVariant,
+  initializeCodeComponentStates,
+  initializePlasmicStates,
+  makeFragment,
+  omit,
+  pick,
+  renderPlasmicSlot,
+  set as $stateSet,
+  useCurrentUser,
+  useDollarState,
+  usePlasmicTranslator,
+  useTrigger,
+  wrapWithClassName
 } from "@plasmicapp/react-web";
+import {
+  DataCtxReader as DataCtxReader__,
+  useDataEnv,
+  useGlobalActions
+} from "@plasmicapp/react-web/lib/host";
+
 import { NavigationBar } from "@plasmicpkgs/plasmic-nav";
 
 import { useScreenVariants as useScreenVariantst9JqZjUtfPcp } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: t9JQZjUtfPcp/globalVariant
@@ -59,12 +82,12 @@ type ArgPropType = keyof PlasmicNavBar__ArgsType;
 export const PlasmicNavBar__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicNavBar__OverridesType = {
-  root?: p.Flex<typeof NavigationBar>;
-  link?: p.Flex<"a"> & Partial<LinkProps>;
-  events?: p.Flex<"a"> & Partial<LinkProps>;
-  artists?: p.Flex<"a"> & Partial<LinkProps>;
-  blog?: p.Flex<"a"> & Partial<LinkProps>;
-  team?: p.Flex<"a"> & Partial<LinkProps>;
+  root?: Flex__<typeof NavigationBar>;
+  link?: Flex__<"a"> & Partial<LinkProps>;
+  events?: Flex__<"a"> & Partial<LinkProps>;
+  artists?: Flex__<"a"> & Partial<LinkProps>;
+  blog?: Flex__<"a"> & Partial<LinkProps>;
+  team?: Flex__<"a"> & Partial<LinkProps>;
 };
 
 export interface DefaultNavBarProps {
@@ -96,11 +119,11 @@ function PlasmicNavBar__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantst9JqZjUtfPcp()
@@ -113,7 +136,7 @@ function PlasmicNavBar__RenderFunc(props: {
       data-plasmic-root={true}
       data-plasmic-for-node={forNode}
       brand={
-        <p.PlasmicLink
+        <PlasmicLink__
           data-plasmic-name={"link"}
           data-plasmic-override={overrides.link}
           className={classNames(projectcss.all, projectcss.a, sty.link)}
@@ -121,7 +144,7 @@ function PlasmicNavBar__RenderFunc(props: {
           href={hasVariant(globalVariants, "screen", "mobileOnly") ? `/` : `/`}
           platform={"nextjs"}
         >
-          <p.PlasmicImg
+          <PlasmicImg__
             alt={""}
             className={classNames(sty.img__l836)}
             displayHeight={"40px"}
@@ -137,7 +160,7 @@ function PlasmicNavBar__RenderFunc(props: {
               aspectRatio: undefined
             }}
           />
-        </p.PlasmicLink>
+        </PlasmicLink__>
       }
       className={classNames(
         "__wab_instance",
@@ -150,7 +173,7 @@ function PlasmicNavBar__RenderFunc(props: {
         sty.root
       )}
       closeButton={
-        <p.PlasmicImg
+        <PlasmicImg__
           alt={""}
           className={classNames(sty.img__fm7Qy)}
           displayHeight={"auto"}
@@ -165,7 +188,7 @@ function PlasmicNavBar__RenderFunc(props: {
       itemsGap={8}
       menuItems={
         <React.Fragment>
-          <p.PlasmicImg
+          <PlasmicImg__
             alt={""}
             className={classNames(sty.img__iAAj8)}
             displayHeight={"auto"}
@@ -186,7 +209,7 @@ function PlasmicNavBar__RenderFunc(props: {
           {(
             hasVariant(globalVariants, "screen", "mobileOnly") ? true : false
           ) ? (
-            <p.PlasmicImg
+            <PlasmicImg__
               alt={""}
               className={classNames(sty.img__b7KuT)}
               displayHeight={"auto"}
@@ -204,7 +227,7 @@ function PlasmicNavBar__RenderFunc(props: {
               }}
             />
           ) : null}
-          <p.PlasmicLink
+          <PlasmicLink__
             data-plasmic-name={"events"}
             data-plasmic-override={overrides.events}
             className={classNames(
@@ -218,8 +241,8 @@ function PlasmicNavBar__RenderFunc(props: {
             platform={"nextjs"}
           >
             {"EVENTS"}
-          </p.PlasmicLink>
-          <p.PlasmicLink
+          </PlasmicLink__>
+          <PlasmicLink__
             data-plasmic-name={"artists"}
             data-plasmic-override={overrides.artists}
             className={classNames(
@@ -237,8 +260,8 @@ function PlasmicNavBar__RenderFunc(props: {
             platform={"nextjs"}
           >
             {"ARTISTS"}
-          </p.PlasmicLink>
-          <p.PlasmicLink
+          </PlasmicLink__>
+          <PlasmicLink__
             data-plasmic-name={"blog"}
             data-plasmic-override={overrides.blog}
             className={classNames(
@@ -256,8 +279,8 @@ function PlasmicNavBar__RenderFunc(props: {
             platform={"nextjs"}
           >
             {"BLOG"}
-          </p.PlasmicLink>
-          <p.PlasmicLink
+          </PlasmicLink__>
+          <PlasmicLink__
             data-plasmic-name={"team"}
             data-plasmic-override={overrides.team}
             className={classNames(
@@ -275,11 +298,11 @@ function PlasmicNavBar__RenderFunc(props: {
             platform={"nextjs"}
           >
             {"TEAM"}
-          </p.PlasmicLink>
+          </PlasmicLink__>
         </React.Fragment>
       }
       openButton={
-        <p.PlasmicImg
+        <PlasmicImg__
           alt={""}
           className={classNames(sty.img__o6RKl)}
           displayHeight={"auto"}

@@ -17,8 +17,47 @@ import Head from "next/head";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
 
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
+import {
+  Flex as Flex__,
+  MultiChoiceArg,
+  PlasmicDataSourceContextProvider as PlasmicDataSourceContextProvider__,
+  PlasmicIcon as PlasmicIcon__,
+  PlasmicImg as PlasmicImg__,
+  PlasmicLink as PlasmicLink__,
+  PlasmicPageGuard as PlasmicPageGuard__,
+  SingleBooleanChoiceArg,
+  SingleChoiceArg,
+  Stack as Stack__,
+  StrictProps,
+  Trans as Trans__,
+  classNames,
+  createPlasmicElementProxy,
+  deriveRenderOpts,
+  ensureGlobalVariants,
+  generateOnMutateForSpec,
+  generateStateOnChangeProp,
+  generateStateOnChangePropForCodeComponents,
+  generateStateValueProp,
+  get as $stateGet,
+  hasVariant,
+  initializeCodeComponentStates,
+  initializePlasmicStates,
+  makeFragment,
+  omit,
+  pick,
+  renderPlasmicSlot,
+  set as $stateSet,
+  useCurrentUser,
+  useDollarState,
+  usePlasmicTranslator,
+  useTrigger,
+  wrapWithClassName
+} from "@plasmicapp/react-web";
+import {
+  DataCtxReader as DataCtxReader__,
+  useDataEnv,
+  useGlobalActions
+} from "@plasmicapp/react-web/lib/host";
 
 import {
   executePlasmicDataOp,
@@ -26,22 +65,6 @@ import {
   usePlasmicInvalidate
 } from "@plasmicapp/react-web/lib/data-sources";
 
-import {
-  hasVariant,
-  classNames,
-  wrapWithClassName,
-  createPlasmicElementProxy,
-  makeFragment,
-  MultiChoiceArg,
-  SingleBooleanChoiceArg,
-  SingleChoiceArg,
-  pick,
-  omit,
-  useTrigger,
-  StrictProps,
-  deriveRenderOpts,
-  ensureGlobalVariants
-} from "@plasmicapp/react-web";
 import NavBar from "../../NavBar"; // plasmic-import: zoXit50v16ZA/component
 import JournalPost2 from "../../JournalPost2"; // plasmic-import: lOAhjoWYBUsL/component
 import Footer2 from "../../Footer2"; // plasmic-import: DUd-yxFV_3vR/component
@@ -67,14 +90,14 @@ type ArgPropType = keyof PlasmicTeamIndividual2__ArgsType;
 export const PlasmicTeamIndividual2__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicTeamIndividual2__OverridesType = {
-  postGenre?: p.Flex<"div">;
-  navBar?: p.Flex<typeof NavBar>;
-  bandInfo?: p.Flex<"section">;
-  name?: p.Flex<"section">;
-  h1?: p.Flex<"h1">;
-  link?: p.Flex<"a"> & Partial<LinkProps>;
-  journalPost2?: p.Flex<typeof JournalPost2>;
-  footer2?: p.Flex<typeof Footer2>;
+  postGenre?: Flex__<"div">;
+  navBar?: Flex__<typeof NavBar>;
+  bandInfo?: Flex__<"section">;
+  name?: Flex__<"section">;
+  h1?: Flex__<"h1">;
+  link?: Flex__<"a"> & Partial<LinkProps>;
+  journalPost2?: Flex__<typeof JournalPost2>;
+  footer2?: Flex__<typeof Footer2>;
 };
 
 export interface DefaultTeamIndividual2Props {}
@@ -104,11 +127,11 @@ function PlasmicTeamIndividual2__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
 
   let [$queries, setDollarQueries] = React.useState<
     Record<string, ReturnType<typeof usePlasmicDataOp>>
@@ -243,7 +266,7 @@ function PlasmicTeamIndividual2__RenderFunc(props: {
             className={classNames(projectcss.all, sty.bandInfo)}
             style={undefined}
           >
-            <p.PlasmicImg
+            <PlasmicImg__
               alt={""}
               className={classNames(sty.img__lRRbi)}
               displayHeight={"100vw"}
@@ -320,7 +343,7 @@ function PlasmicTeamIndividual2__RenderFunc(props: {
               const currentItem = __plasmic_item_0;
               const currentIndex = __plasmic_idx_0;
               return (
-                <p.PlasmicLink
+                <PlasmicLink__
                   data-plasmic-name={"link"}
                   data-plasmic-override={overrides.link}
                   className={classNames(projectcss.all, projectcss.a, sty.link)}
@@ -436,7 +459,7 @@ function PlasmicTeamIndividual2__RenderFunc(props: {
                       </div>
                     }
                     slot4={
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img__m8W3O)}
                         displayHeight={"349px"}
@@ -478,7 +501,7 @@ function PlasmicTeamIndividual2__RenderFunc(props: {
                       })()}
                     </React.Fragment>
                   </JournalPost2>
-                </p.PlasmicLink>
+                </PlasmicLink__>
               );
             })}
           </section>

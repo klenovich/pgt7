@@ -17,25 +17,47 @@ import Head from "next/head";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
 
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
-
 import {
-  hasVariant,
-  classNames,
-  wrapWithClassName,
-  createPlasmicElementProxy,
-  makeFragment,
+  Flex as Flex__,
   MultiChoiceArg,
+  PlasmicDataSourceContextProvider as PlasmicDataSourceContextProvider__,
+  PlasmicIcon as PlasmicIcon__,
+  PlasmicImg as PlasmicImg__,
+  PlasmicLink as PlasmicLink__,
+  PlasmicPageGuard as PlasmicPageGuard__,
   SingleBooleanChoiceArg,
   SingleChoiceArg,
-  pick,
-  omit,
-  useTrigger,
+  Stack as Stack__,
   StrictProps,
+  Trans as Trans__,
+  classNames,
+  createPlasmicElementProxy,
   deriveRenderOpts,
-  ensureGlobalVariants
+  ensureGlobalVariants,
+  generateOnMutateForSpec,
+  generateStateOnChangeProp,
+  generateStateOnChangePropForCodeComponents,
+  generateStateValueProp,
+  get as $stateGet,
+  hasVariant,
+  initializeCodeComponentStates,
+  initializePlasmicStates,
+  makeFragment,
+  omit,
+  pick,
+  renderPlasmicSlot,
+  set as $stateSet,
+  useCurrentUser,
+  useDollarState,
+  usePlasmicTranslator,
+  useTrigger,
+  wrapWithClassName
 } from "@plasmicapp/react-web";
+import {
+  DataCtxReader as DataCtxReader__,
+  useDataEnv,
+  useGlobalActions
+} from "@plasmicapp/react-web/lib/host";
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -70,8 +92,8 @@ export const PlasmicJournalPost2__ArgProps = new Array<ArgPropType>(
 );
 
 export type PlasmicJournalPost2__OverridesType = {
-  article?: p.Flex<"div">;
-  rectangle38928?: p.Flex<"div">;
+  article?: Flex__<"div">;
+  rectangle38928?: Flex__<"div">;
 };
 
 export interface DefaultJournalPost2Props {
@@ -109,11 +131,11 @@ function PlasmicJournalPost2__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
 
   return (
     <div
@@ -180,7 +202,7 @@ function PlasmicJournalPost2__RenderFunc(props: {
         className={classNames(projectcss.all, sty.rectangle38928)}
       >
         <div className={classNames(projectcss.all, sty.freeBox__yLk3K)}>
-          {p.renderPlasmicSlot({
+          {renderPlasmicSlot({
             defaultContents: (
               <React.Fragment>
                 {(() => {
@@ -203,7 +225,7 @@ function PlasmicJournalPost2__RenderFunc(props: {
           })}
         </div>
         <div className={classNames(projectcss.all, sty.freeBox___8XoBf)}>
-          {p.renderPlasmicSlot({
+          {renderPlasmicSlot({
             defaultContents: (
               <React.Fragment>
                 {(() => {
@@ -234,9 +256,9 @@ function PlasmicJournalPost2__RenderFunc(props: {
           })}
         </div>
         <div className={classNames(projectcss.all, sty.freeBox___2Web2)}>
-          {p.renderPlasmicSlot({
+          {renderPlasmicSlot({
             defaultContents: (
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__aD9Zg)}
                 displayHeight={"349px"}
@@ -267,7 +289,7 @@ function PlasmicJournalPost2__RenderFunc(props: {
           })}
         </div>
         <div className={classNames(projectcss.all, sty.freeBox__fng9D)}>
-          {p.renderPlasmicSlot({
+          {renderPlasmicSlot({
             defaultContents: (
               <React.Fragment>
                 {(() => {
@@ -290,7 +312,7 @@ function PlasmicJournalPost2__RenderFunc(props: {
           })}
         </div>
         <div className={classNames(projectcss.all, sty.freeBox__r4XXg)}>
-          {p.renderPlasmicSlot({
+          {renderPlasmicSlot({
             defaultContents: (
               <React.Fragment>
                 {(() => {

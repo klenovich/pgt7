@@ -17,8 +17,47 @@ import Head from "next/head";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
 
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
+import {
+  Flex as Flex__,
+  MultiChoiceArg,
+  PlasmicDataSourceContextProvider as PlasmicDataSourceContextProvider__,
+  PlasmicIcon as PlasmicIcon__,
+  PlasmicImg as PlasmicImg__,
+  PlasmicLink as PlasmicLink__,
+  PlasmicPageGuard as PlasmicPageGuard__,
+  SingleBooleanChoiceArg,
+  SingleChoiceArg,
+  Stack as Stack__,
+  StrictProps,
+  Trans as Trans__,
+  classNames,
+  createPlasmicElementProxy,
+  deriveRenderOpts,
+  ensureGlobalVariants,
+  generateOnMutateForSpec,
+  generateStateOnChangeProp,
+  generateStateOnChangePropForCodeComponents,
+  generateStateValueProp,
+  get as $stateGet,
+  hasVariant,
+  initializeCodeComponentStates,
+  initializePlasmicStates,
+  makeFragment,
+  omit,
+  pick,
+  renderPlasmicSlot,
+  set as $stateSet,
+  useCurrentUser,
+  useDollarState,
+  usePlasmicTranslator,
+  useTrigger,
+  wrapWithClassName
+} from "@plasmicapp/react-web";
+import {
+  DataCtxReader as DataCtxReader__,
+  useDataEnv,
+  useGlobalActions
+} from "@plasmicapp/react-web/lib/host";
 
 import {
   executePlasmicDataOp,
@@ -26,22 +65,6 @@ import {
   usePlasmicInvalidate
 } from "@plasmicapp/react-web/lib/data-sources";
 
-import {
-  hasVariant,
-  classNames,
-  wrapWithClassName,
-  createPlasmicElementProxy,
-  makeFragment,
-  MultiChoiceArg,
-  SingleBooleanChoiceArg,
-  SingleChoiceArg,
-  pick,
-  omit,
-  useTrigger,
-  StrictProps,
-  deriveRenderOpts,
-  ensureGlobalVariants
-} from "@plasmicapp/react-web";
 import NavBar from "../../NavBar"; // plasmic-import: zoXit50v16ZA/component
 import Card from "../../Card"; // plasmic-import: at931Xm9Xbfa/component
 import Footer2 from "../../Footer2"; // plasmic-import: DUd-yxFV_3vR/component
@@ -66,39 +89,39 @@ type ArgPropType = keyof PlasmicGenesis14__ArgsType;
 export const PlasmicGenesis14__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicGenesis14__OverridesType = {
-  postGenre?: p.Flex<"div">;
-  navBar?: p.Flex<typeof NavBar>;
-  bandInfo?: p.Flex<"section">;
-  lfo2NewObidPoster1?: p.Flex<"div">;
-  name?: p.Flex<"section">;
-  h1?: p.Flex<"h1">;
-  description?: p.Flex<"section">;
-  about?: p.Flex<"div">;
-  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow?: p.Flex<"div">;
-  figmaPaste2?: p.Flex<"a"> & Partial<LinkProps>;
-  rectangle38918?: p.Flex<"div">;
-  about3?: p.Flex<"div">;
-  card?: p.Flex<typeof Card>;
-  link?: p.Flex<"a"> & Partial<LinkProps>;
-  img?: p.Flex<typeof p.PlasmicImg>;
-  figmaPaste?: p.Flex<"div">;
-  rectangle38961?: p.Flex<"div">;
-  pitterPatter9FiftySevenSouthsiders?: p.Flex<"div">;
-  locationFriday112023?: p.Flex<"div">;
-  rectangle38962?: p.Flex<"div">;
-  atwoodChurchSaturday020324Time700Pm?: p.Flex<"div">;
-  rectangle38963?: p.Flex<"div">;
-  pitterPatter9FiftySevenSouthsiders2?: p.Flex<"div">;
-  locationFriday1120232?: p.Flex<"div">;
-  rectangle38976?: p.Flex<"div">;
-  rectangle38977?: p.Flex<"div">;
-  rectangle38978?: p.Flex<"div">;
-  rectangle38979?: p.Flex<"div">;
-  cSouthsiders?: p.Flex<"div">;
-  locationFriday1120233?: p.Flex<"div">;
-  rectangle38980?: p.Flex<"div">;
-  rectangle38981?: p.Flex<"div">;
-  footer2?: p.Flex<typeof Footer2>;
+  postGenre?: Flex__<"div">;
+  navBar?: Flex__<typeof NavBar>;
+  bandInfo?: Flex__<"section">;
+  lfo2NewObidPoster1?: Flex__<"div">;
+  name?: Flex__<"section">;
+  h1?: Flex__<"h1">;
+  description?: Flex__<"section">;
+  about?: Flex__<"div">;
+  askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow?: Flex__<"div">;
+  figmaPaste2?: Flex__<"a"> & Partial<LinkProps>;
+  rectangle38918?: Flex__<"div">;
+  about3?: Flex__<"div">;
+  card?: Flex__<typeof Card>;
+  link?: Flex__<"a"> & Partial<LinkProps>;
+  img?: Flex__<typeof PlasmicImg__>;
+  figmaPaste?: Flex__<"div">;
+  rectangle38961?: Flex__<"div">;
+  pitterPatter9FiftySevenSouthsiders?: Flex__<"div">;
+  locationFriday112023?: Flex__<"div">;
+  rectangle38962?: Flex__<"div">;
+  atwoodChurchSaturday020324Time700Pm?: Flex__<"div">;
+  rectangle38963?: Flex__<"div">;
+  pitterPatter9FiftySevenSouthsiders2?: Flex__<"div">;
+  locationFriday1120232?: Flex__<"div">;
+  rectangle38976?: Flex__<"div">;
+  rectangle38977?: Flex__<"div">;
+  rectangle38978?: Flex__<"div">;
+  rectangle38979?: Flex__<"div">;
+  cSouthsiders?: Flex__<"div">;
+  locationFriday1120233?: Flex__<"div">;
+  rectangle38980?: Flex__<"div">;
+  rectangle38981?: Flex__<"div">;
+  footer2?: Flex__<typeof Footer2>;
 };
 
 export interface DefaultGenesis14Props {}
@@ -128,11 +151,11 @@ function PlasmicGenesis14__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
 
   let [$queries, setDollarQueries] = React.useState<
     Record<string, ReturnType<typeof usePlasmicDataOp>>
@@ -305,7 +328,7 @@ function PlasmicGenesis14__RenderFunc(props: {
                     "The finale of Live From Oakland \u201cGenesis\u201d will feature an album release from Funky Lamp and support from Trip Lotus and Wild Blue Yonder"
                   }
                 </div>
-                <p.PlasmicLink
+                <PlasmicLink__
                   data-plasmic-name={"figmaPaste2"}
                   data-plasmic-override={overrides.figmaPaste2}
                   className={classNames(
@@ -332,7 +355,7 @@ function PlasmicGenesis14__RenderFunc(props: {
                   >
                     {"TICKETS"}
                   </div>
-                </p.PlasmicLink>
+                </PlasmicLink__>
               </div>
               <div
                 data-plasmic-name={"about3"}
@@ -373,7 +396,7 @@ function PlasmicGenesis14__RenderFunc(props: {
                       key={currentIndex}
                       noTitle={true}
                     >
-                      <p.PlasmicLink
+                      <PlasmicLink__
                         data-plasmic-name={"link"}
                         data-plasmic-override={overrides.link}
                         className={classNames(
@@ -403,7 +426,7 @@ function PlasmicGenesis14__RenderFunc(props: {
                             sty.freeBox__mx2Wp
                           )}
                         >
-                          <p.PlasmicImg
+                          <PlasmicImg__
                             data-plasmic-name={"img"}
                             data-plasmic-override={overrides.img}
                             alt={""}
@@ -510,7 +533,7 @@ function PlasmicGenesis14__RenderFunc(props: {
                             </div>
                           </div>
                         </div>
-                      </p.PlasmicLink>
+                      </PlasmicLink__>
                     </Card>
                   );
                 })}
@@ -928,7 +951,7 @@ type NodeDefaultElementType = {
   about3: "div";
   card: typeof Card;
   link: "a";
-  img: typeof p.PlasmicImg;
+  img: typeof PlasmicImg__;
   figmaPaste: "div";
   rectangle38961: "div";
   pitterPatter9FiftySevenSouthsiders: "div";

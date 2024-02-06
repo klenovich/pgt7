@@ -73,8 +73,7 @@
           }
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "ohDidvG9XsCeFumugENU3J",
@@ -474,8 +473,7 @@
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
@@ -533,8 +531,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "hjKYmYi6HMwK6TRyk7ew5R",
@@ -592,8 +589,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-cms"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "7nJ7UcFmq9UzB6eXfC5z4a",
@@ -615,8 +611,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-nav"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "oATn9WrAqtDeaLtJDt8hxD",
@@ -1181,6 +1176,46 @@
           "id": "ejPoESnrXhhZ",
           "name": "Screenshot 2024-01-19 at 09.19.07.png",
           "filePath": "../public/plasmic/pg_site/images/screenshot20240119At091907Png.png"
+        },
+        {
+          "id": "hVE4xzzpgIY7",
+          "name": "DSC_2461.jpg",
+          "filePath": "../public/plasmic/pg_site/images/dsc2461Jpg.jpg"
+        },
+        {
+          "id": "XSksQ0ncYSAd",
+          "name": "IMG_0490.jpg",
+          "filePath": "../public/plasmic/pg_site/images/img0490Jpg.jpg"
+        },
+        {
+          "id": "vawqTnKIQggA",
+          "name": "Screenshot 2024-02-06 at 17.46.01.png",
+          "filePath": "../public/plasmic/pg_site/images/screenshot20240206At174601Png.png"
+        },
+        {
+          "id": "COpK0RL8rUY1",
+          "name": "Screenshot 2024-02-06 at 17.46.36.png",
+          "filePath": "../public/plasmic/pg_site/images/screenshot20240206At174636Png.png"
+        },
+        {
+          "id": "M88qJvT-ksEm",
+          "name": "Screenshot 2024-02-06 at 17.46.44.png",
+          "filePath": "../public/plasmic/pg_site/images/screenshot20240206At174644Png.png"
+        },
+        {
+          "id": "DGvoXgZQIjGS",
+          "name": "image 7",
+          "filePath": "../public/plasmic/pg_site/images/image7.jpg"
+        },
+        {
+          "id": "WJVjt4w1xCNR",
+          "name": "image 8",
+          "filePath": "../public/plasmic/pg_site/images/image8.jpg"
+        },
+        {
+          "id": "Ot8_3sfR6tCA",
+          "name": "image 9",
+          "filePath": "../public/plasmic/pg_site/images/image9.jpg"
         }
       ],
       "indirect": false,

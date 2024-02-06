@@ -320,7 +320,7 @@
 .figmaPaste {
   display: block;
   position: relative;
-  width: 339px;
+  width: 352px;
   height: 311px;
   margin-left: 0px;
   margin-bottom: 13px;
@@ -431,12 +431,13 @@
 .rectangle38976 {
   background: rgba(255, 255, 255, 1);
   box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 1);
-  width: 326px;
+  width: 100%;
   height: 91px;
   display: block;
   position: absolute;
   left: 9px;
   top: 0px;
+  min-width: 0;
   border-radius: 12px;
 }
 .text__iaYi0 {
@@ -466,7 +467,7 @@
   top: 35px;
 }
 .rectangle38977 {
-  background: url("/plasmic/pg_site/images/rectangle38977.jpg") -8px -1px / 118px 91px no-repeat;
+  background: url("/plasmic/pg_site/images/image7.jpg") top 50% left 50% / cover repeat;
   box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 1);
   width: 106px;
   height: 91px;
@@ -480,16 +481,17 @@
 .rectangle38978 {
   background: rgba(255, 255, 255, 1);
   box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 1);
-  width: 326px;
+  width: 100%;
   height: 91px;
   display: block;
   position: absolute;
   left: 9px;
   top: 106px;
+  min-width: 0;
   border-radius: 12px;
 }
 .rectangle38979 {
-  background: url("/plasmic/pg_site/images/rectangle38979.jpg") -22px 0px / 137px 91px no-repeat;
+  background: url("/plasmic/pg_site/images/image8.jpg") top 50% left 50% / cover repeat;
   box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 1);
   width: 106px;
   height: 91px;
@@ -539,16 +541,17 @@
 .rectangle38980 {
   background: rgba(255, 255, 255, 1);
   box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 1);
-  width: 326px;
+  width: 100%;
   height: 91px;
   display: block;
   position: absolute;
   left: 9px;
   top: 212px;
+  min-width: 0;
   border-radius: 12px;
 }
 .rectangle38981 {
-  background: url("/plasmic/pg_site/images/rectangle38981.jpg") 0px 0px / 118px 91px no-repeat;
+  background: url("/plasmic/pg_site/images/image9.jpg") top 50% left 50% / cover repeat;
   box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 1);
   width: 106px;
   height: 91px;
