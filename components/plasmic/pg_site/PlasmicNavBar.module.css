@@ -34,6 +34,7 @@
 }
 .img__o6RKl {
   object-fit: cover;
+  display: none !important;
 }
 .img__o6RKl > picture > img {
   object-fit: cover;
@@ -86,6 +87,12 @@
   max-width: 100%;
   color: #000000;
   font-weight: 600;
+  display: none;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .events {
+    display: block;
+  }
 }
 .artists {
   position: relative;
@@ -94,6 +101,12 @@
   max-width: 100%;
   font-weight: 600;
   color: #000000;
+  display: none;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .artists {
+    display: block;
+  }
 }
 .blog {
   position: relative;
@@ -102,6 +115,12 @@
   max-width: 100%;
   font-weight: 600;
   color: #000000;
+  display: none;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .blog {
+    display: block;
+  }
 }
 .team {
   position: relative;
@@ -110,4 +129,10 @@
   max-width: 100%;
   color: #000000;
   font-weight: 600;
+  display: none;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .team {
+    display: block;
+  }
 }

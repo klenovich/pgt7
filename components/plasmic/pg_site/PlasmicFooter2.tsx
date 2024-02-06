@@ -85,7 +85,8 @@ export type PlasmicFooter2__OverridesType = {
   rectangle38948?: Flex__<"a"> & Partial<LinkProps>;
   rectangle38949?: Flex__<"div">;
   rectangle38884?: Flex__<"a"> & Partial<LinkProps>;
-  rectangle38950?: Flex__<"div">;
+  rectangle38950?: Flex__<"a"> & Partial<LinkProps>;
+  rectangle38951?: Flex__<"a"> & Partial<LinkProps>;
 };
 
 export interface DefaultFooter2Props {
@@ -255,21 +256,52 @@ function PlasmicFooter2__RenderFunc(props: {
         >
           {"TEAM"}
         </PlasmicLink__>
-        <div
+        <PlasmicLink__
           data-plasmic-name={"rectangle38950"}
           data-plasmic-override={overrides.rectangle38950}
-          className={classNames(projectcss.all, sty.rectangle38950)}
-        />
-
-        <div
           className={classNames(
             projectcss.all,
-            projectcss.__wab_text,
-            sty.text__ti18O
+            projectcss.a,
+            sty.rectangle38950
           )}
+          component={Link}
+          href={"mailto:info@postgenre.world"}
+          platform={"nextjs"}
+          target={"_blank"}
         >
-          {"CONTACT US"}
-        </div>
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__ti18O
+            )}
+          >
+            {"CONTACT US"}
+          </div>
+        </PlasmicLink__>
+        <PlasmicLink__
+          data-plasmic-name={"rectangle38951"}
+          data-plasmic-override={overrides.rectangle38951}
+          className={classNames(
+            projectcss.all,
+            projectcss.a,
+            sty.rectangle38951
+          )}
+          component={Link}
+          href={"https://discord.gg/yv9usVRa"}
+          platform={"nextjs"}
+          target={"_blank"}
+        >
+          <div
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text__mgvh
+            )}
+          >
+            {"JOIN THE TEAM"}
+          </div>
+        </PlasmicLink__>
         <div
           className={classNames(
             projectcss.all,
@@ -277,7 +309,7 @@ function PlasmicFooter2__RenderFunc(props: {
             sty.text__kxD5
           )}
         >
-          {"2023 POST GENRE"}
+          {"1924 POST GENRE"}
         </div>
       </div>
     </section>
@@ -293,7 +325,8 @@ const PlasmicDescendants = {
     "rectangle38948",
     "rectangle38949",
     "rectangle38884",
-    "rectangle38950"
+    "rectangle38950",
+    "rectangle38951"
   ],
   figmaPaste4: [
     "figmaPaste4",
@@ -302,14 +335,16 @@ const PlasmicDescendants = {
     "rectangle38948",
     "rectangle38949",
     "rectangle38884",
-    "rectangle38950"
+    "rectangle38950",
+    "rectangle38951"
   ],
   rectangle38946: ["rectangle38946"],
   rectangle38947: ["rectangle38947"],
   rectangle38948: ["rectangle38948"],
   rectangle38949: ["rectangle38949"],
   rectangle38884: ["rectangle38884"],
-  rectangle38950: ["rectangle38950"]
+  rectangle38950: ["rectangle38950"],
+  rectangle38951: ["rectangle38951"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -322,7 +357,8 @@ type NodeDefaultElementType = {
   rectangle38948: "a";
   rectangle38949: "div";
   rectangle38884: "a";
-  rectangle38950: "div";
+  rectangle38950: "a";
+  rectangle38951: "a";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -392,6 +428,7 @@ export const PlasmicFooter2 = Object.assign(
     rectangle38949: makeNodeComponent("rectangle38949"),
     rectangle38884: makeNodeComponent("rectangle38884"),
     rectangle38950: makeNodeComponent("rectangle38950"),
+    rectangle38951: makeNodeComponent("rectangle38951"),
 
     // Metadata about props expected for PlasmicFooter2
     internalVariantProps: PlasmicFooter2__VariantProps,

@@ -92,6 +92,8 @@
   font-weight: 700;
   font-size: 31px;
   background: #ffffff99;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
   padding: 15px;
 }
 .upcomingEvents {
@@ -231,12 +233,13 @@
 .figmaPaste {
   display: block;
   position: absolute;
-  width: 373px;
+  width: 100%;
   height: 394px;
   left: 0px;
   top: 0px;
   margin-bottom: 0px;
   margin-top: 0px;
+  min-width: 0;
 }
 .text__giFr5 {
   display: block;
@@ -286,7 +289,7 @@
 .rectangle38930 {
   background: rgba(255, 255, 255, 1);
   box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 1);
-  width: 324px;
+  width: 308px;
   height: 91px;
   display: block;
   position: absolute;
@@ -331,7 +334,7 @@
 .rectangle38955 {
   background: rgba(255, 255, 255, 1);
   box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 1);
-  width: 324px;
+  width: 308px;
   height: 91px;
   display: block;
   position: absolute;
@@ -376,7 +379,7 @@
 .rectangle38957 {
   background: rgba(255, 255, 255, 1);
   box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 1);
-  width: 324px;
+  width: 309px;
   height: 91px;
   display: block;
   position: absolute;
