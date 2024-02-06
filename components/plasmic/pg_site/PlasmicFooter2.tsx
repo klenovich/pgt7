@@ -309,7 +309,7 @@ function PlasmicFooter2__RenderFunc(props: {
             sty.text__kxD5
           )}
         >
-          {"1924 POST GENRE"}
+          {"2024 POST GENRE"}
         </div>
       </div>
     </section>

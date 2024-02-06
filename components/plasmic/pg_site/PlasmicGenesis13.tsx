@@ -108,7 +108,6 @@ export type PlasmicGenesis13__OverridesType = {
   rectangle38961?: Flex__<"div">;
   pitterPatter9FiftySevenSouthsiders?: Flex__<"div">;
   locationFriday112023?: Flex__<"div">;
-  rectangle38962?: Flex__<"div">;
   atwoodChurchSaturday020324Time700Pm?: Flex__<"div">;
   rectangle38963?: Flex__<"div">;
   pitterPatter9FiftySevenSouthsiders2?: Flex__<"div">;
@@ -573,12 +572,6 @@ function PlasmicGenesis13__RenderFunc(props: {
                     {"location\nFriday 11/20/23 \n"}
                   </div>
                   <div
-                    data-plasmic-name={"rectangle38962"}
-                    data-plasmic-override={overrides.rectangle38962}
-                    className={classNames(projectcss.all, sty.rectangle38962)}
-                  />
-
-                  <div
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
@@ -778,7 +771,6 @@ const PlasmicDescendants = {
     "rectangle38961",
     "pitterPatter9FiftySevenSouthsiders",
     "locationFriday112023",
-    "rectangle38962",
     "atwoodChurchSaturday020324Time700Pm",
     "rectangle38963",
     "pitterPatter9FiftySevenSouthsiders2",
@@ -812,7 +804,6 @@ const PlasmicDescendants = {
     "rectangle38961",
     "pitterPatter9FiftySevenSouthsiders",
     "locationFriday112023",
-    "rectangle38962",
     "atwoodChurchSaturday020324Time700Pm",
     "rectangle38963",
     "pitterPatter9FiftySevenSouthsiders2",
@@ -844,7 +835,6 @@ const PlasmicDescendants = {
     "rectangle38961",
     "pitterPatter9FiftySevenSouthsiders",
     "locationFriday112023",
-    "rectangle38962",
     "atwoodChurchSaturday020324Time700Pm",
     "rectangle38963",
     "pitterPatter9FiftySevenSouthsiders2",
@@ -879,7 +869,6 @@ const PlasmicDescendants = {
     "rectangle38961",
     "pitterPatter9FiftySevenSouthsiders",
     "locationFriday112023",
-    "rectangle38962",
     "atwoodChurchSaturday020324Time700Pm",
     "rectangle38963",
     "pitterPatter9FiftySevenSouthsiders2",
@@ -901,7 +890,6 @@ const PlasmicDescendants = {
     "rectangle38961",
     "pitterPatter9FiftySevenSouthsiders",
     "locationFriday112023",
-    "rectangle38962",
     "atwoodChurchSaturday020324Time700Pm",
     "rectangle38963",
     "pitterPatter9FiftySevenSouthsiders2",
@@ -918,7 +906,6 @@ const PlasmicDescendants = {
   rectangle38961: ["rectangle38961"],
   pitterPatter9FiftySevenSouthsiders: ["pitterPatter9FiftySevenSouthsiders"],
   locationFriday112023: ["locationFriday112023"],
-  rectangle38962: ["rectangle38962"],
   atwoodChurchSaturday020324Time700Pm: ["atwoodChurchSaturday020324Time700Pm"],
   rectangle38963: ["rectangle38963"],
   pitterPatter9FiftySevenSouthsiders2: ["pitterPatter9FiftySevenSouthsiders2"],
@@ -956,7 +943,6 @@ type NodeDefaultElementType = {
   rectangle38961: "div";
   pitterPatter9FiftySevenSouthsiders: "div";
   locationFriday112023: "div";
-  rectangle38962: "div";
   atwoodChurchSaturday020324Time700Pm: "div";
   rectangle38963: "div";
   pitterPatter9FiftySevenSouthsiders2: "div";
@@ -1055,7 +1041,6 @@ export const PlasmicGenesis13 = Object.assign(
       "pitterPatter9FiftySevenSouthsiders"
     ),
     locationFriday112023: makeNodeComponent("locationFriday112023"),
-    rectangle38962: makeNodeComponent("rectangle38962"),
     atwoodChurchSaturday020324Time700Pm: makeNodeComponent(
       "atwoodChurchSaturday020324Time700Pm"
     ),
