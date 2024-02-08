@@ -100,6 +100,8 @@ export type PlasmicGenesis13__OverridesType = {
   askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow?: Flex__<"div">;
   figmaPaste2?: Flex__<"a"> & Partial<LinkProps>;
   rectangle38918?: Flex__<"div">;
+  figmaPaste3?: Flex__<"a"> & Partial<LinkProps>;
+  rectangle38920?: Flex__<"div">;
   about3?: Flex__<"div">;
   card?: Flex__<typeof Card>;
   link?: Flex__<"a"> & Partial<LinkProps>;
@@ -353,6 +355,34 @@ function PlasmicGenesis13__RenderFunc(props: {
                     )}
                   >
                     {"TICKETS"}
+                  </div>
+                </PlasmicLink__>
+                <PlasmicLink__
+                  data-plasmic-name={"figmaPaste3"}
+                  data-plasmic-override={overrides.figmaPaste3}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.figmaPaste3
+                  )}
+                  component={Link}
+                  href={"https://indietix.org/pgmerch"}
+                  platform={"nextjs"}
+                >
+                  <div
+                    data-plasmic-name={"rectangle38920"}
+                    data-plasmic-override={overrides.rectangle38920}
+                    className={classNames(projectcss.all, sty.rectangle38920)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__iwRi
+                      )}
+                    >
+                      {"MERCH"}
+                    </div>
                   </div>
                 </PlasmicLink__>
               </div>
@@ -763,6 +793,8 @@ const PlasmicDescendants = {
     "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow",
     "figmaPaste2",
     "rectangle38918",
+    "figmaPaste3",
+    "rectangle38920",
     "about3",
     "card",
     "link",
@@ -796,6 +828,8 @@ const PlasmicDescendants = {
     "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow",
     "figmaPaste2",
     "rectangle38918",
+    "figmaPaste3",
+    "rectangle38920",
     "about3",
     "card",
     "link",
@@ -827,6 +861,8 @@ const PlasmicDescendants = {
     "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow",
     "figmaPaste2",
     "rectangle38918",
+    "figmaPaste3",
+    "rectangle38920",
     "about3",
     "card",
     "link",
@@ -852,7 +888,9 @@ const PlasmicDescendants = {
     "about",
     "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow",
     "figmaPaste2",
-    "rectangle38918"
+    "rectangle38918",
+    "figmaPaste3",
+    "rectangle38920"
   ],
   askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow:
     [
@@ -860,6 +898,8 @@ const PlasmicDescendants = {
     ],
   figmaPaste2: ["figmaPaste2", "rectangle38918"],
   rectangle38918: ["rectangle38918"],
+  figmaPaste3: ["figmaPaste3", "rectangle38920"],
+  rectangle38920: ["rectangle38920"],
   about3: [
     "about3",
     "card",
@@ -935,6 +975,8 @@ type NodeDefaultElementType = {
   askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow: "div";
   figmaPaste2: "a";
   rectangle38918: "div";
+  figmaPaste3: "a";
+  rectangle38920: "div";
   about3: "div";
   card: typeof Card;
   link: "a";
@@ -1031,6 +1073,8 @@ export const PlasmicGenesis13 = Object.assign(
       ),
     figmaPaste2: makeNodeComponent("figmaPaste2"),
     rectangle38918: makeNodeComponent("rectangle38918"),
+    figmaPaste3: makeNodeComponent("figmaPaste3"),
+    rectangle38920: makeNodeComponent("rectangle38920"),
     about3: makeNodeComponent("about3"),
     card: makeNodeComponent("card"),
     link: makeNodeComponent("link"),
