@@ -109,6 +109,7 @@ export type PlasmicHomepage__OverridesType = {
   rectangle38957?: Flex__<"a"> & Partial<LinkProps>;
   atwoodChurchFriday030124Time700Pm?: Flex__<"a"> & Partial<LinkProps>;
   rectangle38958?: Flex__<"a"> & Partial<LinkProps>;
+  rectangle38951?: Flex__<"a"> & Partial<LinkProps>;
   whatis?: Flex__<"section">;
   figmaPaste2?: Flex__<"div">;
   rectangle38940?: Flex__<"div">;
@@ -718,6 +719,29 @@ function PlasmicHomepage__RenderFunc(props: {
                   platform={"nextjs"}
                 />
               </div>
+              <PlasmicLink__
+                data-plasmic-name={"rectangle38951"}
+                data-plasmic-override={overrides.rectangle38951}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.a,
+                  sty.rectangle38951
+                )}
+                component={Link}
+                href={"https://indietix.org/pgmerch"}
+                platform={"nextjs"}
+                target={undefined}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__am52W
+                  )}
+                >
+                  {"MERCH"}
+                </div>
+              </PlasmicLink__>
             </div>
           </section>
           <section
@@ -874,6 +898,7 @@ const PlasmicDescendants = {
     "rectangle38957",
     "atwoodChurchFriday030124Time700Pm",
     "rectangle38958",
+    "rectangle38951",
     "whatis",
     "figmaPaste2",
     "rectangle38940",
@@ -902,7 +927,8 @@ const PlasmicDescendants = {
     "rectangle38956",
     "rectangle38957",
     "atwoodChurchFriday030124Time700Pm",
-    "rectangle38958"
+    "rectangle38958",
+    "rectangle38951"
   ],
   allArtists: ["allArtists"],
   figmaPaste: [
@@ -932,6 +958,7 @@ const PlasmicDescendants = {
   rectangle38957: ["rectangle38957"],
   atwoodChurchFriday030124Time700Pm: ["atwoodChurchFriday030124Time700Pm"],
   rectangle38958: ["rectangle38958"],
+  rectangle38951: ["rectangle38951"],
   whatis: [
     "whatis",
     "figmaPaste2",
@@ -976,6 +1003,7 @@ type NodeDefaultElementType = {
   rectangle38957: "a";
   atwoodChurchFriday030124Time700Pm: "a";
   rectangle38958: "a";
+  rectangle38951: "a";
   whatis: "section";
   figmaPaste2: "div";
   rectangle38940: "div";
@@ -1073,6 +1101,7 @@ export const PlasmicHomepage = Object.assign(
       "atwoodChurchFriday030124Time700Pm"
     ),
     rectangle38958: makeNodeComponent("rectangle38958"),
+    rectangle38951: makeNodeComponent("rectangle38951"),
     whatis: makeNodeComponent("whatis"),
     figmaPaste2: makeNodeComponent("figmaPaste2"),
     rectangle38940: makeNodeComponent("rectangle38940"),
