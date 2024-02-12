@@ -85,6 +85,7 @@ export type PlasmicNavBar__OverridesType = {
   root?: Flex__<typeof NavigationBar>;
   link?: Flex__<"a"> & Partial<LinkProps>;
   events?: Flex__<"a"> & Partial<LinkProps>;
+  slashBlog?: Flex__<"a"> & Partial<LinkProps>;
   artists?: Flex__<"a"> & Partial<LinkProps>;
   blog?: Flex__<"a"> & Partial<LinkProps>;
   team?: Flex__<"a"> & Partial<LinkProps>;
@@ -243,6 +244,21 @@ function PlasmicNavBar__RenderFunc(props: {
             {"EVENTS"}
           </PlasmicLink__>
           <PlasmicLink__
+            data-plasmic-name={"slashBlog"}
+            data-plasmic-override={overrides.slashBlog}
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              projectcss.__wab_text,
+              sty.slashBlog
+            )}
+            component={Link}
+            href={"/blog"}
+            platform={"nextjs"}
+          >
+            {"BLOG"}
+          </PlasmicLink__>
+          <PlasmicLink__
             data-plasmic-name={"artists"}
             data-plasmic-override={overrides.artists}
             className={classNames(
@@ -320,9 +336,10 @@ function PlasmicNavBar__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "link", "events", "artists", "blog", "team"],
+  root: ["root", "link", "events", "slashBlog", "artists", "blog", "team"],
   link: ["link"],
   events: ["events"],
+  slashBlog: ["slashBlog"],
   artists: ["artists"],
   blog: ["blog"],
   team: ["team"]
@@ -334,6 +351,7 @@ type NodeDefaultElementType = {
   root: typeof NavigationBar;
   link: "a";
   events: "a";
+  slashBlog: "a";
   artists: "a";
   blog: "a";
   team: "a";
@@ -401,6 +419,7 @@ export const PlasmicNavBar = Object.assign(
     // Helper components rendering sub-elements
     link: makeNodeComponent("link"),
     events: makeNodeComponent("events"),
+    slashBlog: makeNodeComponent("slashBlog"),
     artists: makeNodeComponent("artists"),
     blog: makeNodeComponent("blog"),
     team: makeNodeComponent("team"),

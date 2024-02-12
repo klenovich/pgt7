@@ -967,6 +967,20 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/genesis3"
+        },
+        {
+          "id": "RcX5IhtXncj9",
+          "name": "JournalPost2",
+          "type": "managed",
+          "projectId": "oATn9WrAqtDeaLtJDt8hxD",
+          "renderModuleFilePath": "plasmic/pg_site/PlasmicJournalPost2.tsx",
+          "importSpec": {
+            "modulePath": "../pages/blog.tsx"
+          },
+          "cssFilePath": "plasmic/pg_site/PlasmicJournalPost2.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/blog"
         }
       ],
       "icons": [
@@ -1221,6 +1235,11 @@
           "id": "Ot8_3sfR6tCA",
           "name": "image 9",
           "filePath": "../public/plasmic/pg_site/images/image9.jpg"
+        },
+        {
+          "id": "iqpAOFrIGCDI",
+          "name": "Screenshot 2024-02-12 at 11.34.28.png",
+          "filePath": "../public/plasmic/pg_site/images/screenshot20240212At113428Png.png"
         }
       ],
       "indirect": false,
