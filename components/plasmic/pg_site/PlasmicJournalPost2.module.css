@@ -65,9 +65,9 @@
 }
 .text__aRjl {
   padding-right: 0px;
-  width: 100%;
+  width: auto;
   max-width: 337px;
-  min-width: 0;
+  height: auto;
 }
 .img {
   position: relative;
