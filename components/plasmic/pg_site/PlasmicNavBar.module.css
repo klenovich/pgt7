@@ -39,6 +39,11 @@
 .img__o6RKl > picture > img {
   object-fit: cover;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .img__o6RKl {
+    display: block !important;
+  }
+}
 .img__fm7Qy {
   object-fit: cover;
 }
@@ -91,8 +96,16 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .events {
-    display: block;
+    display: none;
   }
+}
+.slashBlog {
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  color: #000000;
+  font-weight: 600;
 }
 .artists {
   position: relative;
@@ -105,7 +118,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .artists {
-    display: block;
+    display: none;
   }
 }
 .blog {
@@ -119,7 +132,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .blog {
-    display: block;
+    display: none;
   }
 }
 .team {
@@ -133,6 +146,6 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .team {
-    display: block;
+    display: none;
   }
 }
