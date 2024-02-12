@@ -90,9 +90,6 @@ export const PlasmicJournalPost2__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicJournalPost2__OverridesType = {
   root?: Flex__<"div">;
-  article?: Flex__<"div">;
-  rectangle38928?: Flex__<"div">;
-  rectangle38952?: Flex__<"div">;
   navBar?: Flex__<typeof NavBar>;
   section?: Flex__<"section">;
   journalPost2?: Flex__<typeof JournalPost2>;
@@ -213,7 +210,35 @@ function PlasmicJournalPost2__RenderFunc(props: {
 
   return (
     <React.Fragment>
-      <Head></Head>
+      <Head>
+        <meta name="twitter:card" content="summary" />
+        <title key="title">{PlasmicJournalPost2.pageMetadata.title}</title>
+        <meta
+          key="og:title"
+          property="og:title"
+          content={PlasmicJournalPost2.pageMetadata.title}
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={PlasmicJournalPost2.pageMetadata.title}
+        />
+        <meta
+          key="description"
+          name="description"
+          content={PlasmicJournalPost2.pageMetadata.description}
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={PlasmicJournalPost2.pageMetadata.description}
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content={PlasmicJournalPost2.pageMetadata.description}
+        />
+      </Head>
 
       <style>{`
         body {
@@ -238,194 +263,6 @@ function PlasmicJournalPost2__RenderFunc(props: {
             sty.root
           )}
         >
-          {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
-            (() => {
-              try {
-                return $queries.articles.data;
-              } catch (e) {
-                if (
-                  e instanceof TypeError ||
-                  e?.plasmicType === "PlasmicUndefinedDataError"
-                ) {
-                  return [];
-                }
-                throw e;
-              }
-            })()
-          ).map((__plasmic_item_0, __plasmic_idx_0) => {
-            const currentItem = __plasmic_item_0;
-            const currentIndex = __plasmic_idx_0;
-            return (
-              <div
-                data-plasmic-name={"article"}
-                data-plasmic-override={overrides.article}
-                className={classNames(projectcss.all, sty.article)}
-                key={currentIndex}
-                onClick={async event => {
-                  const $steps = {};
-
-                  $steps["goToPage"] = true
-                    ? (() => {
-                        const actionArgs = {
-                          destination: (() => {
-                            try {
-                              return "/" + currentItem.slug;
-                            } catch (e) {
-                              if (
-                                e instanceof TypeError ||
-                                e?.plasmicType === "PlasmicUndefinedDataError"
-                              ) {
-                                return undefined;
-                              }
-                              throw e;
-                            }
-                          })()
-                        };
-                        return (({ destination }) => {
-                          if (
-                            typeof destination === "string" &&
-                            destination.startsWith("#")
-                          ) {
-                            document
-                              .getElementById(destination.substr(1))
-                              .scrollIntoView({ behavior: "smooth" });
-                          } else {
-                            __nextRouter?.push(destination);
-                          }
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["goToPage"] != null &&
-                    typeof $steps["goToPage"] === "object" &&
-                    typeof $steps["goToPage"].then === "function"
-                  ) {
-                    $steps["goToPage"] = await $steps["goToPage"];
-                  }
-                }}
-              >
-                <div
-                  data-plasmic-name={"rectangle38928"}
-                  data-plasmic-override={overrides.rectangle38928}
-                  className={classNames(projectcss.all, sty.rectangle38928)}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__eRruu
-                    )}
-                  >
-                    <React.Fragment>
-                      {(() => {
-                        try {
-                          return $queries.query.data[0].Title;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "By: Aidan Dunn";
-                          }
-                          throw e;
-                        }
-                      })()}
-                    </React.Fragment>
-                  </div>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__wwDuq
-                    )}
-                  >
-                    <React.Fragment>
-                      {(() => {
-                        try {
-                          return (() => {
-                            const date = new Date(currentItem.Date);
-                            const options = {
-                              day: "2-digit",
-                              month: "short",
-                              year: "numeric"
-                            };
-                            return date.toLocaleDateString("en-US", options);
-                          })();
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "10 Nov 2023";
-                          }
-                          throw e;
-                        }
-                      })()}
-                    </React.Fragment>
-                  </div>
-                  <div
-                    data-plasmic-name={"rectangle38952"}
-                    data-plasmic-override={overrides.rectangle38952}
-                    className={classNames(projectcss.all, sty.rectangle38952)}
-                  />
-
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__rEblp
-                    )}
-                  >
-                    <React.Fragment>
-                      {(() => {
-                        try {
-                          return currentItem.Title;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "Mr.Dr. drops new single \u201cSouth\nOakland\u201d";
-                          }
-                          throw e;
-                        }
-                      })()}
-                    </React.Fragment>
-                  </div>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__plUc
-                    )}
-                  >
-                    <React.Fragment>
-                      {(() => {
-                        try {
-                          return (() => {
-                            const postBody = currentItem["Post Body"];
-                            if (postBody.length <= 200) {
-                              return postBody;
-                            } else {
-                              return postBody.slice(0, 200) + "...";
-                            }
-                          })();
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return 'Pittsburgh\'s most enigmatic and eclectic musical collective, "Mr. Dr.," has dropped a scorching new single, "South O," that\'s setting the Steel City\'s music scene on fire. This explosive track is destined to become an instant classic...';
-                          }
-                          throw e;
-                        }
-                      })()}
-                    </React.Fragment>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
           <NavBar
             data-plasmic-name={"navBar"}
             data-plasmic-override={overrides.navBar}
@@ -657,9 +494,6 @@ function PlasmicJournalPost2__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
-    "article",
-    "rectangle38928",
-    "rectangle38952",
     "navBar",
     "section",
     "journalPost2",
@@ -669,9 +503,6 @@ const PlasmicDescendants = {
     "link",
     "footer2"
   ],
-  article: ["article", "rectangle38928", "rectangle38952"],
-  rectangle38928: ["rectangle38928", "rectangle38952"],
-  rectangle38952: ["rectangle38952"],
   navBar: ["navBar"],
   section: [
     "section",
@@ -700,9 +531,6 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  article: "div";
-  rectangle38928: "div";
-  rectangle38952: "div";
   navBar: typeof NavBar;
   section: "section";
   journalPost2: typeof JournalPost2;
@@ -773,9 +601,6 @@ export const PlasmicJournalPost2 = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    article: makeNodeComponent("article"),
-    rectangle38928: makeNodeComponent("rectangle38928"),
-    rectangle38952: makeNodeComponent("rectangle38952"),
     navBar: makeNodeComponent("navBar"),
     section: makeNodeComponent("section"),
     journalPost2: makeNodeComponent("journalPost2"),
@@ -794,8 +619,8 @@ export const PlasmicJournalPost2 = Object.assign(
 
     // Page metadata
     pageMetadata: {
-      title: "",
-      description: "",
+      title: "PG Blog",
+      description: "PG Blog",
       ogImageSrc: "",
       canonical: ""
     }
