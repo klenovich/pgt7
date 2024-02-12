@@ -218,7 +218,7 @@ function PlasmicJournalPost2__RenderFunc(props: {
   return (
     <React.Fragment>
       <Head>
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <title key="title">{PlasmicJournalPost2.pageMetadata.title}</title>
         <meta
           key="og:title"
@@ -244,6 +244,16 @@ function PlasmicJournalPost2__RenderFunc(props: {
           key="twitter:description"
           name="twitter:description"
           content={PlasmicJournalPost2.pageMetadata.description}
+        />
+        <meta
+          key="og:image"
+          property="og:image"
+          content={PlasmicJournalPost2.pageMetadata.ogImageSrc}
+        />
+        <meta
+          key="twitter:image"
+          name="twitter:image"
+          content={PlasmicJournalPost2.pageMetadata.ogImageSrc}
         />
       </Head>
 
@@ -486,7 +496,7 @@ function PlasmicJournalPost2__RenderFunc(props: {
                 component={Link}
                 href={"https://linktr.ee/rileyalicewrites"}
                 platform={"nextjs"}
-                target={"_blank"}
+                target={undefined}
               >
                 {"Linktree >"}
               </PlasmicLink__>
@@ -631,9 +641,10 @@ export const PlasmicJournalPost2 = Object.assign(
 
     // Page metadata
     pageMetadata: {
-      title: "PG Blog",
-      description: "PG Blog",
-      ogImageSrc: "",
+      title: "Post Genre Blog: Live From Oakland: Genesis Premiere",
+      description: "Live From Oakland: Genesis Premiere",
+      ogImageSrc:
+        "https://site-assets.plasmic.app/b4c01f52c15818f118263cb948864ef3.png",
       canonical: ""
     }
   }
