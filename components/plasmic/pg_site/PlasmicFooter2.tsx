@@ -288,7 +288,7 @@ function PlasmicFooter2__RenderFunc(props: {
             sty.rectangle38951
           )}
           component={Link}
-          href={"https://discord.gg/yv9usVRa"}
+          href={"https://discord.gg/Vm5RJKed"}
           platform={"nextjs"}
           target={"_blank"}
         >
