@@ -149,7 +149,7 @@ function PlasmicSponsors__RenderFunc(props: {
             data-plasmic-override={overrides.embedHtml}
             className={classNames("__wab_instance", sty.embedHtml)}
             code={
-              '<meta http-equiv="Refresh" content="0; url=\'https://postgenre.world/LFO2-SPONSORPACKET.pdf\'" />'
+              '<meta http-equiv="Refresh" content="0; url=\'https://postgenre.world/indiefest_2_sponsor_packet.pdf\'" />'
             }
           />
         </div>
