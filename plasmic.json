@@ -73,8 +73,7 @@
           }
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "ohDidvG9XsCeFumugENU3J",
@@ -474,8 +473,7 @@
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
@@ -533,8 +531,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "hjKYmYi6HMwK6TRyk7ew5R",
@@ -614,8 +611,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-nav"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "oATn9WrAqtDeaLtJDt8hxD",

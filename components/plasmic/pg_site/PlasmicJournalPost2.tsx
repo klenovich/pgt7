@@ -225,31 +225,37 @@ function PlasmicJournalPost2__RenderFunc(props: {
           property="og:title"
           content={PlasmicJournalPost2.pageMetadata.title}
         />
+
         <meta
           key="twitter:title"
           name="twitter:title"
           content={PlasmicJournalPost2.pageMetadata.title}
         />
+
         <meta
           key="description"
           name="description"
           content={PlasmicJournalPost2.pageMetadata.description}
         />
+
         <meta
           key="og:description"
           property="og:description"
           content={PlasmicJournalPost2.pageMetadata.description}
         />
+
         <meta
           key="twitter:description"
           name="twitter:description"
           content={PlasmicJournalPost2.pageMetadata.description}
         />
+
         <meta
           key="og:image"
           property="og:image"
           content={PlasmicJournalPost2.pageMetadata.ogImageSrc}
         />
+
         <meta
           key="twitter:image"
           name="twitter:image"
@@ -525,6 +531,7 @@ const PlasmicDescendants = {
     "link",
     "footer2"
   ],
+
   navBar: ["navBar"],
   section: [
     "section",
@@ -534,6 +541,7 @@ const PlasmicDescendants = {
     "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow",
     "link"
   ],
+
   article: ["article", "rectangle38928"],
   rectangle38928: ["rectangle38928"],
   about: [
@@ -541,10 +549,12 @@ const PlasmicDescendants = {
     "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow",
     "link"
   ],
+
   askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow:
     [
       "askedToDefineTheirGenreFunkyLampUsuallyResortsToItsComplicatedAsAMeltingPotOfFunkRockAlternativeFolkIndieAndPunkItsComplicatedMightCaptureTheirSoundBetterThanAnyCategoryCouldTheirContagiousStagePreferenceAndMemorableChorusesSeeCrowdsDancingAndSingingAlongAtEveryShow"
     ],
+
   link: ["link"],
   footer2: ["footer2"]
 } as const;
@@ -568,6 +578,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicJournalPost2__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {
