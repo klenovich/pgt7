@@ -255,7 +255,7 @@ function PlasmicHomepage__RenderFunc(props: {
             <PlasmicImg__
               alt={""}
               className={classNames(sty.img__mzptP)}
-              displayHeight={"70vh"}
+              displayHeight={"30vh"}
               displayMaxHeight={"70vh"}
               displayMaxWidth={"100%"}
               displayMinHeight={"0"}
@@ -269,16 +269,6 @@ function PlasmicHomepage__RenderFunc(props: {
                 aspectRatio: undefined
               }}
             />
-
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__shQh3
-              )}
-            >
-              {"LIVE FROM OAKLAND:\nGENESIS\nTickets Available Now!"}
-            </div>
           </section>
           <section
             data-plasmic-name={"upcomingEvents"}
